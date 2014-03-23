@@ -1,11 +1,10 @@
 package base;
 
+import dbService.UserDataSet;
 import gameClasses.Snapshot;
 import gameClasses.Stroke;
 
 import java.util.Map;
-
-import dbService.UserDataSet;
 
 public interface GameMechanic extends Abonent,Runnable{
 	public Map<String, String> createGames(Map<String, UserDataSet> users);

@@ -2,7 +2,6 @@ package frontend.newOrLoginUser;
 
 import dbService.UserDataSet;
 import base.Address;
-import base.UserData;
 import messageSystem.MsgToUserData;
 
 
@@ -16,7 +15,7 @@ public class MsgUpdateUser extends MsgToUserData{
 		this.uds=uds;
 	}
 
-	public void exec(UserData userData){
+	public void exec(base.UserData userData){
 		userData.updateUserId(sessionId, uds);
 	}
 }

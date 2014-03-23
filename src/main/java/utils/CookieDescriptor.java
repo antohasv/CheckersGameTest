@@ -5,20 +5,19 @@ import java.util.Map;
 
 import javax.servlet.http.Cookie;
 
-public class CookieDescriptor{
-	private Map<String,String> nameToCookie=
-			new HashMap<String,String>();
+public class CookieDescriptor {
+    private Map<String, String> storeCookie =
+            new HashMap<String, String>();
 
-	public CookieDescriptor(Cookie coo[]){
-		for(int f=0;f<coo.length;f++){
-			nameToCookie.put(coo[f].getName(), coo[f].getValue());
-		}
-	}
+    public CookieDescriptor(Cookie cookie[]) {
+        for (int i = 0; i < cookie.length; i++) {
+            storeCookie.put(cookie[i].getName(), cookie[i].getValue());
+        }
+    }
 
-	public String getCookieByName(String name){
-		String ans=null;
-		if (nameToCookie.containsKey(name))
-			ans=nameToCookie.get(name);
-		return ans;
-	}
+    public String getCookieByName(String name) {
+        if (storeCookie.containsKey(name))
+            return storeCookie.get(name);
+        return null;
+    }
 }

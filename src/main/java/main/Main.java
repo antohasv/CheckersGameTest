@@ -1,83 +1,77 @@
 package main;
 
+import base.*;
+import chat.ChatWebSocketServlet;
+import chat.GameChatImpl;
+import dbService.DBServiceImpl;
+import frontend.FrontendImpl;
+import frontend.UserDataImpl;
+import frontend.WebSocketImpl;
+import frontend.WebSocketServletImpl;
+import gameMechanic.GameMechanicImpl;
 import messageSystem.MessageSystemImpl;
-
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-
-import chat.ChatWSServletImpl;
-import chat.GameChatImpl;
-
-import dbService.DBServiceImpl;
-
 import resource.ResourceFactory;
-
-import utils.SysInfo;
+import system.SystemInfo;
 import utils.TemplateHelper;
-//import utils.VFS;
-import frontend.UserDataImpl;
-import frontend.WebSocketImpl;
-import frontend.WebSocketServletImpl;
 
-import frontend.FrontendImpl;
-import gameMechanic.GameMechanicImpl;
 
-//import accountService.AccountServiceImpl;
-//import base.AccountService;
-import base.DataAccessObject;
-import base.GameChat;
-import base.GameMechanic;
-import base.MessageSystem;
-import base.UserData;
+public class Main {
 
-public class Main{
+    public static final int GAME_SERVER_PORT = 8001;
+    public static final int WEBSOCKET_SERVER_PORT = 8051;
+    public static final int CHAT_SERVER_PORT = 8011;
 
-	public static void main(String[] args) throws Exception{
-		MessageSystem messageSystem= new MessageSystemImpl();
-		FrontendImpl frontend = new FrontendImpl(messageSystem);
-//		AccountService accountService = new AccountServiceImpl(messageSystem);
-		GameMechanic gameMechanic = new GameMechanicImpl(messageSystem);
-		UserData userData = new UserDataImpl(messageSystem);
-		DataAccessObject dbService = new DBServiceImpl(messageSystem);
-		SysInfo sysInfo = new SysInfo();
-		
-		Server server = new Server(8000);
-		ResourceHandler resource_handler = new ResourceHandler();
-		resource_handler.setDirectoriesListed(true);
-		resource_handler.setResourceBase("static");
+    public static void main(String[] args) throws Exception {
+        final SystemInfo sysInfo = new SystemInfo();
 
-		Server serverWS = new Server(8050);
-		ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS); 
-		serverWS.setHandler(context); 
-		context.addServlet(new ServletHolder(new WebSocketServletImpl(messageSystem)),"/*");
-		serverWS.start();
+        final MessageSystem messageSystem = new MessageSystemImpl();
+        final FrontendImpl frontend = new FrontendImpl(messageSystem);
+        final GameMechanic gameMechanic = new GameMechanicImpl(messageSystem);
+        final UserData userData = new UserDataImpl(messageSystem);
+        final DataAccessObject dbService = new DBServiceImpl(messageSystem);
+        final GameChat gameChat = new GameChatImpl(messageSystem);
+        final WebSocket webSocket = new WebSocketImpl(messageSystem);
 
-		Server chatServer = new Server(8010);
-		ServletContextHandler context2 = new ServletContextHandler(ServletContextHandler.SESSIONS);
-		chatServer.setHandler(context2);
-		context2.addServlet(new ServletHolder(new ChatWSServletImpl()),"/*");
-		chatServer.start();
+        Server server = new Server(GAME_SERVER_PORT);
+        ResourceHandler resource_handler = new ResourceHandler();
+        resource_handler.setDirectoriesListed(true);
+        resource_handler.setResourceBase("static");
 
-		HandlerList handlers = new HandlerList();
-		handlers.setHandlers(new Handler[] {frontend, resource_handler});
-		server.setHandler(handlers);
+        HandlerList handlers = new HandlerList();
+        handlers.setHandlers(new Handler[]{frontend, resource_handler});
+        server.setHandler(handlers);
 
-		WebSocketImpl webSocket = new WebSocketImpl(true);
-		GameChat gameChat = new GameChatImpl(messageSystem);
+        Server serverWS = new Server(WEBSOCKET_SERVER_PORT);
+        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        serverWS.setHandler(context);
+        context.addServlet(new ServletHolder(new WebSocketServletImpl()), "/*");
+        serverWS.start();
 
-//		(new Thread(accountService)).start();
-		(new Thread(sysInfo)).start();
-		(new Thread(dbService)).start();
-		(new Thread(userData)).start();
-		(new Thread(gameMechanic)).start();
-		(new Thread(webSocket)).start();
-		(new Thread(gameChat)).start();
-		server.start();
-		TemplateHelper.init();
-		ResourceFactory.instanse();
-	}
+        Server chatServer = new Server(CHAT_SERVER_PORT);
+        ServletContextHandler context2 = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        chatServer.setHandler(context2);
+        context2.addServlet(new ServletHolder(new ChatWebSocketServlet()), "/*");
+        chatServer.start();
+
+        startService(sysInfo);
+        startService(dbService);
+        startService(userData);
+        startService(gameMechanic);
+        startService(webSocket);
+        startService(gameChat);
+
+        server.start();
+        TemplateHelper.init();
+        ResourceFactory.instanse();
+    }
+
+    private static void startService(Runnable service) {
+        new Thread(service).start();
+    }
 }

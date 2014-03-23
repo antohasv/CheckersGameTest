@@ -18,7 +18,7 @@ import utils.TimeHelper;
 public class GameMechanicImpl implements GameMechanic{
 	final private Map<Integer,GameSession> userIdToSession=
 			new HashMap<Integer,GameSession>();
-	final private Map<String, UserDataSet> wantToPlay = 
+	final private Map<String, UserDataSet> wantToPlay =
 			new HashMap<String, UserDataSet>();
 	final private Address address;
 	final private MessageSystem messageSystem;
@@ -99,7 +99,7 @@ public class GameMechanicImpl implements GameMechanic{
 		wantToPlay.put(sessionId, userSession);
 	}
 
-	public Map<String,String> createGames(Map<String,UserDataSet> users){
+	public Map<String,String> createGames(Map<String, UserDataSet> users){
 		Map<String,String> sessionIdToColor=new HashMap<String,String>();
 		if(users.size()==0)
 			return sessionIdToColor;
@@ -176,7 +176,7 @@ public class GameMechanicImpl implements GameMechanic{
 	}
 	
 	private void updateUsersRating(int winnerId, int loseId){
-		Address to = messageSystem.getAddressByName("UserData");
+		Address to = messageSystem.getAddressByName("UserDataSet");
 		MsgPartyEnd msg = new MsgPartyEnd(address, to, winnerId, loseId);
 		messageSystem.putMsg(to, msg);
 	}

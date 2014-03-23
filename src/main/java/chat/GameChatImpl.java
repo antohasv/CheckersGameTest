@@ -5,13 +5,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
+import dbService.UserDataSet;
 import utils.TimeHelper;
 
 import base.Address;
 import base.GameChat;
 import base.MessageSystem;
-
-import dbService.UserDataSet;
 
 import frontend.UserDataImpl;
 
@@ -50,9 +49,9 @@ public class GameChatImpl implements GameChat{
 		ChatMessage message = new ChatMessage(sender.getNick(), text);
 		if(sessionIdToChat.get(sessionId)!=null){
 			sessionIdToChat.get(sessionId).add(message);
-			ChatWSImpl.sendMessage(sessionId, message.json());
+			ChatWebSocketImpl.sendMessage(sessionId, message.json());
 			String anotherSessionId = sessionIdToAnotherSessionId.get(sessionId);
-			ChatWSImpl.sendMessage(anotherSessionId, message.json());
+			ChatWebSocketImpl.sendMessage(anotherSessionId, message.json());
 		}
 	}
 

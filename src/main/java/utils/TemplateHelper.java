@@ -22,7 +22,6 @@ public class TemplateHelper {
 			logger.info("Can't find folder with templates. Shutting down...");
 			System.exit(404);
 		}
-
 	}
 
 	public static void renderTemplate(String name, Map<String, String> map, Writer out) {
@@ -34,15 +33,4 @@ public class TemplateHelper {
 			e.printStackTrace();
 		}
 	}
-
-	public static void renderTemplate(String name, Writer out) {
-		Template template;
-		try {
-			template = cfg.getTemplate(name);
-			template.process(null, out);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 }

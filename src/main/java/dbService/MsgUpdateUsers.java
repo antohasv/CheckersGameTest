@@ -2,8 +2,6 @@ package dbService;
 
 import java.util.List;
 
-import dbService.UserDataSet;
-
 import base.Address;
 import base.DataAccessObject;
 import messageSystem.MsgToDBService;

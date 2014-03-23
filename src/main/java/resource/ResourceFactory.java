@@ -43,12 +43,11 @@ public class ResourceFactory {
 		else {
 			try{
 				SAXParserFactory factory = SAXParserFactory.newInstance();
-				SAXParser parser = null;
-				parser = factory.newSAXParser();
-				SAXHandler saxh = new SAXHandler();
-				parser.parse(new File(path), saxh);
-				resource.put(path, (Resource) saxh.object);
-				return (Resource) saxh.object;
+				SAXParser parser = factory.newSAXParser();
+				SAXHandler saxHandler = new SAXHandler();
+				parser.parse(new File(path), saxHandler);
+				resource.put(path, (Resource) saxHandler.object);
+				return (Resource) saxHandler.object;
 			}
 			catch(Exception e){
 				System.err.println("\nError:");

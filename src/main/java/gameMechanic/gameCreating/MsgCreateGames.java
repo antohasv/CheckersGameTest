@@ -10,9 +10,9 @@ import messageSystem.MsgToGameMechanic;
 
 
 public class MsgCreateGames extends MsgToGameMechanic{
-	final private Map<String,UserDataSet> users;
+	final private Map<String, UserDataSet> users;
 
-	public MsgCreateGames(Address from, Address to, Map<String,UserDataSet> data){
+	public MsgCreateGames(Address from, Address to, Map<String, UserDataSet> data){
 		super(from,to);
 		users=data;
 	}
