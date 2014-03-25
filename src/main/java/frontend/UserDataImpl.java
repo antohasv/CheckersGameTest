@@ -25,6 +25,8 @@ import utils.SHA2;
 import utils.TimeHelper;
 
 public class UserDataImpl implements base.UserData {
+    public static final String SERVICE_NAME = "UserDataSet";
+
     final private static String startServerTime = SHA2.getSHA2(TimeHelper.getCurrentTime());
     final private static Map<String, UserDataSet> sessionIdToUserSession =
             new ConcurrentHashMap<String, UserDataSet>();
@@ -36,13 +38,14 @@ public class UserDataImpl implements base.UserData {
             new HashMap<String, WebSocketImpl>();
     final private static Map<String, ChatWebSocketImpl> sessionIdToChatWS =
             new HashMap<String, ChatWebSocketImpl>();
+
     static private MessageSystem messageSystem;
     final private Address address;
 
     public UserDataImpl(MessageSystem msgSystem) {
         messageSystem = msgSystem;
         address = new Address();
-        messageSystem.addService(this, "UserDataSet");
+        messageSystem.addService(this, SERVICE_NAME);
     }
 
     public Address getAddress() {
@@ -75,7 +78,7 @@ public class UserDataImpl implements base.UserData {
 
     public static UserDataSet getLogInUserBySessionId(String sessionId) {
         if (logInUsers.get(sessionId) != null) {
-            logInUsers.get(sessionId).visit();
+            logInUsers.get(sessionId).markLatestVisitTime();
         }
         return logInUsers.get(sessionId);
     }
@@ -90,7 +93,7 @@ public class UserDataImpl implements base.UserData {
 
     public static String getSessionIdByUserId(int userId) {
         for (String sessionId : logInUsers.keySet()) {
-            if ((logInUsers.get(sessionId) != null) && (logInUsers.get(sessionId).getId() == userId)) {
+            if (logInUsers.get(sessionId) != null && logInUsers.get(sessionId).getId() == userId) {
                 return sessionId;
             }
         }
@@ -104,7 +107,7 @@ public class UserDataImpl implements base.UserData {
     public static void putSessionIdAndChatWS(String sessionId, ChatWebSocketImpl chatWS) {
         sessionIdToChatWS.put(sessionId, chatWS);
         if (logInUsers.get(sessionId) != null) {
-            logInUsers.get(sessionId).visit();
+            logInUsers.get(sessionId).markLatestVisitTime();
         }
     }
 
@@ -124,17 +127,18 @@ public class UserDataImpl implements base.UserData {
 
     private String getOldUserSessionId(int id) {
         for (String sessionId : logInUsers.keySet()) {
-            if (logInUsers.get(sessionId).getId() == id)
+            if (logInUsers.get(sessionId).getId() == id) {
                 return sessionId;
+            }
         }
         return null;
     }
 
     public void updateUserId(String sessionId, UserDataSet user) {
         if (user != null) {
-            String sessiondIdOld = getOldUserSessionId(user.getId());
-            if (sessiondIdOld != null) {
-                removeUser(sessiondIdOld);
+            String oldSessiondId = getOldUserSessionId(user.getId());
+            if (oldSessiondId != null) {
+                removeUser(oldSessiondId);
             }
             getUserSessionBySessionId(sessionId).makeLike(user);
         }
@@ -148,12 +152,14 @@ public class UserDataImpl implements base.UserData {
         int count;
         String sessionId;
         UserDataSet userSession;
+
         for (count = 0; count < keys.length; count++) {
             sessionId = keys[count];
             userSession = wantToPlay.get(sessionId);
             wantToPlay.remove(sessionId);
             sendMap.put(sessionId, userSession);
         }
+
         if (sendMap.size() > 0) {
             Address to = messageSystem.getAddressByName("GameMechanic");
             MsgCreateGames msg = new MsgCreateGames(address, to, sendMap);
@@ -179,7 +185,7 @@ public class UserDataImpl implements base.UserData {
         try {
             if (sessionIdToWS.get(sessionId) != null) {
                 getWSBySessionId(sessionId).sendString("1");
-                getLogInUserBySessionId(sessionId).visit();
+                getLogInUserBySessionId(sessionId).markLatestVisitTime();
             }
         } catch (Exception ignor) {
         }

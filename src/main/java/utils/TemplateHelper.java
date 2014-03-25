@@ -13,13 +13,11 @@ import freemarker.template.Template;
 
 public class TemplateHelper {
 	private static Configuration cfg = new Configuration();
-	public static void init() {
+	static {
 		try {
 			cfg.setDirectoryForTemplateLoading(new File(System.getProperty("user.dir") + "/static/html"));				
 		} catch (IOException e) {
 			e.printStackTrace();
-			Logger logger = Logger.getLogger(Frontend.class.toString());
-			logger.info("Can't find folder with templates. Shutting down...");
 			System.exit(404);
 		}
 	}

@@ -14,7 +14,7 @@ import base.DataAccessObject;
 import base.MessageSystem;
 
 public class DBServiceImpl implements DataAccessObject {
-    public static final String DB_SERVICE = "DBService";
+    public static final String SERVICE_NAME = "DBService";
 
     public static final String DB = "mysql";
     public static final String DB_HOST = "localhost";
@@ -33,10 +33,29 @@ public class DBServiceImpl implements DataAccessObject {
     private final Address address;
     private Connection connection;
 
+    private TResultHandler handler = new TResultHandler<UserDataSet>() {
+        @Override
+        public UserDataSet handle(ResultSet result) {
+            try {
+                if (result.first()) {
+                    int id = result.getInt(DBUserManager.COL_ID);
+                    String login = result.getString(DBUserManager.COL_NICKNAME);
+                    int rating = result.getInt(DBUserManager.COL_RATING);
+                    int winQuantity = result.getInt(DBUserManager.COL_WIN_QUANTITY);
+                    int loseQuantity = result.getInt(DBUserManager.COL_LOSE_QUANTITY);
+                    return new UserDataSet(id, login, rating, winQuantity, loseQuantity);
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+            return null;
+        }
+    };
+
     public DBServiceImpl(MessageSystem msgSystem) {
         address = new Address();
         messageSystem = msgSystem;
-        messageSystem.addService(this, DB_SERVICE);
+        messageSystem.addService(this, SERVICE_NAME);
     }
 
     public MessageSystem getMessageSystem() {
@@ -48,55 +67,38 @@ public class DBServiceImpl implements DataAccessObject {
     }
 
     public UserDataSet getUserData(final String login, String password) {
-        UserDataSet user = DBUserManager.getUserData(connection, login, password,
-                new TResultHandler<UserDataSet>() {
-                    @Override
-                    public UserDataSet handle(ResultSet result) {
-                        try {
-                            if (result.first()) {
-                                int id = result.getInt(DBUserManager.COL_ID);
-                                int rating = result.getInt(DBUserManager.COL_RATING);
-                                int winQuantity = result.getInt(DBUserManager.COL_WIN_QUANTITY);
-                                int loseQuantity = result.getInt(DBUserManager.COL_LOSE_QUANTITY);
-                                return new UserDataSet(id, login, rating, winQuantity, loseQuantity);
-                            }
-                        } catch (SQLException e) {
-                            System.err.println(e.getMessage());
-                        }
-                        return null;
-                    }
-                });
-        return user;
+        return  (UserDataSet) DBUserManager.getUserData(connection, login, password, handler);
     }
 
     public boolean addUserData(final String login, String password) {
         int rows = DBUserManager.findUser(connection, login);
-        if (rows == 0)
+
+        if (rows == 0) {
             DBUserManager.addUser(connection, login, password);
-        return (rows == 0);
+            rows = DBUserManager.findUser(connection, login);
+        }
+
+        return rows != 0;
     }
 
     public void updateUsers(List<UserDataSet> users) {
-        ListIterator<UserDataSet> li = users.listIterator();
-        while (li.hasNext()) {
-            UserDataSet user = li.next();
-            String login = user.getNick();
-            int rating = user.getRating();
-            int winQuantity = user.getWinQuantity();
-            int loseQuantity = user.getLoseQuantity();
-            DBUserManager.updateUser(connection, login, rating, winQuantity, loseQuantity);
+        ListIterator<UserDataSet> iterator = users.listIterator();
+        while (iterator.hasNext()) {
+            UserDataSet user = iterator.next();
+            DBUserManager.updateUser(connection, user.getNickName(), user.getRating(), user.getWinQuantity(),
+                    user.getLoseQuantity());
         }
     }
 
     public void run() {
-        createDatabase();
+        createConnection();
         while (true) {
             messageSystem.execForAbonent(this);
             TimeHelper.sleep(TICK_TIME);
         }
     }
 
-    private void createDatabase() {
+    private void createConnection() {
         try {
             Driver driver = (Driver) Class.forName(DB_CLASS_NAME).newInstance();
             DriverManager.registerDriver(driver);

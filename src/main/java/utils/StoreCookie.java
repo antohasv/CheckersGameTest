@@ -5,11 +5,11 @@ import java.util.Map;
 
 import javax.servlet.http.Cookie;
 
-public class CookieDescriptor {
+public class StoreCookie {
     private Map<String, String> storeCookie =
             new HashMap<String, String>();
 
-    public CookieDescriptor(Cookie cookie[]) {
+    public StoreCookie(Cookie cookie[]) {
         for (int i = 0; i < cookie.length; i++) {
             storeCookie.put(cookie[i].getName(), cookie[i].getValue());
         }

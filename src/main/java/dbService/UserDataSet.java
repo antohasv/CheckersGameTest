@@ -40,7 +40,7 @@ public class UserDataSet {
         color = userDataSet.color;
     }
 
-    public String getNick() {
+    public String getNickName() {
         return nick;
     }
 
@@ -48,7 +48,7 @@ public class UserDataSet {
         return id;
     }
 
-    public void visit() {
+    public void markLatestVisitTime() {
         lastVisit = TimeHelper.getCurrentTime();
     }
 
@@ -64,8 +64,8 @@ public class UserDataSet {
         return postStatus;
     }
 
-    public void setColor(String col) {
-        color = col;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getColor() {

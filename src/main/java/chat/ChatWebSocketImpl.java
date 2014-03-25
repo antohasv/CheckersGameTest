@@ -1,6 +1,8 @@
 package chat;
 
+import base.Frontend;
 import dbService.UserDataSet;
+import frontend.FrontendImpl;
 import org.eclipse.jetty.websocket.api.WebSocketAdapter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -8,6 +10,9 @@ import org.json.simple.parser.JSONParser;
 import frontend.UserDataImpl;
 
 public class ChatWebSocketImpl extends WebSocketAdapter {
+
+    public static final String TEXT = "text";
+
     public ChatWebSocketImpl() {
     }
 
@@ -16,19 +21,21 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
         if (isNotConnected()) {
             return;
         }
-//		System.out.println(message);
+
         String sessionId = null, startServerTime = null;
         String text = null;
-        JSONParser parser = new JSONParser();
-        JSONObject json = null;
         try {
-            json = (JSONObject) parser.parse(message);
-            sessionId = json.get("sessionId").toString();
-            startServerTime = json.get("startServerTime").toString();
-            text = json.get("text").toString();
-        } catch (Exception ignor) {
+            JSONParser parser = new JSONParser();
+            JSONObject json = (JSONObject) parser.parse(message);
+
+            sessionId = json.get(FrontendImpl.SESSION_ID).toString();
+            startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
+            text = json.get(TEXT).toString();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        if ((sessionId != null) && (startServerTime != null) && (text != null) && (!text.equals("")) && (UserDataImpl.checkServerTime(startServerTime))) {
+
+        if (sessionId != null && startServerTime != null && text != null && !text.equals("") && UserDataImpl.checkServerTime(startServerTime)) {
             addMessageToChat(sessionId, text);
         } else if ((sessionId != null) && (startServerTime != null) && UserDataImpl.checkServerTime(startServerTime)) {
             addNewChater(sessionId);
@@ -49,7 +56,8 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
     public static void sendMessage(String sessionId, String message) {
         try {
             UserDataImpl.getChatWSBySessionId(sessionId).sendString(message);
-        } catch (Exception ignor) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

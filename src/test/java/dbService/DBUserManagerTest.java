@@ -64,7 +64,7 @@ public class DBUserManagerTest {
         UserDataSet userDataSet = (UserDataSet) DBUserManager.getUserData(connection, fakeName, FAKE_PASSWORD, resultHandler);
 
         Assert.assertNotNull(userDataSet);
-        Assert.assertEquals(fakeName, userDataSet.getNick());
+        Assert.assertEquals(fakeName, userDataSet.getNickName());
     }
 
     @Test
@@ -76,7 +76,7 @@ public class DBUserManagerTest {
         UserDataSet userDataSet = (UserDataSet) DBUserManager.getUserData(connection, fakeName, FAKE_PASSWORD, resultHandler);
 
         Assert.assertNotNull(userDataSet);
-        Assert.assertEquals(fakeName, userDataSet.getNick());
+        Assert.assertEquals(fakeName, userDataSet.getNickName());
         Assert.assertEquals(FAKE_RAITING, userDataSet.getRating());
         Assert.assertEquals(FAKE_WIN_QUANTITY, userDataSet.getWinQuantity());
         Assert.assertEquals(FAKE_LOSE_QUANTITY, userDataSet.getLoseQuantity());

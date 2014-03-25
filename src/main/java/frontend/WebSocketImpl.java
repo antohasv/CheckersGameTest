@@ -3,6 +3,7 @@ package frontend;
 import java.util.Map;
 
 import dbService.UserDataSet;
+import gameMechanic.GameMechanicImpl;
 import org.eclipse.jetty.websocket.api.WebSocketAdapter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -19,13 +20,22 @@ import gameClasses.Stroke;
 import utils.TimeHelper;
 
 public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
+    public static final String SERVICE_NAME = "WebSocket";
+    public static final int TICK_TIME = 200;
+    public static final String COLOR_BLACK = "black";
+    public static final String COLOR_WHITE = "white";
+    public static final String FROM_X = "from_x";
+    public static final String FROM_Y = "from_y";
+    public static final String TO_X = "to_x";
+    public static final String TO_Y = "to_y";
+    public static final String STATUS = "status";
     final private Address address;
     private static MessageSystem messageSystem = null;
 
     public WebSocketImpl(MessageSystem messageSystem) {
         this.address = new Address();
         this.messageSystem = messageSystem;
-        messageSystem.addService(this, "WebSocket");
+        messageSystem.addService(this, SERVICE_NAME);
     }
 
     public Address getAddress() {
@@ -37,26 +47,35 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
         if (isNotConnected()) {
             return;
         }
-        String sessionId = null, startServerTime = null;
-        int from_x = -1, from_y = -1, to_x = -1, to_y = -1;
+
+        String sessionId = null;
+        String startServerTime = null;
+        int fromX = -1;
+        int fromY = -1;
+        int toX = -1;
+        int toY = -1;
+
         String status = null;
         JSONParser parser = new JSONParser();
-        JSONObject json = null;
         try {
-            json = (JSONObject) parser.parse(message);
-            sessionId = json.get("sessionId").toString();
-            startServerTime = json.get("startServerTime").toString();
-            from_x = Integer.parseInt(json.get("from_x").toString());
-            from_y = Integer.parseInt(json.get("from_y").toString());
-            to_x = Integer.parseInt(json.get("to_x").toString());
-            to_y = Integer.parseInt(json.get("to_y").toString());
-            status = json.get("status").toString();
+            JSONObject json = (JSONObject) parser.parse(message);
+            sessionId = json.get(FrontendImpl.SERVICE_NAME).toString();
+            startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
+
+            fromX = Integer.parseInt(json.get(FROM_X).toString());
+            fromY = Integer.parseInt(json.get(FROM_Y).toString());
+            toX = Integer.parseInt(json.get(TO_X).toString());
+            toY = Integer.parseInt(json.get(TO_Y).toString());
+            status = json.get(STATUS).toString();
         } catch (ParseException parseException) {
-        } catch (Exception ignor) {
+            parseException.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        if ((from_x != -1) && (from_y != -1) && (to_x != -1) && (to_y != -1) && (sessionId != null) &&
+
+        if ((fromX != -1) && (fromY != -1) && (toX != -1) && (toY != -1) && (sessionId != null) &&
                 (UserDataImpl.checkServerTime(startServerTime))) {
-            checkStroke(sessionId, to_x, to_y, from_x, from_y, status);
+            checkStroke(sessionId, toX, toY, fromX, fromY, status);
         } else if ((sessionId != null) && (UserDataImpl.checkServerTime(startServerTime))) {
             addNewWS(sessionId);
         }
@@ -65,16 +84,18 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
     private void addNewWS(String sessionId) {
         UserDataSet userSession = UserDataImpl.getLogInUserBySessionId(sessionId);
         if (userSession != null) {
-            userSession.visit();
+            userSession.markLatestVisitTime();
             UserDataImpl.putSessionIdAndWS(sessionId, this);
         }
     }
 
-    private void checkStroke(String sessionId, int to_x, int to_y, int from_x, int from_y, String status) {
-        Stroke stroke = new Stroke(to_x, to_y, from_x, from_y, status);
+    private void checkStroke(String sessionId, int toX, int toY, int fromX, int fromY, String status) {
+        Stroke stroke = new Stroke(toX, toY, fromX, fromY, status);
+
         UserDataSet userSession = UserDataImpl.getLogInUserBySessionId(sessionId);
-        userSession.visit();
-        Address to = messageSystem.getAddressByName("GameMechanic");
+        userSession.markLatestVisitTime();
+
+        Address to = messageSystem.getAddressByName(GameMechanicImpl.SERVICE_NAME);
         MsgCheckStroke msg = new MsgCheckStroke(address, to, userSession.getId(), stroke);
         messageSystem.putMsg(to, msg);
     }
@@ -86,16 +107,17 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
         try {
             for (Integer userId : userIdToStroke.keySet()) {
                 sessionId = UserDataImpl.getSessionIdByUserId(userId);
+
                 userSession = UserDataImpl.getLogInUserBySessionId(sessionId);
-                userSession.visit();
+                userSession.markLatestVisitTime();
+
                 stroke = new Stroke(userIdToStroke.get(userId));
                 stroke.setColor(userSession.getColor());
+
                 UserDataImpl.getWSBySessionId(sessionId).sendString(stroke.toString());
             }
         } catch (Exception e) {
-            System.err.println("\nError:");
-            System.err.println("WebSocketImpl, doneStroke");
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -107,17 +129,15 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
                 color = usersToColors.get(sessionId);
                 userSession = UserDataImpl.getLogInUserBySessionId(sessionId);
                 color = usersToColors.get(sessionId);
-                if (color == "black") {
+                if (color.equals(COLOR_BLACK)) {
                     userSession.setColor("b");
                     UserDataImpl.getWSBySessionId(sessionId).sendString(black);
-                } else if (color == "white") {
+                } else if (color.equals(COLOR_WHITE)) {
                     userSession.setColor("w");
                     UserDataImpl.getWSBySessionId(sessionId).sendString(white);
                 }
             } catch (Exception e) {
-                System.err.println("\nError:");
-                System.err.println("WebSocketImpl, updateUsersColor");
-                System.err.println(e.getMessage());
+                e.printStackTrace();
             }
         }
     }
@@ -127,16 +147,14 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
         try {
             UserDataImpl.getWSBySessionId(sessionId).sendString(snapshot.toString());
         } catch (Exception e) {
-            System.err.println("\nError:");
-            System.err.println("WebSocketImpl, doneSnapshot");
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
     public void run() {
         while (true) {
             messageSystem.execForAbonent(this);
-            TimeHelper.sleep(200);
+            TimeHelper.sleep(TICK_TIME);
         }
 
     }

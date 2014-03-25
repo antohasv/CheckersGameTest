@@ -23,9 +23,9 @@ import utils.TemplateHelper;
 
 public class Main {
 
-    public static final int GAME_SERVER_PORT = 8001;
-    public static final int WEBSOCKET_SERVER_PORT = 8051;
-    public static final int CHAT_SERVER_PORT = 8011;
+    public static final int GAME_SERVER_PORT = 8002;
+    public static final int WEBSOCKET_SERVER_PORT = 8052;
+    public static final int CHAT_SERVER_PORT = 8012;
 
     public static void main(String[] args) throws Exception {
         final SystemInfo sysInfo = new SystemInfo();
@@ -39,12 +39,10 @@ public class Main {
         final WebSocket webSocket = new WebSocketImpl(messageSystem);
 
         Server server = new Server(GAME_SERVER_PORT);
-        ResourceHandler resource_handler = new ResourceHandler();
-        resource_handler.setDirectoriesListed(true);
-        resource_handler.setResourceBase("static");
+        ResourceHandler resourceHandler = getResourceHanlder();
 
         HandlerList handlers = new HandlerList();
-        handlers.setHandlers(new Handler[]{frontend, resource_handler});
+        handlers.setHandlers(new Handler[]{frontend, resourceHandler});
         server.setHandler(handlers);
 
         Server serverWS = new Server(WEBSOCKET_SERVER_PORT);
@@ -67,8 +65,14 @@ public class Main {
         startService(gameChat);
 
         server.start();
-        TemplateHelper.init();
         ResourceFactory.instanse();
+    }
+
+    private static ResourceHandler getResourceHanlder() {
+        ResourceHandler resourceHandler = new ResourceHandler();
+        resourceHandler.setDirectoriesListed(true);
+        resourceHandler.setResourceBase("static");
+        return resourceHandler;
     }
 
     private static void startService(Runnable service) {
