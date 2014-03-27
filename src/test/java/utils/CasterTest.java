@@ -20,6 +20,7 @@ public class CasterTest {
     public static final String THREE = "three";
     public static final String FOUR = "four";
 
+
     @BeforeMethod
     public void setUp() throws Exception {
         caster = new Caster();
