@@ -98,7 +98,7 @@ public class DBServiceImpl implements DataAccessObject {
         }
     }
 
-    private void createConnection() {
+    public void createConnection() {
         try {
             Driver driver = (Driver) Class.forName(DB_CLASS_NAME).newInstance();
             DriverManager.registerDriver(driver);

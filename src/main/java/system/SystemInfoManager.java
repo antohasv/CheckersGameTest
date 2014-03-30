@@ -23,7 +23,7 @@ public class SystemInfoManager {
                 value = TimeHelper.getTime();
                 break;
             case CCU:
-                value = String.valueOf(UserDataImpl.ccu());
+                value = String.valueOf(UserDataImpl.getCCU());
                 break;
         }
         return value;

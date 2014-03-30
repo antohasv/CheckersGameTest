@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <head>
-    <script> function reload() {
-                document.forms['main'].submit();
-            }</script>
+    <script>
+        function reload() {
+            document.forms['main'].submit();
+        }
+    </script>
 </head>
-<body onload='setInterval(function() {
-                    reload();
-                }, 1000);'>
-    <div id="carousel" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="container">
-                    <div class="carousel-caption">  
-                        <form id="main" method="POST">
-                            <h1>Wait for authorization</h1>
-                        </form>
-                    </div>
+<body onload='setInterval(function() { reload(); }, 5000);'>
+<div id="carousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                    <form id="main" method="POST">
+                        <h1>Wait for authorization</h1>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>

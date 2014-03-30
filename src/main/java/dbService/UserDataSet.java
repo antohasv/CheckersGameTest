@@ -4,11 +4,15 @@ import utils.TimeHelper;
 
 public class UserDataSet {
     private int id;
-    private int rating, winQuantity, loseQuantity;
     private String nick;
+
+    private int rating;
+    private int winQuantity;
+    private int loseQuantity;
+
+    private String color;
     private long lastVisit;
     private int postStatus;
-    private String color;
 
     public UserDataSet(int id, String nick, int rating, int winQuantity, int loseQuantity) {
         this.id = id;
@@ -16,25 +20,28 @@ public class UserDataSet {
         this.winQuantity = winQuantity;
         this.loseQuantity = loseQuantity;
         this.nick = nick;
-        lastVisit = TimeHelper.getCurrentTime();
-        postStatus = 0;
-        color = null;
+        this.lastVisit = TimeHelper.getCurrentTime();
+        this.postStatus = 0;
+        this.color = null;
     }
 
     public UserDataSet() {
         id = 0;
+        nick = "";
+
         postStatus = 0;
         lastVisit = TimeHelper.getCurrentTime();
-        nick = "";
         color = null;
     }
 
     public void makeLike(UserDataSet userDataSet) {
-        this.id = userDataSet.id;
-        this.rating = userDataSet.rating;
-        this.winQuantity = userDataSet.winQuantity;
-        this.loseQuantity = userDataSet.loseQuantity;
-        this.nick = userDataSet.nick;
+        id = userDataSet.id;
+        nick = userDataSet.nick;
+
+        rating = userDataSet.rating;
+        winQuantity = userDataSet.winQuantity;
+        loseQuantity = userDataSet.loseQuantity;
+
         lastVisit = TimeHelper.getCurrentTime();
         postStatus = userDataSet.postStatus;
         color = userDataSet.color;

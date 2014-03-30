@@ -1,21 +1,21 @@
 package base;
 
 
-public abstract class Msg{
-	final private Address from,to;
+public abstract class Msg {
+    final private Address from, to;
 
-	public Msg(Address from,Address to){
-		this.from=from;
-		this.to=to;
-	}
+    public Msg(Address from, Address to) {
+        this.from = from;
+        this.to = to;
+    }
 
-	protected Address getFrom(){
-		return from;
-	}
+    protected Address getFrom() {
+        return from;
+    }
 
-	protected Address getTo(){
-		return to;
-	}
+    protected Address getTo() {
+        return to;
+    }
 
-	public abstract void exec(Abonent abonent);
+    public abstract void exec(Abonent abonent);
 }

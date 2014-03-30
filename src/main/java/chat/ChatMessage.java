@@ -1,6 +1,10 @@
 package chat;
 
+import org.json.simple.JSONObject;
+
 public class ChatMessage {
+    public static final String SENDER = "sender";
+    public static final String TEXT = "text";
     String sender, text;
 
     public ChatMessage(String sender, String text) {
@@ -9,8 +13,9 @@ public class ChatMessage {
     }
 
     public String getJson() {
-        StringBuilder json = new StringBuilder("{\"sender\":\"").append(sender).append("\"");
-        json.append(",").append("\"text\":").append("\"").append(text).append("\"}");
-        return json.toString();
+        JSONObject message = new JSONObject();
+        message.put(SENDER, sender);
+        message.put(TEXT, text);
+        return message.toString();
     }
 }

@@ -18,7 +18,6 @@ public class TemplateHelper {
 			cfg.setDirectoryForTemplateLoading(new File(System.getProperty("user.dir") + "/static/html"));				
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(404);
 		}
 	}
 

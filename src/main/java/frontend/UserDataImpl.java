@@ -1,8 +1,19 @@
 package frontend;
 
+import base.Address;
+import base.MessageSystem;
 import chat.ChatWebSocketImpl;
+import dbService.DBServiceImpl;
+import dbService.MsgUpdateUsers;
 import dbService.UserDataSet;
+import gameMechanic.GameMechanicImpl;
 import gameMechanic.gameCreating.MsgCreateGames;
+import org.eclipse.jetty.websocket.api.RemoteEndpoint;
+import resource.Rating;
+import resource.TimeSettings;
+import utils.Caster;
+import utils.SHA2;
+import utils.TimeHelper;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,32 +21,24 @@ import java.util.Map;
 import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
-import dbService.MsgUpdateUsers;
-
-import org.eclipse.jetty.websocket.api.RemoteEndpoint;
-
-import resource.Rating;
-import resource.TimeSettings;
-
-import base.Address;
-import base.MessageSystem;
-
-import utils.Caster;
-import utils.SHA2;
-import utils.TimeHelper;
-
 public class UserDataImpl implements base.UserData {
     public static final String SERVICE_NAME = "UserDataSet";
+    public static final int TICK_TIME = 200;
 
     final private static String startServerTime = SHA2.getSHA2(TimeHelper.getCurrentTime());
+
     final private static Map<String, UserDataSet> sessionIdToUserSession =
             new ConcurrentHashMap<String, UserDataSet>();
+
     final private static Map<String, UserDataSet> logInUsers =
             new ConcurrentHashMap<String, UserDataSet>();
+
     final private static Map<String, UserDataSet> wantToPlay =
             new ConcurrentHashMap<String, UserDataSet>();
+
     final private static Map<String, WebSocketImpl> sessionIdToWS =
             new HashMap<String, WebSocketImpl>();
+
     final private static Map<String, ChatWebSocketImpl> sessionIdToChatWS =
             new HashMap<String, ChatWebSocketImpl>();
 
@@ -53,7 +56,7 @@ public class UserDataImpl implements base.UserData {
     }
 
     public static boolean checkServerTime(String value) {
-        return (value.equals(startServerTime));
+        return value.equals(startServerTime);
     }
 
     public static String getStartServerTime() {
@@ -68,7 +71,7 @@ public class UserDataImpl implements base.UserData {
         return sessionIdToUserSession.containsKey(sessionId);
     }
 
-    public static int ccu() {
+    public static int getCCU() {
         return sessionIdToUserSession.size();
     }
 
@@ -77,10 +80,12 @@ public class UserDataImpl implements base.UserData {
     }
 
     public static UserDataSet getLogInUserBySessionId(String sessionId) {
-        if (logInUsers.get(sessionId) != null) {
-            logInUsers.get(sessionId).markLatestVisitTime();
+        UserDataSet userDataSet = logInUsers.get(sessionId);
+
+        if (userDataSet != null) {
+            userDataSet.markLatestVisitTime();
         }
-        return logInUsers.get(sessionId);
+        return userDataSet;
     }
 
     public static void playerWantToPlay(String sessionId, UserDataSet userSession) {
@@ -112,17 +117,19 @@ public class UserDataImpl implements base.UserData {
     }
 
     public static RemoteEndpoint getWSBySessionId(String sessionId) {
-        if (sessionIdToWS.get(sessionId) == null)
+        if (sessionIdToWS.get(sessionId) == null) {
             return null;
-        else
-            return sessionIdToWS.get(sessionId).getSession().getRemote();
+        }
+
+        return sessionIdToWS.get(sessionId).getSession().getRemote();
     }
 
     public static RemoteEndpoint getChatWSBySessionId(String sessionId) {
-        if (sessionIdToChatWS.get(sessionId) == null)
+        if (sessionIdToChatWS.get(sessionId) == null) {
             return null;
-        else
-            return sessionIdToChatWS.get(sessionId).getSession().getRemote();
+        }
+
+        return sessionIdToChatWS.get(sessionId).getSession().getRemote();
     }
 
     private String getOldUserSessionId(int id) {
@@ -148,20 +155,20 @@ public class UserDataImpl implements base.UserData {
     private void createGames() {
         Map<String, UserDataSet> sendMap =
                 new ConcurrentHashMap<String, UserDataSet>();
+
         String[] keys = Caster.castKeysToStrings(wantToPlay);
-        int count;
         String sessionId;
         UserDataSet userSession;
 
-        for (count = 0; count < keys.length; count++) {
-            sessionId = keys[count];
+        for (int i = 0; i < keys.length; i++) {
+            sessionId = keys[i];
             userSession = wantToPlay.get(sessionId);
             wantToPlay.remove(sessionId);
             sendMap.put(sessionId, userSession);
         }
 
         if (sendMap.size() > 0) {
-            Address to = messageSystem.getAddressByName("GameMechanic");
+            Address to = messageSystem.getAddressByName(GameMechanicImpl.SERVICE_NAME);
             MsgCreateGames msg = new MsgCreateGames(address, to, sendMap);
             messageSystem.putMsg(to, msg);
         }
@@ -176,7 +183,7 @@ public class UserDataImpl implements base.UserData {
     }
 
     private static void removeUserFromGM(String sessionId) {
-        Address to = messageSystem.getAddressByName("GameMechanic");
+        Address to = messageSystem.getAddressByName(GameMechanicImpl.SERVICE_NAME);
         MsgRemoveUserFromGM msg = new MsgRemoveUserFromGM(null, to, sessionId);
         messageSystem.putMsg(to, msg);
     }
@@ -187,50 +194,61 @@ public class UserDataImpl implements base.UserData {
                 getWSBySessionId(sessionId).sendString("1");
                 getLogInUserBySessionId(sessionId).markLatestVisitTime();
             }
-        } catch (Exception ignor) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     private void checkUsers(int keepAlive) {
         for (String sessionId : sessionIdToUserSession.keySet()) {
-            if (exitedUser(getUserSessionBySessionId(sessionId)))
+            if (exitedUser(getUserSessionBySessionId(sessionId))) {
                 removeUser(sessionId);
-            else if (keepAlive == 1)
+            } else if (keepAlive == 1) {
                 keepAlive(sessionId);
+            }
         }
     }
 
     private boolean exitedUser(UserDataSet userSession) {
         long curTime = TimeHelper.getCurrentTime();
-        return (curTime - userSession.getLastVisit() > TimeSettings.getExitTime());
+        return curTime - userSession.getLastVisit() > TimeSettings.getExitTime();
     }
 
     public void partyEnd(int winId, int loseId) {
         List<UserDataSet> updateUsers = new Vector<UserDataSet>();
-        UserDataSet winUserSession = null, loseUserSession = null;
+
         String winSessionId = getSessionIdByUserId(winId);
         String loseSessionId = getSessionIdByUserId(loseId);
+
         sessionIdToChatWS.remove(winSessionId);
         sessionIdToChatWS.remove(loseSessionId);
-        winUserSession = getUserSessionBySessionId(winSessionId);
-        loseUserSession = getUserSessionBySessionId(loseSessionId);
+
+        UserDataSet winUserSession = getUserSessionBySessionId(winSessionId);
+        UserDataSet loseUserSession = getUserSessionBySessionId(loseSessionId);
+
         int diff = Rating.getAvgDiff();
-        if ((loseUserSession != null) && (winUserSession != null)) {
+
+        if (loseUserSession != null && winUserSession != null) {
             int winRating = winUserSession.getRating();
             int loseRating = loseUserSession.getRating();
-            if (winRating != loseRating)
+
+            if (winRating != loseRating) {
                 diff = Rating.getDiff(winRating, loseRating);
+            }
         }
+
         if (loseUserSession != null) {
             loseUserSession.lose(diff);
             updateUsers.add(loseUserSession);
         }
+
         if (winUserSession != null) {
             winUserSession.win(diff);
             updateUsers.add(winUserSession);
         }
+
         if (updateUsers.size() != 0) {
-            Address to = messageSystem.getAddressByName("DBService");
+            Address to = messageSystem.getAddressByName(DBServiceImpl.SERVICE_NAME);
             MsgUpdateUsers msg = new MsgUpdateUsers(address, to, updateUsers);
             messageSystem.putMsg(to, msg);
         }
@@ -241,9 +259,11 @@ public class UserDataImpl implements base.UserData {
         while (true) {
             count = (count + 1) % 250;
             messageSystem.execForAbonent(this);
+
             checkUsers(count);
             createGames();
-            TimeHelper.sleep(200);
+
+            TimeHelper.sleep(TICK_TIME);
         }
     }
 }

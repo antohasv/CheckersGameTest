@@ -29,6 +29,7 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
     public static final String TO_X = "to_x";
     public static final String TO_Y = "to_y";
     public static final String STATUS = "status";
+    public static final String COLOR = "color";
     final private Address address;
     private static MessageSystem messageSystem = null;
 
@@ -121,12 +122,20 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
         }
     }
 
+    private String getJSON(String key, String value) {
+        JSONObject obj = new JSONObject();
+        obj.put(key, value);
+        return obj.toJSONString();
+    }
+
     public void updateUsersColor(Map<String, String> usersToColors) {
         UserDataSet userSession;
-        String color, black = "{\"color\":\"black\"}", white = "{\"color\":\"white\"}";
+        String color;
+        String black = getJSON(COLOR, COLOR_WHITE);
+        String white = getJSON(COLOR, COLOR_BLACK);
+
         for (String sessionId : usersToColors.keySet()) {
             try {
-                color = usersToColors.get(sessionId);
                 userSession = UserDataImpl.getLogInUserBySessionId(sessionId);
                 color = usersToColors.get(sessionId);
                 if (color.equals(COLOR_BLACK)) {

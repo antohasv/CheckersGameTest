@@ -6,6 +6,9 @@ import base.DataAccessObject;
 import messageSystem.MsgToDBService;
 
 
+/**
+ * Add user to db and update it in UserDataImpl
+ * */
 public class MsgAddUser extends MsgToDBService {
     final private String login;
     final private String sessionId;
