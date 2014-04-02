@@ -31,8 +31,13 @@ public class
     public static final String TO_Y = "to_y";
     public static final String STATUS = "status";
     public static final String COLOR = "color";
+    public static final String SESSION_ID = "sessionId";
     final private Address address;
     private static MessageSystem messageSystem = null;
+
+    public WebSocketImpl() {
+        this.address = new Address();
+    }
 
     public WebSocketImpl(MessageSystem messageSystem) {
         this.address = new Address();
@@ -61,14 +66,19 @@ public class
         JSONParser parser = new JSONParser();
         try {
             JSONObject json = (JSONObject) parser.parse(message);
-            sessionId = json.get(FrontendImpl.SERVICE_NAME).toString();
+            sessionId = json.get(SESSION_ID).toString();
             startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
 
-            fromX = Integer.parseInt(json.get(FROM_X).toString());
-            fromY = Integer.parseInt(json.get(FROM_Y).toString());
-            toX = Integer.parseInt(json.get(TO_X).toString());
-            toY = Integer.parseInt(json.get(TO_Y).toString());
-            status = json.get(STATUS).toString();
+            if (isLocationExist(json)) {
+                fromX = Integer.parseInt(json.get(FROM_X).toString());
+                fromY = Integer.parseInt(json.get(FROM_Y).toString());
+                toX = Integer.parseInt(json.get(TO_X).toString());
+                toY = Integer.parseInt(json.get(TO_Y).toString());
+            }
+
+            if (json.get(STATUS) != null) {
+                status = json.get(STATUS).toString();
+            }
         } catch (ParseException parseException) {
             parseException.printStackTrace();
         } catch (Exception e) {
@@ -81,6 +91,10 @@ public class
         } else if ((sessionId != null) && (UserDataImpl.checkServerTime(startServerTime))) {
             addNewWS(sessionId);
         }
+    }
+
+    private boolean isLocationExist(JSONObject json) {
+        return json.get(FROM_X) != null && json.get(FROM_Y) != null && json.get(TO_X) != null && json.get(TO_Y) != null;
     }
 
     private void addNewWS(String sessionId) {
