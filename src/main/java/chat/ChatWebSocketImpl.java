@@ -1,13 +1,11 @@
 package chat;
 
-import base.Frontend;
 import dbService.UserDataSet;
 import frontend.FrontendImpl;
+import frontend.UserDataImpl;
 import org.eclipse.jetty.websocket.api.WebSocketAdapter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
-import frontend.UserDataImpl;
 
 public class ChatWebSocketImpl extends WebSocketAdapter {
 
@@ -22,7 +20,8 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
             return;
         }
 
-        String sessionId = null, startServerTime = null;
+        String sessionId = null;
+        String startServerTime = null;
         String text = null;
         try {
             JSONParser parser = new JSONParser();
@@ -30,7 +29,10 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
 
             sessionId = json.get(FrontendImpl.SESSION_ID).toString();
             startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
-            text = json.get(TEXT).toString();
+
+            if (json.get(TEXT) != null) {
+                text = json.get(TEXT).toString();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

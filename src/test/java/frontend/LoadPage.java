@@ -1,6 +1,8 @@
 package frontend;
 
 import dbService.UserDataSet;
+import system.Metric;
+import system.SystemInfo;
 import utils.TemplateHelper;
 
 import java.io.StringWriter;
@@ -8,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoadPage {
-    private static Site[] baseHtml = {Site.INDEX, Site.REG};
+    public static Site[] baseHtml = {Site.INDEX, Site.REG, Site.RULES, Site.ERROR};
     private static Map<Site, String> urlToSite = new HashMap<Site, String>();
 
     static {
@@ -21,15 +23,18 @@ public class LoadPage {
         return urlToSite.get(site);
     }
 
-    private static String getPage(String page, UserDataSet userSession) {
+    public static String getPage(String page, Map<String, String> data, UserDataSet userSession) {
         StringWriter writer = new StringWriter();
-        Map<String, String> data = new HashMap<String, String>();
 
         data.put(FrontendImpl.PAGE, page);
         createUserSession(userSession, data);
 
         TemplateHelper.renderTemplate(FrontendImpl.TEMPLATE_HTML, data, writer);
         return writer.toString();
+    }
+
+    public static String getPage(String page, UserDataSet userSession) {
+        return getPage(page, new HashMap<String, String>(), userSession);
     }
 
     private static void createUserSession(UserDataSet userSession, Map<String, String> data) {

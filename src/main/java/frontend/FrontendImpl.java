@@ -51,6 +51,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     public static final String PARAM_REG_PASSWORD = "regPassword";
 
     public static final String HTTP_POST = "POST";
+    public static final String HTTP_GET = "GET";
 
     public static final int MIN_URL_LENGTH = 4;
 

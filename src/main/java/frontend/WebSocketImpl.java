@@ -19,7 +19,8 @@ import gameClasses.Snapshot;
 import gameClasses.Stroke;
 import utils.TimeHelper;
 
-public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
+public class
+        WebSocketImpl extends WebSocketAdapter implements WebSocket {
     public static final String SERVICE_NAME = "WebSocket";
     public static final int TICK_TIME = 200;
     public static final String COLOR_BLACK = "black";
@@ -131,8 +132,8 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
     public void updateUsersColor(Map<String, String> usersToColors) {
         UserDataSet userSession;
         String color;
-        String black = getJSON(COLOR, COLOR_WHITE);
-        String white = getJSON(COLOR, COLOR_BLACK);
+        String black = getJSON(COLOR, COLOR_BLACK);
+        String white = getJSON(COLOR, COLOR_WHITE);
 
         for (String sessionId : usersToColors.keySet()) {
             try {

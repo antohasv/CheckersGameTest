@@ -12,7 +12,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.TemplateHelper;
+import system.Metric;
+import system.SystemInfo;
+import utils.StoreCookie;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -36,6 +38,7 @@ public class FrontendImplTest {
     private DBServiceImpl dbService;
     private UserDataImpl userData;
 
+    private Site[] sitesWithSession = {Site.REG, Site.RULES};
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -103,7 +106,7 @@ public class FrontendImplTest {
 
     @Test
     public void testSiteWithSesson() throws Exception {
-        String path = "/reg";
+
         Cookie[] cookies = getCookie();
         Assert.assertNotNull(cookies);
         Assert.assertNotEquals(cookies.length, 0);
@@ -111,13 +114,17 @@ public class FrontendImplTest {
         Request request = mock(Request.class);
         HttpServletRequest servletRequest = getHttpServletRequest(cookies);
 
-        StringWriter htmlTemplate = new StringWriter();
+        StringWriter htmlTemplate;
 
         HttpServletResponse response = mock(HttpServletResponse.class);
-        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
 
-        frontend.handle(path, request, servletRequest, response);
-        Assert.assertEquals(LoadPage.getPage(Site.REG), htmlTemplate.toString());
+        for (Site site : sitesWithSession) {
+            htmlTemplate = new StringWriter();
+            when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+
+            frontend.handle(site.getUrl(), request, servletRequest, response);
+            Assert.assertEquals(LoadPage.getPage(site), htmlTemplate.toString());
+        }
     }
 
     @Test
@@ -210,6 +217,91 @@ public class FrontendImplTest {
 
         captorMsg.getValue().exec(dbService);
         verify(messageSystem, times(2)).putMsg(captorAddress.capture(), captorMsg.capture());
+    }
+
+    @Test
+    public void testUserLogout() throws Exception {
+        String path = "/logout";
+        Cookie[] cookies = getCookie();
+        Assert.assertNotNull(cookies);
+        Assert.assertNotEquals(cookies.length, 0);
+
+        Request request = mock(Request.class);
+
+        HttpServletRequest servletRequest = getHttpServletRequest(cookies);
+        when(servletRequest.getMethod()).thenReturn(FrontendImpl.HTTP_GET);
+
+        StringWriter htmlTemplate = new StringWriter();
+
+        HttpServletResponse response = mock(HttpServletResponse.class);
+
+        StoreCookie storeCookie = new StoreCookie(cookies);
+        UserDataImpl.putSessionIdAndUserSession(storeCookie.getCookieByName("sessionId"), getFakeNickName());
+
+        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+        frontend.handle(path, request, servletRequest, response);
+
+        ArgumentCaptor<Cookie> captorCookie = ArgumentCaptor.forClass(Cookie.class);
+        verify(response, times(1)).addCookie(captorCookie.capture());
+    }
+
+    @Test
+    public void testUserWait() throws Exception {
+        String path = "/wait";
+        Request request = mock(Request.class);
+
+        HttpServletRequest servletRequest = getHttpServletRequest(getEmptyCookie());
+        StringWriter htmlTemplate = new StringWriter();
+
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        frontend.handle(path, request, servletRequest, response);
+
+        ArgumentCaptor<String> captorLocation = ArgumentCaptor.forClass(String.class);
+        ArgumentCaptor<String> captorValue = ArgumentCaptor.forClass(String.class);
+        verify(response, times(1)).addHeader(captorLocation.capture(), captorValue.capture());
+
+        Assert.assertEquals(captorLocation.getValue(), FrontendImpl.LOCATION);
+    }
+
+    @Test
+    public void testPageNotFound() throws Exception {
+        String path = "/abcderfg";
+        Request request = mock(Request.class);
+
+        HttpServletRequest servletRequest = getHttpServletRequest(getEmptyCookie());
+        StringWriter html = new StringWriter();
+
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        when(response.getWriter()).thenReturn(new PrintWriter(html));
+
+        frontend.handle(path, request, servletRequest, response);
+        Assert.assertEquals(LoadPage.getPage(Site.ERROR), html.toString());
+    }
+
+    private UserDataSet getFakeNickName() {
+        return new UserDataSet(100, "NickName", 100, 100, 100);
+    }
+
+    @Test
+    public void testStatistic() throws Exception {
+        Site statistic = Site.ADMIN;
+
+        Request request = mock(Request.class);
+        HttpServletRequest servletRequest = getHttpServletRequest(getEmptyCookie());
+
+        StringWriter htmlTemplate = new StringWriter();
+
+        HttpServletResponse response = mock(HttpServletResponse.class);
+
+        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+
+        Map<String, String> data = new HashMap<String, String>();
+        for (Metric metric : Metric.values()) {
+            data.put(metric.getFileName(), SystemInfo.getMetricInfo(metric));
+        }
+
+        frontend.handle(statistic.getUrl(), request, servletRequest, response);
+        Assert.assertEquals(htmlTemplate.toString(), LoadPage.getPage(statistic.getHtmlPath(), data, null));
     }
 
     private Cookie[] getCookie() throws IOException {
