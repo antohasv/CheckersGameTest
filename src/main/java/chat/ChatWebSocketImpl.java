@@ -30,7 +30,9 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
 
             sessionId = json.get(FrontendImpl.SESSION_ID).toString();
             startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
-            text = json.get(TEXT).toString();
+            if (json.get(TEXT) != null) {
+                text = json.get(TEXT).toString();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
