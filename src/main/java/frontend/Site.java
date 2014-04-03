@@ -2,7 +2,7 @@ package frontend;
 
 public enum Site {
     INDEX("/", "index.html"), REG("/reg", "reg.html"), ADMIN("/admin", "admin.html"), PROFILE("/profile", "profile.html"),
-    GAME("/game", "game.html"), RULES("/rules", "rules.html"), WAIT("/wait", "wait.html"), ERROR("/error", "404.html");
+    GAME("/game", "game.html"), RULES("/rules", "rules.html"), WAIT("/wait", "wait.html"), ERROR("/error", "404.html"), DEFAULT("", "");
 
     private String url;
     private String htmlPath;
@@ -26,6 +26,6 @@ public enum Site {
                 return site;
             }
         }
-        return null;
+        return DEFAULT;
     }
 }

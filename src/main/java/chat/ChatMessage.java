@@ -5,7 +5,9 @@ import org.json.simple.JSONObject;
 public class ChatMessage {
     public static final String SENDER = "sender";
     public static final String TEXT = "text";
-    String sender, text;
+
+    private String sender;
+    private String text;
 
     public ChatMessage(String sender, String text) {
         this.sender = sender;

@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoadPage {
-    public static Site[] baseHtml = {Site.INDEX, Site.REG, Site.RULES, Site.ERROR};
+    public static Site[] baseHtml = {Site.INDEX, Site.REG, Site.RULES, Site.ERROR, Site.WAIT};
     private static Map<Site, String> urlToSite = new HashMap<Site, String>();
 
     static {

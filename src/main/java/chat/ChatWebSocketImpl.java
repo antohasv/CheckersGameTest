@@ -9,9 +9,9 @@ import org.json.simple.parser.JSONParser;
 
 public class ChatWebSocketImpl extends WebSocketAdapter {
 
-    public static final String TEXT = "text";
-
+    private Chater chater;
     public ChatWebSocketImpl() {
+        chater = new Chater(this);
     }
 
     @Override
@@ -19,47 +19,10 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
         if (isNotConnected()) {
             return;
         }
-
-        String sessionId = null;
-        String startServerTime = null;
-        String text = null;
-        try {
-            JSONParser parser = new JSONParser();
-            JSONObject json = (JSONObject) parser.parse(message);
-
-            sessionId = json.get(FrontendImpl.SESSION_ID).toString();
-            startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
-
-            if (json.get(TEXT) != null) {
-                text = json.get(TEXT).toString();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if (sessionId != null && startServerTime != null && text != null && !text.equals("") && UserDataImpl.checkServerTime(startServerTime)) {
-            addMessageToChat(sessionId, text);
-        } else if ((sessionId != null) && (startServerTime != null) && UserDataImpl.checkServerTime(startServerTime)) {
-            addNewChater(sessionId);
-        }
-    }
-
-    private void addNewChater(String sessionId) {
-        UserDataImpl.putSessionIdAndChatWS(sessionId, this);
-    }
-
-    private void addMessageToChat(String sessionId, String text) {
-        UserDataSet user = UserDataImpl.getLogInUserBySessionId(sessionId);
-        if (user != null) {
-            GameChatImpl.sendMessage(sessionId, text);
-        }
+        chater.webSocketText(ReceiveMessage.getMessage(message));
     }
 
     public static void sendMessage(String sessionId, String message) {
-        try {
-            UserDataImpl.getChatWSBySessionId(sessionId).sendString(message);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Chater.sendMessage(sessionId, message);
     }
 }
