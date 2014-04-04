@@ -9,20 +9,49 @@ import org.json.simple.parser.JSONParser;
 
 public class ChatWebSocketImpl extends WebSocketAdapter {
 
-    private Chater chater;
     public ChatWebSocketImpl() {
-        chater = new Chater(this);
     }
 
     @Override
-    public void onWebSocketText(String message) {
+    public void onWebSocketText(String msgText) {
         if (isNotConnected()) {
             return;
         }
-        chater.webSocketText(ReceiveMessage.getMessage(message));
+
+        ReceiveMessage message = ReceiveMessage.getMessage(msgText);
+        String sessionId = message.getSessionId();
+        String startServerTime = message.getStartServerTime();
+        String text = message.getText();
+
+        if (sessionId != null && startServerTime != null && UserDataImpl.checkServerTime(startServerTime)) {
+            if (isEmpty(text)) {
+                addNewChater(sessionId);
+            } else {
+                addMessageToChat(sessionId, text);
+            }
+        }
+    }
+
+    public boolean isEmpty(String value) {
+        return value == null || value.equals("");
     }
 
     public static void sendMessage(String sessionId, String message) {
-        Chater.sendMessage(sessionId, message);
+        try {
+            UserDataImpl.getChatWSBySessionId(sessionId).sendString(message);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addNewChater(String sessionId) {
+        UserDataImpl.putSessionIdAndChatWS(sessionId, this);
+    }
+
+    private void addMessageToChat(String sessionId, String text) {
+        UserDataSet user = UserDataImpl.getLogInUserBySessionId(sessionId);
+        if (user != null) {
+            GameChatImpl.sendMessage(sessionId, text);
+        }
     }
 }

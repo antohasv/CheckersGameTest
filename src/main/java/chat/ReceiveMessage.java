@@ -20,13 +20,20 @@ public class ReceiveMessage {
     }
 
     public static ReceiveMessage getMessage(String message) {
+        String sessionId = null;
+        String startServerTime = null;
         String text = null;
         try {
             JSONParser parser = new JSONParser();
             JSONObject json = (JSONObject) parser.parse(message);
 
-            String sessionId = json.get(FrontendImpl.SESSION_ID).toString();
-            String startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
+            if (json.get(FrontendImpl.SESSION_ID) != null) {
+               sessionId = json.get(FrontendImpl.SESSION_ID).toString();
+            }
+
+            if (json.get(FrontendImpl.SERVER_TIME) != null) {
+                startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
+            }
 
             if (json.get(TEXT) != null) {
                 text = json.get(TEXT).toString();
