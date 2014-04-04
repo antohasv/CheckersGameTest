@@ -66,11 +66,11 @@ public class DBServiceImpl implements DataAccessObject {
         return address;
     }
 
-    public UserDataSet getUserData(final String login, String password) {
+    public UserDataSet getUserData(final String login, final String password) {
         return  (UserDataSet) DBUserManager.getUserData(connection, login, password, handler);
     }
 
-    public boolean addUserData(final String login, String password) {
+    public boolean addUserData(final String login, final String password) {
         int rows = DBUserManager.findUser(connection, login);
 
         if (rows == 0) {
@@ -88,6 +88,10 @@ public class DBServiceImpl implements DataAccessObject {
             DBUserManager.updateUser(connection, user.getNickName(), user.getRating(), user.getWinQuantity(),
                     user.getLoseQuantity());
         }
+    }
+
+    public int deleteUser(String nickname) {
+        return DBUserManager.deleteUser(connection, nickname);
     }
 
     public void run() {
@@ -109,8 +113,7 @@ public class DBServiceImpl implements DataAccessObject {
     }
 
     private void obtainServiceExcpetion(Exception e) {
-        System.err.println(e.getMessage());
-        System.exit(-1);
+        e.printStackTrace();
     }
 
     public static String getJDBCURI() {

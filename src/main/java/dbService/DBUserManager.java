@@ -3,6 +3,7 @@ package dbService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DBUserManager {
     public static final String TABLE_NAME = "Users";
@@ -31,8 +32,7 @@ public class DBUserManager {
             statement.executeUpdate();
             statement.close();
         } catch (Exception e) {
-            System.err.println("\nError");
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         } finally {
             try {
                 statement.close();
@@ -56,8 +56,7 @@ public class DBUserManager {
                 rows = resultSet.getInt(USERS_COUNT);
             stmt.close();
         } catch (Exception e) {
-            System.err.println("\nError");
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         } finally {
             try {
                 stmt.close();
@@ -86,8 +85,7 @@ public class DBUserManager {
             user = handler.handle(resultSet);
             stmt.close();
         } catch (Exception e) {
-            System.err.println("\nError");
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         } finally {
             try {
                 stmt.close();
@@ -96,6 +94,28 @@ public class DBUserManager {
             }
         }
         return user;
+    }
+
+    public static int deleteUser(Connection connection, String login) {
+        PreparedStatement stmt = null;
+
+        StringBuilder query = new StringBuilder("DELETE FROM ").append(TABLE_NAME);
+        query.append(" WHERE ").append(COL_NICKNAME).append(" = ?");
+
+        try {
+            stmt = connection.prepareStatement(query.toString());
+            stmt.setString(1, login);
+            return stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }  finally {
+            try {
+                stmt.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return 0;
     }
 
     public static void updateUser(Connection connection, String login,
@@ -116,8 +136,7 @@ public class DBUserManager {
             stmt.executeUpdate();
             stmt.close();
         } catch (Exception e) {
-            System.err.println("\nError");
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         } finally {
             try {
                 stmt.close();

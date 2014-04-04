@@ -15,6 +15,7 @@ public class DBUserManagerTest {
     public static final int FAKE_RAITING = 10;
     public static final int FAKE_WIN_QUANTITY = 100;
     public static final int FAKE_LOSE_QUANTITY = 50;
+    public static final String UNEXIST_USER = "unexist_user";
 
     private Connection connection;
 
@@ -54,6 +55,12 @@ public class DBUserManagerTest {
         DBUserManager.addUser(connection, getUserName(), FAKE_PASSWORD);
         int userCount = DBUserManager.findUser(connection, PREFIX_FAKE_USER);
         Assert.assertEquals(userCount, 1);
+    }
+
+    @Test
+    public void testFindUser() throws Exception {
+        int userCount = DBUserManager.findUser(connection, UNEXIST_USER);
+        Assert.assertEquals(userCount, 0);
     }
 
     @Test
