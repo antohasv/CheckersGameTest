@@ -36,6 +36,7 @@ public class FrontendImplTest {
     public static final String FAKE_PAGE_HTML = "/fake_page.html";
     public static final String LONG_USER_NAME = "looooooooooooooooooooooooooooooooooooooooooooooooooongUserName";
     public static final String FAKE_SESSION_ID = "fake_SessionId123";
+    public static final String SESSION_ID = "sessionId";
 
     private MessageSystem messageSystem;
     private FrontendImpl frontend;
@@ -63,7 +64,6 @@ public class FrontendImplTest {
         Assert.assertNotNull(cookies);
         Assert.assertNotEquals(cookies.length, 0);
     }
-
 
     @Test
     public void testSiteIndex() throws Exception {
@@ -124,7 +124,7 @@ public class FrontendImplTest {
         verify(response).addHeader(Matchers.eq(FrontendImpl.LOCATION), Matchers.eq(Site.INDEX.getUrl()));
     }
 
-       @Test
+    @Test
     public void testRegistration() throws Exception {
         Cookie[] cookies = getCookie();
 
@@ -157,8 +157,6 @@ public class FrontendImplTest {
 
     @Test
     public void testRegistrationForm() throws Exception {
-        Cookie[] cookies = getCookie();
-
         Request request = mock(Request.class);
         HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
 
@@ -174,6 +172,38 @@ public class FrontendImplTest {
         Assert.assertEquals(LoadPage.getPage(Site.REG), htmlTemplate.toString());
     }
 
+
+    @Test
+    public void testRegistrationFormWithUnCorrectData() throws Exception {
+        Request request = mock(Request.class);
+        HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
+
+        when(servletRequest.getParameter(FrontendImpl.PARAM_REG_NICKNAME)).thenReturn(LONG_USER_NAME);
+
+        StringWriter htmlTemplate = new StringWriter();
+
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+
+        frontend.handle(Site.REG.getUrl(), request, servletRequest, response);
+        Assert.assertEquals(LoadPage.getPage(Site.REG), htmlTemplate.toString());
+    }
+
+    @Test
+    public void testAuthorizationFormUncorrectData() throws Exception {
+        Request request = mock(Request.class);
+        HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
+
+        when(servletRequest.getParameter(FrontendImpl.USER_NICKNAME)).thenReturn(FAKE_USERNAME);
+
+        StringWriter htmlTemplate = new StringWriter();
+
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+
+        frontend.handle(Site.REG.getUrl(), request, servletRequest, response);
+        Assert.assertEquals(LoadPage.getPage(Site.REG), htmlTemplate.toString());
+    }
 
     @Test
     public void testAuthorizeNoRegUser() throws Exception {
@@ -271,7 +301,47 @@ public class FrontendImplTest {
 
         servletRequest = HttpServletHelper.getRequestWithCookie(FrontendImpl.HTTP_GET);
         frontend.handle(Site.WAIT.getUrl(), request, servletRequest, response);
-        verify(response).addHeader(Matchers.eq(FrontendImpl.LOCATION), Matchers.eq(Site.INDEX.getUrl()));
+        verify(response, times(2)).addHeader(Matchers.eq(FrontendImpl.LOCATION), Matchers.eq(Site.INDEX.getUrl()));
+    }
+
+    @Test
+    public void testUserWaitPost123() throws Exception {
+        Request request = mock(Request.class);
+        HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
+
+        StringWriter html = new StringWriter();
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        when(response.getWriter()).thenReturn(new PrintWriter(html));
+
+        when(servletRequest.getParameter(FrontendImpl.USER_NICKNAME)).thenReturn(FAKE_USERNAME);
+        when(servletRequest.getParameter(FrontendImpl.USER_PASSWORD)).thenReturn(FAKE_PASSWORD);
+
+        frontend.handle(Site.INDEX.getUrl(), request, servletRequest, response);
+
+        String sessionId = new StoreCookie(servletRequest.getCookies()).getCookieByName(SESSION_ID);
+        Assert.assertEquals(UserDataImpl.getUserSessionBySessionId(sessionId).getPostStatus(), 1);
+
+
+        Site[] readySite = new Site[]{ Site.INDEX, Site.GAME, Site.PROFILE};
+
+        for (Site site : readySite) {
+            performRequestReadyStatus(request, response, sessionId, site.getUrl());
+        }
+
+        performRequestReadyStatus(request, response, sessionId, FrontendImpl.LOGOUT);
+        performRequestReadyStatus(request, response, sessionId, "fakesite.ru");
+
+    }
+
+    private void performRequestReadyStatus(Request request, HttpServletResponse response, String sessionId, String url) throws IOException {
+        StringWriter html;HttpServletRequest servletRequest;
+        html = new StringWriter();
+        when(response.getWriter()).thenReturn(new PrintWriter(html));
+
+        UserDataImpl.getUserSessionBySessionId(sessionId).makeLike(new UserDataSet(100, "dsads", 0 , 0 , 0));
+        servletRequest = HttpServletHelper.getRequestWithCookie(FrontendImpl.HTTP_GET);
+
+        frontend.handle(url, request, servletRequest, response);
     }
 
     @Test
@@ -293,6 +363,28 @@ public class FrontendImplTest {
 
         frontend.handle(Site.WAIT.getUrl(), request, servletRequest, response);
         Assert.assertEquals(LoadPage.getPage(Site.WAIT), htmlTemplate.toString());
+    }
+
+    @Test
+    public void testUserWaitWithoutCookie() throws Exception {
+        Request request = mock(Request.class);
+        HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
+
+        when(servletRequest.getParameter(FrontendImpl.USER_NICKNAME)).thenReturn(FAKE_USERNAME);
+        when(servletRequest.getParameter(FrontendImpl.USER_PASSWORD)).thenReturn(FAKE_PASSWORD);
+
+        StringWriter htmlTemplate = new StringWriter();
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+
+        frontend.handle(Site.INDEX.getUrl(), request, servletRequest, response);
+
+        String sessionId = new StoreCookie(servletRequest.getCookies()).getCookieByName(SESSION_ID);
+        Assert.assertEquals(UserDataImpl.getUserSessionBySessionId(sessionId).getPostStatus(), 1);
+
+        servletRequest = HttpServletHelper.getRequest();
+        frontend.handle(Site.WAIT.getUrl(), request, servletRequest, response);
+        verify(response, times(1)).addHeader(Matchers.eq(FrontendImpl.LOCATION), Matchers.eq(Site.INDEX.getUrl()));
     }
 
     @Test

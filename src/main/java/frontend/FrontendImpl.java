@@ -291,7 +291,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
 
         Site site = Site.getSite(target);
 
-        if (site == null) {
+        if (site == Site.DEFAULT) {
             response.setStatus(HttpServletResponse.SC_MOVED_TEMPORARILY);
             response.addHeader(LOCATION, Site.INDEX.getUrl());
             return;
