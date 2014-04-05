@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class UserDataImpl implements base.UserData {
+    public class UserDataImpl implements base.UserData {
     public static final String SERVICE_NAME = "UserDataSet";
     public static final int TICK_TIME = 200;
 

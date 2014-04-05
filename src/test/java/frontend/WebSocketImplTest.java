@@ -3,8 +3,6 @@ package frontend;
 
 import base.GameMechanic;
 import base.MessageSystem;
-import base.UserData;
-import base.WebSocket;
 import dbService.UserDataSet;
 import gameClasses.Field;
 import gameClasses.Snapshot;
@@ -70,6 +68,12 @@ public class WebSocketImplTest {
         Assert.assertEquals(remoteEndpoint, UserDataImpl.getWSBySessionId(FAKE_SESSION_ID));
     }
 
+    @Test
+    public void testAddNewWSUnCorrectValue() throws Exception {
+        when(webSocket.isNotConnected()).thenReturn(false);
+        webSocket.onWebSocketText(getMessage(null, null));
+    }
+
     //{"from_x":4,"from_y":5,"to_x":5,"to_y":4,"status":"","sessionId":"6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b","startServerTime":"caf09bef4f44531a3bedb4c2780696376fb1bf0668e81e3bfae7732391dd77a2"}
     @Test
     public void testSendLocation() throws Exception {
@@ -120,9 +124,22 @@ public class WebSocketImplTest {
         when(session.getRemote()).thenReturn(remoteEndpoint);
 
         UserDataImpl.putLogInUser(FAKE_SESSION_ID, new UserDataSet(FAKE_USER_ID, FAKE_NICK_NAME, 0, 0, 0));
+        UserDataImpl.putSessionIdAndWS(FAKE_SESSION_ID, webSocket);
 
-        webSocket.doneSnapshot(FAKE_USER_ID, new Snapshot(new Field[10][10], 'w', 10, 'b'));
-        verify(remoteEndpoint, times(1)).sendString(WebSocketImpl.JSON_COLOR_BLACK);
+        webSocket.doneSnapshot(FAKE_USER_ID, new Snapshot(getFields(7, 7), 'w', 7, 'b'));
+        verify(remoteEndpoint, times(1)).sendString("{\"field\":[[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing]],\"color\":w,\"status\":\"snapshot\",\"next\":b,\"king\":[[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false]]}");
+    }
+
+    public Field[][] getFields(int n, int m) {
+        Field[][] fileds = new Field[n][];
+        for (int i = 0; i < n; i++) {
+            fileds[i] = new Field[m];
+            for (int j = 0; j < m; j++) {
+                fileds[i][j] = new Field();
+                fileds[i][j].setType(Field.Checker.nothing);
+            }
+        }
+        return fileds;
     }
 
     public Map<String, String> getSessionIdToColor(String color) {
