@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad79f1b-4430-4147-8bba-6c9100c41457" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java" afterPath="$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/ccu" afterPath="$PROJECT_DIR$/statistic/ccu" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/memoryUsage" afterPath="$PROJECT_DIR$/statistic/memoryUsage" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/time" afterPath="$PROJECT_DIR$/statistic/time" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/totalMemory" afterPath="$PROJECT_DIR$/statistic/totalMemory" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="java-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,26 +18,26 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$dbService_in_java_server.coverage" NAME="dbService in java-server Coverage Results" MODIFIED="1395786795207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dbService.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/server$SHA2Test.coverage" NAME="SHA2Test Coverage Results" MODIFIED="1395916722313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/server$CasterTest.coverage" NAME="CasterTest Coverage Results" MODIFIED="1395916538089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>utils.*</FILTER>
+    <SUITE FILE_PATH="coverage/server$dbService_in_java_server.coverage" NAME="dbService in java-server Coverage Results" MODIFIED="1395786795207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dbService.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/server$TimeHelperTest.coverage" NAME="TimeHelperTest Coverage Results" MODIFIED="1395916559355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/server$CasterTest.coverage" NAME="CasterTest Coverage Results" MODIFIED="1395916538089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/server$DBServiceImplTest.coverage" NAME="DBServiceImplTest Coverage Results" MODIFIED="1395786832678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dbService.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/server$SystemInfoTest.coverage" NAME="SystemInfoTest Coverage Results" MODIFIED="1395786824060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>system.*</FILTER>
+    <SUITE FILE_PATH="coverage/server$TimeHelperTest.coverage" NAME="TimeHelperTest Coverage Results" MODIFIED="1395916559355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>utils.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/server$MsgCreateGamesTest.coverage" NAME="MsgCreateGamesTest Coverage Results" MODIFIED="1395858385829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>gameMechanic.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$SystemInfoTest.coverage" NAME="SystemInfoTest Coverage Results" MODIFIED="1395786824060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>system.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/server$VFSTest.coverage" NAME="VFSTest Coverage Results" MODIFIED="1395916571233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
@@ -646,10 +644,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserDataImpl.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserDataImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="197" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.6035156" vertical-offset="1510" max-vertical-offset="4284">
+            <state line="169" column="80" selection-start="5435" selection-end="5435" vertical-scroll-proportion="0.0" vertical-offset="2210" max-vertical-offset="4284">
               <folding>
                 <element signature="e#965#986#0" expanded="true" />
                 <element signature="e#1087#1108#0" expanded="true" />
@@ -666,10 +664,17 @@
       <file leaf-file-name="Snapshot.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.0" vertical-offset="1086" max-vertical-offset="1853">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="60" column="40" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1836">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stroke.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="48" selection-start="461" selection-end="461" vertical-scroll-proportion="0.5644531" vertical-offset="0" max-vertical-offset="2363">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -677,16 +682,7 @@
       <file leaf-file-name="WebSocketImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="165" selection-start="6443" selection-end="6443" vertical-scroll-proportion="0.0" vertical-offset="2190" max-vertical-offset="2890">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VFS.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="55" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="949" max-vertical-offset="2329">
+            <state line="181" column="165" selection-start="6443" selection-end="6443" vertical-scroll-proportion="0.0" vertical-offset="1967" max-vertical-offset="2890">
               <folding />
             </state>
           </provider>
@@ -695,12 +691,8 @@
       <file leaf-file-name="WebSocketImplTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.0" vertical-offset="1032" max-vertical-offset="3077">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6975#6991#0" expanded="true" />
-                <element signature="e#7192#7209#0" expanded="true" />
-              </folding>
+            <state line="76" column="64" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2771">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -753,7 +745,6 @@
         <option value="$PROJECT_DIR$/src/main/java/gameClasses/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/Chater.java" />
         <option value="$PROJECT_DIR$/src/test/java/chat/ChaterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/ReceiveMessage.java" />
@@ -769,6 +760,7 @@
         <option value="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java" />
       </list>
     </option>
   </component>
@@ -814,6 +806,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1138,8 +1132,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1560,12 +1552,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1583,6 +1569,12 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="ChatMessageTest.testChatMessage" type="TestNG" factoryName="TestNG" nameIsGenerated="true">
@@ -1677,11 +1669,12 @@
       <workItem from="1396549334134" duration="44992000" />
       <workItem from="1396713691339" duration="67000" />
       <workItem from="1396713996092" duration="2987000" />
+      <workItem from="1396722345015" duration="101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128523000" />
+    <option name="totallyTimeSpent" value="128624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1707,21 +1700,21 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43308747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43308747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2078125" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14947917" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14436248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2078125" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14947917" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2078125" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1740,8 +1733,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39093783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1975,11 +1968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="819" selection-end="819" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.0.0.v20130308/websocket-api-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/api/RemoteEndpoint.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="9" selection-start="727" selection-end="727" vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="459" />
@@ -1987,16 +1975,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.40520042" vertical-offset="0" max-vertical-offset="923">
-          <folding />
-        </state>
+        <state line="36" column="29" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.40520042" vertical-offset="0" max-vertical-offset="923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="338" selection-end="338" vertical-scroll-proportion="0.14734562" vertical-offset="0" max-vertical-offset="923">
-          <folding />
-        </state>
+        <state line="15" column="21" selection-start="338" selection-end="338" vertical-scroll-proportion="0.14734562" vertical-offset="0" max-vertical-offset="923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
@@ -2052,42 +2036,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="1853">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="60" column="40" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1836">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14529915" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14529915" vertical-offset="0" max-vertical-offset="748" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5-sources.jar!/org/mockito/cglib/proxy/MethodProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="0" selection-start="8122" selection-end="8122" vertical-scroll-proportion="0.82662" vertical-offset="2809" max-vertical-offset="3451">
-          <folding />
-        </state>
+        <state line="217" column="0" selection-start="8122" selection-end="8122" vertical-scroll-proportion="0.82662" vertical-offset="2809" max-vertical-offset="3451" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="55" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="949" max-vertical-offset="2329">
+        <state line="70" column="55" selection-start="2080" selection-end="2080" vertical-scroll-proportion="-0.11050921" vertical-offset="1190" max-vertical-offset="2329">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.0" vertical-offset="1032" max-vertical-offset="3077">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6975#6991#0" expanded="true" />
-            <element signature="e#7192#7209#0" expanded="true" />
-          </folding>
+        <state line="76" column="64" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2771">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2100,7 +2074,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="197" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.6035156" vertical-offset="1510" max-vertical-offset="4284">
+        <state line="169" column="80" selection-start="5435" selection-end="5435" vertical-scroll-proportion="0.0" vertical-offset="2210" max-vertical-offset="4284">
           <folding>
             <element signature="e#965#986#0" expanded="true" />
             <element signature="e#1087#1108#0" expanded="true" />
@@ -2110,6 +2084,13 @@
             <element signature="e#5018#5039#0" expanded="true" />
             <element signature="e#7165#7178#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="48" selection-start="461" selection-end="461" vertical-scroll-proportion="0.5644531" vertical-offset="0" max-vertical-offset="2363">
+          <folding />
         </state>
       </provider>
     </entry>

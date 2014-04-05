@@ -1,115 +1,134 @@
 package gameClasses;
 
-import org.json.simple.JSONObject;
+public class Stroke{
+    private int to_x,to_y,from_x,from_y;
+    private String status="",color="";
+    private char next='0';
 
-public class Stroke {
-    public static final String COLOR_WHITE = "w";
-    public static final String COLOR_BLACK = "b";
-    public static final String COLOR = "color";
-    public static final String TO_X = "to_x";
-    public static final String TO_Y = "to_y";
-    public static final String FROM_X = "from_x";
-    public static final String FROM_Y = "from_y";
-    public static final String STATUS = "status";
-    public static final String NEXT = "next";
-    public static final char DEFAULT_NEXT = '0';
-    public static final int LENGTH_CHESSBOARD = 7;
-
-    private int toX;
-    private int toY;
-    private int fromX;
-    private int fromY;
-
-    private String status = "";
-    private String color = "";
-    private char next = DEFAULT_NEXT;
-
-    public Stroke(int x1, int y1, int x2, int y2, String st) {
-        this(x1, y1, x2, y2, st, "", DEFAULT_NEXT);
+    public Stroke(int x1, int y1, int x2, int y2,String st){
+        to_x=x1; to_y=y1;
+        from_x=x2; from_y=y2;
+        status=st;
     }
 
-    public Stroke(int x1, int y1, int x2, int y2, String st, String col, char next) {
-        toX = x1;
-        toY = y1;
-        fromX = x2;
-        fromY = y2;
-        status = st;
-        color = col;
-        this.next = next;
+    public Stroke(int x1, int y1, int x2, int y2, String st, String col){
+        to_x=x1; to_y=y1;
+        from_x=x2; from_y=y2;
+        status=st;
+        color=col;
     }
 
-    public Stroke(String stat) {
-        toX = toY = fromX = fromY = -1;
-        status = stat;
+    public Stroke(int x1, int y1, int x2, int y2, String st, String col,char next){
+        to_x=x1; to_y=y1;
+        from_x=x2; from_y=y2;
+        status=st;
+        color=col;
+        this.next=next;
     }
 
-    public Stroke(Stroke stroke) {
-        toX = stroke.getTo_X();
-        toY = stroke.getTo_Y();
-        fromX = stroke.getFrom_X();
-        fromY = stroke.getFrom_Y();
-        status = stroke.getStatus();
-        color = stroke.getColor();
-        next = stroke.getNext();
+    public Stroke(){
+        to_x=to_y=from_x=from_y=-1;
     }
 
-    public Stroke getInverse() {
-        if (color.equals(COLOR_BLACK)) {
-            return new Stroke(LENGTH_CHESSBOARD - toX, LENGTH_CHESSBOARD - toY, LENGTH_CHESSBOARD - fromX, LENGTH_CHESSBOARD - fromY, status, COLOR_WHITE, next);
-        } else {
-            return new Stroke(LENGTH_CHESSBOARD - toX, LENGTH_CHESSBOARD - toY, LENGTH_CHESSBOARD - fromX, LENGTH_CHESSBOARD - fromY, status, COLOR_BLACK, next);
-        }
+    public Stroke(String stat){
+        to_x=to_y=from_x=from_y=-1;
+        status=stat;
     }
 
-    public int getTo_X() {
-        return toX;
+    public Stroke(Stroke stroke){
+        to_x=stroke.getTo_X();
+        to_y=stroke.getTo_Y();
+        from_x=stroke.getFrom_X();
+        from_y=stroke.getFrom_Y();
+        status=stroke.getStatus();
+        color=stroke.getColor();
+        next=stroke.getNext();
     }
 
-    public int getTo_Y() {
-        return toY;
+    public Stroke getInverse(){
+        if(color == "b")
+            return new Stroke(7-to_x, 7-to_y, 7-from_x, 7-from_y,status,"w",next);
+        else
+            return new Stroke(7-to_x, 7-to_y, 7-from_x, 7-from_y,status,"b",next);
     }
 
-    public int getFrom_X() {
-        return fromX;
+    public void clear(){
+        to_x=to_y=from_x=from_y=-1;
+        status=color="";
+        next='\0';
     }
 
-    public int getFrom_Y() {
-        return fromY;
+    public boolean isEmpty(){
+        if((to_x!=-1)||(to_y!=-1)||(from_x!=-1)||(from_y!=-1))
+            return false;
+        return true;
     }
 
-    public String getStatus() {
+    public int getTo_X(){
+        return to_x;
+    }
+
+    public int getTo_Y(){
+        return to_y;
+    }
+
+    public int getFrom_X(){
+        return from_x;
+    }
+
+    public int getFrom_Y(){
+        return from_y;
+    }
+
+    public String getStatus(){
         return status;
     }
 
-    public String getColor() {
+    public String getColor(){
         return color;
     }
 
-    public char getNext() {
+    public char getNext(){
         return next;
     }
 
-    public void setStatus(String st) {
-        status = st;
+    public void setTo_X(int x){
+        to_x=x;
     }
 
-    public void setColor(String col) {
-        color = col;
+    public void setTo_Y(int y){
+        to_y=y;
     }
 
-    public void setNext(char next) {
-        this.next = next;
+    public void setFrom_X(int x){
+        from_x=x;
     }
 
-    public String toString() {
-        JSONObject stroke = new JSONObject();
-        stroke.put(COLOR, color);
-        stroke.put(TO_X, toX);
-        stroke.put(TO_Y, toY);
-        stroke.put(FROM_X, fromX);
-        stroke.put(FROM_Y, fromY);
-        stroke.put(STATUS, status);
-        stroke.put(NEXT, next);
-        return stroke.toJSONString();
+    public void setFrom_Y(int y){
+        from_y=y;
     }
+
+    public void setStatus(String st){
+        status=st;
+    }
+
+    public void setColor(String col){
+        color=col;
+    }
+
+    public void setNext(char next){
+        this.next=next;
+    }
+
+    public void fullSet(int x1, int y1, int x2, int y2){
+        to_x=x1; to_y=y1;
+        from_x=x2; from_y=y2;
+    }
+
+    public String toString(){
+        return "{\"color\":\""+color+"\",\"to_x\":"+to_x+",\"to_y\":"+to_y+
+                ",\"from_x\":"+from_x+",\"from_y\":"+from_y+
+                ",\"status\":\""+status+"\",\"next\":\""+next+"\"}";
+    }
+
 }
