@@ -21,6 +21,7 @@ public class GameChatImpl implements GameChat {
 
     private static final Map<String, List<ChatMessage>> sessionIdToChat =
             new HashMap<String, List<ChatMessage>>();
+
     private static final Map<String, String> sessionIdToAnotherSessionId =
             new HashMap<String, String>();
 
@@ -54,6 +55,7 @@ public class GameChatImpl implements GameChat {
         if (sessionIdToChat.get(sessionId) != null) {
             sessionIdToChat.get(sessionId).add(message);
             ChatWebSocketImpl.sendMessage(sessionId, message.getJson());
+
             String anotherSessionId = sessionIdToAnotherSessionId.get(sessionId);
             ChatWebSocketImpl.sendMessage(anotherSessionId, message.getJson());
         }

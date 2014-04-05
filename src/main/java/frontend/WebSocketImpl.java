@@ -19,8 +19,7 @@ import gameClasses.Snapshot;
 import gameClasses.Stroke;
 import utils.TimeHelper;
 
-public class
-        WebSocketImpl extends WebSocketAdapter implements WebSocket {
+public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
     public static final String SERVICE_NAME = "WebSocket";
     public static final int TICK_TIME = 200;
     public static final String COLOR_BLACK = "black";
@@ -34,6 +33,9 @@ public class
     public static final String SESSION_ID = "sessionId";
     final private Address address;
     private static MessageSystem messageSystem = null;
+
+    public static final String JSON_COLOR_BLACK = getJSON(COLOR, COLOR_BLACK);
+    public static final String JSON_COLOR_WHITE = getJSON(COLOR, COLOR_WHITE);
 
     public WebSocketImpl() {
         this.address = new Address();
@@ -55,12 +57,12 @@ public class
             return;
         }
 
-        String sessionId = null;
-        String startServerTime = null;
         int fromX = -1;
         int fromY = -1;
         int toX = -1;
         int toY = -1;
+        String sessionId = null;
+        String startServerTime = null;
 
         String status = null;
         JSONParser parser = new JSONParser();
@@ -81,14 +83,11 @@ public class
             }
         } catch (ParseException parseException) {
             parseException.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
 
-        if ((fromX != -1) && (fromY != -1) && (toX != -1) && (toY != -1) && (sessionId != null) &&
-                (UserDataImpl.checkServerTime(startServerTime))) {
+        if (fromX != -1 && fromY != -1 && toX != -1 && toY != -1 && sessionId != null && UserDataImpl.checkServerTime(startServerTime)) {
             checkStroke(sessionId, toX, toY, fromX, fromY, status);
-        } else if ((sessionId != null) && (UserDataImpl.checkServerTime(startServerTime))) {
+        } else if (sessionId != null && UserDataImpl.checkServerTime(startServerTime)) {
             addNewWS(sessionId);
         }
     }
@@ -122,12 +121,14 @@ public class
         Stroke stroke;
         try {
             for (Integer userId : userIdToStroke.keySet()) {
+                Stroke userIdStroke = userIdToStroke.get(userId);
+
                 sessionId = UserDataImpl.getSessionIdByUserId(userId);
 
                 userSession = UserDataImpl.getLogInUserBySessionId(sessionId);
                 userSession.markLatestVisitTime();
 
-                stroke = new Stroke(userIdToStroke.get(userId));
+                stroke = new Stroke(userIdStroke);
                 stroke.setColor(userSession.getColor());
 
                 UserDataImpl.getWSBySessionId(sessionId).sendString(stroke.toString());
@@ -137,7 +138,7 @@ public class
         }
     }
 
-    private String getJSON(String key, String value) {
+    private static String getJSON(String key, String value) {
         JSONObject obj = new JSONObject();
         obj.put(key, value);
         return obj.toJSONString();
@@ -146,8 +147,6 @@ public class
     public void updateUsersColor(Map<String, String> usersToColors) {
         UserDataSet userSession;
         String color;
-        String black = getJSON(COLOR, COLOR_BLACK);
-        String white = getJSON(COLOR, COLOR_WHITE);
 
         for (String sessionId : usersToColors.keySet()) {
             try {
@@ -155,10 +154,10 @@ public class
                 color = usersToColors.get(sessionId);
                 if (color.equals(COLOR_BLACK)) {
                     userSession.setColor("b");
-                    UserDataImpl.getWSBySessionId(sessionId).sendString(black);
+                    UserDataImpl.getWSBySessionId(sessionId).sendString(JSON_COLOR_BLACK);
                 } else if (color.equals(COLOR_WHITE)) {
                     userSession.setColor("w");
-                    UserDataImpl.getWSBySessionId(sessionId).sendString(white);
+                    UserDataImpl.getWSBySessionId(sessionId).sendString(JSON_COLOR_WHITE);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

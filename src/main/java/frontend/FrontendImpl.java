@@ -12,10 +12,7 @@ import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 import system.Metric;
 import system.SystemInfo;
-import utils.SHA2;
-import utils.StoreCookie;
-import utils.TemplateHelper;
-import utils.TimeHelper;
+import utils.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -246,11 +243,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     }
 
     private boolean isRegistrationForm(String regNick, String regPassword) {
-        return !isEmpty(regNick) && !isEmpty(regPassword) && regNick.length() <= MAX_USER_NAME;
+        return !TextUtils.isEmpty(regNick) && !TextUtils.isEmpty(regPassword) && regNick.length() <= MAX_USER_NAME;
     }
 
     private boolean isLoginForm(String nick, String password) {
-        return !isEmpty(nick) && !isEmpty(password);
+        return !TextUtils.isEmpty(nick) && !TextUtils.isEmpty(password);
     }
 
     private void sendDBMsgToVerifyUser(String sessionId, String nick, String password) {
@@ -267,10 +264,6 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         MsgAddUser msgAddUser = new MsgAddUser(from, to, sessionId, nick, password);
 
         messageSystem.putMsg(to, msgAddUser);
-    }
-
-    public static boolean isEmpty(String data) {
-        return data == null || data.equals("");
     }
 
     private void onWaitingStatus(HttpServletResponse response) {

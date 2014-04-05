@@ -6,6 +6,7 @@ import frontend.UserDataImpl;
 import org.eclipse.jetty.websocket.api.WebSocketAdapter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import utils.TextUtils;
 
 public class ChatWebSocketImpl extends WebSocketAdapter {
 
@@ -24,16 +25,12 @@ public class ChatWebSocketImpl extends WebSocketAdapter {
         String text = message.getText();
 
         if (sessionId != null && startServerTime != null && UserDataImpl.checkServerTime(startServerTime)) {
-            if (isEmpty(text)) {
+            if (TextUtils.isEmpty(text)) {
                 addNewChater(sessionId);
             } else {
                 addMessageToChat(sessionId, text);
             }
         }
-    }
-
-    public boolean isEmpty(String value) {
-        return value == null || value.equals("");
     }
 
     public static void sendMessage(String sessionId, String message) {
