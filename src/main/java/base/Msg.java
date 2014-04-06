@@ -17,5 +17,5 @@ public abstract class Msg {
         return to;
     }
 
-    public abstract void exec(Abonent abonent);
+    public abstract boolean exec(Abonent abonent);
 }

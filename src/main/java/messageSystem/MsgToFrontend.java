@@ -12,10 +12,13 @@ public abstract class MsgToFrontend extends Msg{
 		super(from,to);
 	}
 
-	public void exec(Abonent abonent){
+	public boolean exec(Abonent abonent){
 		if (abonent instanceof Frontend){
 			exec((Frontend)abonent);
+            return true;
 		}
+        else
+            return false;
 	}
 	public abstract void exec(Frontend frontend);
 }
