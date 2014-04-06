@@ -68,6 +68,11 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
         JSONParser parser = new JSONParser();
         try {
             JSONObject json = (JSONObject) parser.parse(message);
+
+            if (json.get(SESSION_ID) == null || json.get(FrontendImpl.SERVER_TIME) == null) {
+                return;
+            }
+
             sessionId = json.get(SESSION_ID).toString();
             startServerTime = json.get(FrontendImpl.SERVER_TIME).toString();
 
@@ -85,9 +90,13 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
             parseException.printStackTrace();
         }
 
-        if (fromX != -1 && fromY != -1 && toX != -1 && toY != -1 && sessionId != null && UserDataImpl.checkServerTime(startServerTime)) {
+        if (!UserDataImpl.checkServerTime(startServerTime)) {
+             return;
+        }
+
+        if (fromX != -1 && fromY != -1 && toX != -1 && toY != -1) {
             checkStroke(sessionId, toX, toY, fromX, fromY, status);
-        } else if (sessionId != null && UserDataImpl.checkServerTime(startServerTime)) {
+        } else {
             addNewWS(sessionId);
         }
     }

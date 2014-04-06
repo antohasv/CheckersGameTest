@@ -29,6 +29,7 @@ public class WebSocketImplTest {
     public static final String FAKE_SESSION_ID = "fake_sessionId";
     public static final String FAKE_NICK_NAME = "Fake_Nick_Name";
     public static final int FAKE_USER_ID = 100;
+    public static final String FAKE_SERVER_TIME = "FAKE_SERVER_TIME";
 
     private WebSocketImpl webSocket;
     private GameMechanic gameMechanic;
@@ -56,7 +57,13 @@ public class WebSocketImplTest {
 
         String serverTime = UserDataImpl.getStartServerTime();
         webSocket.onWebSocketText(getMessage(FAKE_SESSION_ID, serverTime)); //userSession == null
+    }
 
+    @Test
+    public void testSendInitializeMessageUserSession() throws Exception {
+        when(webSocket.isNotConnected()).thenReturn(false);
+
+        String serverTime = UserDataImpl.getStartServerTime();
         UserDataImpl.putLogInUser(FAKE_SESSION_ID, new UserDataSet());
 
         Session session = mock(Session.class);
@@ -72,6 +79,14 @@ public class WebSocketImplTest {
     public void testAddNewWSUnCorrectValue() throws Exception {
         when(webSocket.isNotConnected()).thenReturn(false);
         webSocket.onWebSocketText(getMessage(null, null));
+
+        webSocket.onWebSocketText(getMessage(FAKE_SESSION_ID, null));
+    }
+
+    @Test
+    public void testServerUncorrectTime() throws Exception {
+        when(webSocket.isNotConnected()).thenReturn(false);
+        webSocket.onWebSocketText(getMessage(null, FAKE_SERVER_TIME));
     }
 
     //{"from_x":4,"from_y":5,"to_x":5,"to_y":4,"status":"","sessionId":"6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b","startServerTime":"caf09bef4f44531a3bedb4c2780696376fb1bf0668e81e3bfae7732391dd77a2"}
@@ -96,7 +111,9 @@ public class WebSocketImplTest {
 
         UserDataImpl.putSessionIdAndWS(FAKE_SESSION_ID, webSocket);
         webSocket.sendStroke(getUsersStroke());
-        verify(remoteEndpoint, times(1)).sendString("{\"to_y\":5,\"status\":\"\",\"to_x\":4,\"color\":null,\"next\":0,\"from_y\":4,\"from_x\":5}");
+        verify(remoteEndpoint, times(1)).sendString("{\"color\":\"null\",\"to_x\":4,\"to_y\":5,\"from_x\":5,\"from_y\":4,\"status\":\"\",\"next\":\"0\"}");
+
+        webSocket.sendStroke(new HashMap<Integer, Stroke>());
     }
 
     @Test
@@ -114,6 +131,8 @@ public class WebSocketImplTest {
 
         webSocket.updateUsersColor(getSessionIdToColor(WebSocketImpl.COLOR_BLACK));
         verify(remoteEndpoint, times(1)).sendString(WebSocketImpl.JSON_COLOR_BLACK);
+
+        webSocket.updateUsersColor(getSessionIdToColor("red"));
     }
 
     @Test
