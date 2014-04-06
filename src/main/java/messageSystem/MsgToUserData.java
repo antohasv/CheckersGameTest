@@ -12,10 +12,13 @@ public abstract class MsgToUserData extends Msg{
 		super(from,to);
 	}
 
-	public void exec(Abonent abonent){
+	public boolean exec(Abonent abonent){
 		if (abonent instanceof UserData){
 			exec((UserData)abonent);
-		}
+            return true;
+        }
+        else
+            return false;
 	}
 	public abstract void exec(UserData frontend);
 }

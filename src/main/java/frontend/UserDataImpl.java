@@ -33,7 +33,7 @@ public class UserDataImpl implements base.UserData {
     final private static Map<String, UserDataSet> logInUsers =
             new ConcurrentHashMap<String, UserDataSet>();
 
-    final private static Map<String, UserDataSet> wantToPlay =
+    private static Map<String, UserDataSet> wantToPlay =
             new ConcurrentHashMap<String, UserDataSet>();
 
     final private static Map<String, WebSocketImpl> sessionIdToWS =
@@ -74,6 +74,7 @@ public class UserDataImpl implements base.UserData {
     public static int getCCU() {
         return sessionIdToUserSession.size();
     }
+
 
     public static void putSessionIdAndUserSession(String sessionId, UserDataSet userSession) {
         sessionIdToUserSession.put(sessionId, userSession);

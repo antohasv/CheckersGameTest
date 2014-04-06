@@ -12,10 +12,13 @@ public abstract class MsgToGameMechanic extends Msg{
 		super(from,to);
 	}
 
-	public void exec(Abonent abonent){
+	public boolean exec(Abonent abonent){
 		if (abonent instanceof GameMechanic){
 			exec((GameMechanic)abonent);
+            return true;
 		}
+        else
+            return false;
 	}
 	public abstract void exec(GameMechanic gameMechanic);
 }

@@ -19,7 +19,7 @@ public class MsgCreateGames extends MsgToGameMechanic{
 
 	public void exec(GameMechanic gameMechanic){
 		Map<String,String> sessionIdToColor=gameMechanic.createGames(users);
-		Address to=gameMechanic.getMessageSystem().getAddressByName("WebSocket");
+		Address to = gameMechanic.getMessageSystem().getAddressByName("WebSocket");
 		MsgUpdateColors msg=new MsgUpdateColors(gameMechanic.getAddress(),to,sessionIdToColor);
 		gameMechanic.getMessageSystem().putMsg(to, msg);
 	}
