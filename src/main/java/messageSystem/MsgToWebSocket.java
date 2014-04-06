@@ -12,10 +12,13 @@ public abstract class MsgToWebSocket extends Msg{
 		super(from,to);
 	}
 
-	public void exec(Abonent abonent){
+	public boolean exec(Abonent abonent){
 		if (abonent instanceof WebSocket){
 			exec((WebSocket)abonent);
-		}
+            return true;
+        }
+        else
+            return false;
 	}
 	public abstract void exec(WebSocket webSocket);
 }

@@ -12,10 +12,13 @@ public abstract class MsgToDBService extends Msg{
 		super(from,to);
 	}
 
-	public void exec(Abonent abonent){
+	public boolean exec(Abonent abonent){
 		if (abonent instanceof DataAccessObject){
 			exec((DataAccessObject)abonent);
-		}
+            return true;
+        }
+        else
+            return false;
 	}
 	public abstract void exec(DataAccessObject dbService);
 }

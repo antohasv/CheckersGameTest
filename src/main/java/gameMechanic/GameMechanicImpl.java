@@ -21,7 +21,7 @@ import utils.TimeHelper;
 public class GameMechanicImpl implements GameMechanic {
     public static final String SERVICE_NAME = "GameMechanic";
 
-    final private Map<Integer, GameSession> userIdToSession =
+    final public Map<Integer, GameSession> userIdToSession =
             new HashMap<Integer, GameSession>();
     final private Map<String, UserDataSet> wantToPlay =
             new HashMap<String, UserDataSet>();
@@ -41,6 +41,12 @@ public class GameMechanicImpl implements GameMechanic {
     public MessageSystem getMessageSystem() {
         return messageSystem;
     }
+
+
+    public Map<String, UserDataSet> getWantToPlay() {
+        return wantToPlay;
+    }
+
 
     private void sendSnapshot(int userId) {
         Snapshot snapshot = getSnapshot(userId);
@@ -184,7 +190,7 @@ public class GameMechanicImpl implements GameMechanic {
         messageSystem.putMsg(to, msg);
     }
 
-    private void removeDeadGames() {
+    public  void removeDeadGames() {
         Object[] keys = userIdToSession.keySet().toArray();
         int count, winnerId;
         GameSession gameSession;
