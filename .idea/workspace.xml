@@ -2,37 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad79f1b-4430-4147-8bba-6c9100c41457" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java" afterPath="$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/VFS.java" afterPath="$PROJECT_DIR$/src/main/java/utils/VFS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/ccu" afterPath="$PROJECT_DIR$/statistic/ccu" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/memoryUsage" afterPath="$PROJECT_DIR$/statistic/memoryUsage" />
-=======
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" afterPath="$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/base/Msg.java" afterPath="$PROJECT_DIR$/src/main/java/base/Msg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java" afterPath="$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToDBService.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToDBService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameChat.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameChat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameMechanic.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameMechanic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToUserData.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToUserData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToWebSocket.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToWebSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/ccu" afterPath="$PROJECT_DIR$/statistic/ccu" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/memoryUsage" afterPath="$PROJECT_DIR$/statistic/memoryUsage" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/time" afterPath="$PROJECT_DIR$/statistic/time" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/totalMemory" afterPath="$PROJECT_DIR$/statistic/totalMemory" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -47,13 +21,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/server$SHA2Test.coverage" NAME="SHA2Test Coverage Results" MODIFIED="1395916722313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
-=======
-    <SUITE FILE_PATH="coverage/server$MsgPartyEndTest.coverage" NAME="MsgPartyEndTest Coverage Results" MODIFIED="1396266135428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
     </SUITE>
     <SUITE FILE_PATH="coverage/server$dbService_in_java_server.coverage" NAME="dbService in java-server Coverage Results" MODIFIED="1395786795207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dbService.*</FILTER>
@@ -61,37 +30,8 @@
     <SUITE FILE_PATH="coverage/server$CasterTest.coverage" NAME="CasterTest Coverage Results" MODIFIED="1395916538089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
     </SUITE>
-<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/server$DBServiceImplTest.coverage" NAME="DBServiceImplTest Coverage Results" MODIFIED="1395786832678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dbService.*</FILTER>
-=======
-    <SUITE FILE_PATH="coverage/server$MsgCheckStrokeTest.coverage" NAME="MsgCheckStrokeTest Coverage Results" MODIFIED="1396260631958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$FrontendImplTest.coverage" NAME="FrontendImplTest Coverage Results" MODIFIED="1396204680584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>frontend.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$GameMechanicImplTest.coverage" NAME="GameMechanicImplTest Coverage Results" MODIFIED="1396772627704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$SystemInfoTest.coverage" NAME="SystemInfoTest Coverage Results" MODIFIED="1395786824060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>system.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$DBServiceImplTest.coverage" NAME="DBServiceImplTest Coverage Results" MODIFIED="1395786832678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dbService.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$MsgDoneSnapshotTest.coverage" NAME="MsgDoneSnapshotTest Coverage Results" MODIFIED="1396260753216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$frontend_in_java_server.coverage" NAME="frontend in java-server Coverage Results" MODIFIED="1396204647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>frontend.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$MsgUpdateColorsTest.coverage" NAME="MsgUpdateColorsTest Coverage Results" MODIFIED="1396266100086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$utils_in_java_server.coverage" NAME="utils in java-server Coverage Results" MODIFIED="1395916494989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>utils.*</FILTER>
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
     </SUITE>
     <SUITE FILE_PATH="coverage/server$TimeHelperTest.coverage" NAME="TimeHelperTest Coverage Results" MODIFIED="1395916559355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
@@ -99,7 +39,6 @@
     <SUITE FILE_PATH="coverage/server$MsgCreateGamesTest.coverage" NAME="MsgCreateGamesTest Coverage Results" MODIFIED="1395858385829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>gameMechanic.*</FILTER>
     </SUITE>
-<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/server$SystemInfoTest.coverage" NAME="SystemInfoTest Coverage Results" MODIFIED="1395786824060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>system.*</FILTER>
     </SUITE>
@@ -108,16 +47,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/server$utils_in_java_server.coverage" NAME="utils in java-server Coverage Results" MODIFIED="1395916494989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
-=======
-    <SUITE FILE_PATH="coverage/server$MsgCreateGamesTest.coverage" NAME="MsgCreateGamesTest Coverage Results" MODIFIED="1396254880460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
     </SUITE>
     <SUITE FILE_PATH="coverage/server$StoreCookieTest.coverage" NAME="StoreCookieTest Coverage Results" MODIFIED="1395916547969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/server$MsgCreateChatTest.coverage" NAME="MsgCreateChatTest Coverage Results" MODIFIED="1396254839413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>gameMechanic.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -495,112 +427,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" line="127" class="frontend.UserDataImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="59" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="78" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="108" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="97" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="116" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="134" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="142" class="frontend.WebSocketImpl" package="frontend">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" line="128" class="frontend.UserDataImpl" package="frontend">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -660,52 +487,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" line="112" class="gameMechanic.GameMechanicImpl" package="gameMechanic">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" line="177" class="frontend.WebSocketImplTest" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="99" class="frontend.WebSocketImpl" package="frontend">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" line="72" class="frontend.WebSocketImpl" package="frontend">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -795,7 +577,202 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" line="109" class="gameMechanic.GameMechanicImpl" package="gameMechanic">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="47" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="52" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="105" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="142" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="150" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="171" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="598" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="43" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="576" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="578" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="582" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="588" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" line="594" class="gameMechanic.GameSession" package="gameMechanic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/utils/VFS.java" line="69" class="utils.VFS" package="utils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -820,75 +797,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-<<<<<<< HEAD
-      <file leaf-file-name="DBUserManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="56" selection-start="4627" selection-end="4627" vertical-scroll-proportion="0.0" vertical-offset="1765" max-vertical-offset="2550">
-=======
-      <file leaf-file-name="GameSession.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="469" column="19" selection-start="13671" selection-end="13675" vertical-scroll-proportion="1.4381443" vertical-offset="6966" max-vertical-offset="9537">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameMechanicImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="14" selection-start="5699" selection-end="5703" vertical-scroll-proportion="-16.206896" vertical-offset="2080" max-vertical-offset="3825">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1246#1247#0" expanded="true" />
-                <element signature="e#1279#1280#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameMechanicImplTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="8.793103" vertical-offset="493" max-vertical-offset="2227">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+            <state line="87" column="0" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="3519">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="ReflectionHelper.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java">
+      <file leaf-file-name="Snapshot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="37" selection-start="658" selection-end="658" vertical-scroll-proportion="0.49808916" vertical-offset="0" max-vertical-offset="785">
-=======
-      <file leaf-file-name="UserDataImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="0" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="4301">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+            <state line="19" column="0" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="1836">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="ReflectionHelperTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java">
+      <file leaf-file-name="GameSession.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="55" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+            <state line="36" column="53" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.39586028" vertical-offset="153" max-vertical-offset="10234">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameSessionTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="48" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-=======
-      <file leaf-file-name="FrontendImplTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VFS.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="8" selection-start="1327" selection-end="1370" vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="4012">
+            <state line="81" column="89" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.0" vertical-offset="1493" max-vertical-offset="2278">
               <folding />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
             </state>
           </provider>
         </entry>
@@ -906,38 +857,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-<<<<<<< HEAD
-=======
-        <option value="$PROJECT_DIR$/src/main/java/frontend/newOrLoginUser/MsgGetUser.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frontend/newOrLoginUser/MsgAddUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/VFS.java" />
-        <option value="$PROJECT_DIR$/src/test/java/utils/VFSTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/resource/Rating.java" />
-        <option value="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/utils/CookieDescriptorTest.java" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-        <option value="$PROJECT_DIR$/src/main/java/utils/CookieDescriptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/StoreCookie.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/StoreCookieTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/ChatWebSocketServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/msg/MsgUpdateUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/Metric.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" />
-=======
-        <option value="$PROJECT_DIR$/src/main/java/chat/ChatWebSocketImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/chat/GameChatImpl.java" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
         <option value="$PROJECT_DIR$/src/main/java/dbService/UserDataSet.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/TemplateHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/SHA2Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/TimeHelperTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/CasterTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/static/js/game.js" />
         <option value="$PROJECT_DIR$/src/main/java/chat/ChatMessage.java" />
         <option value="$PROJECT_DIR$/src/test/java/frontend/HttpServletHelper.java" />
@@ -951,7 +885,6 @@
         <option value="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameClasses/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/Chater.java" />
         <option value="$PROJECT_DIR$/src/test/java/chat/ChaterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/ReceiveMessage.java" />
@@ -970,31 +903,11 @@
         <option value="$PROJECT_DIR$/src/test/java/chat/ChatWebSocketImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/VFS.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java" />
-=======
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameMechanic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToWebSocket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToUserData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameChat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToDBService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java" />
-        <option value="$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgCheckStroke.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/VFS.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       </list>
     </option>
   </component>
@@ -1007,17 +920,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
     <option name="x" value="1592" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
-=======
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1030" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1049,7 +955,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1065,7 +970,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
-<<<<<<< HEAD
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1102,12 +1006,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
-=======
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheckersGameTest" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1148,13 +1046,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="resource" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-=======
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1177,6 +1072,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gameMechanic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1199,7 +1098,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -1226,8 +1124,28 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-=======
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -1273,7 +1191,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1326,8 +1243,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-=======
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1414,7 +1329,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
@@ -1441,8 +1355,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-=======
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
         </subPane>
       </pane>
     </panes>
@@ -1475,159 +1387,24 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="gameMechanic" />
       <recent name="utils" />
       <recent name="resource" />
       <recent name="frontend" />
       <recent name="chat" />
-      <recent name="dbService" />
-<<<<<<< HEAD
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="ChatWebSocketImplTest.testSendMessage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="chat.*" />
-=======
-      <recent name="system" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.GameMechanicImplTest">
-    <configuration default="false" name="MsgPartyEndTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="gameMechanic.*" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java-server" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-<<<<<<< HEAD
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="chat" />
-      <option name="MAIN_CLASS_NAME" value="chat.ChatWebSocketImplTest" />
-      <option name="METHOD_NAME" value="testSendMessage" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-=======
-      <option name="PACKAGE_NAME" value="gameMechanic" />
-      <option name="MAIN_CLASS_NAME" value="gameMechanic.MsgPartyEndTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-<<<<<<< HEAD
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="7643" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ResourceFactoryTest.testGameSettingsResource" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="resource.*" />
-=======
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GameMechanicImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="gameMechanic.*" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java-server" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-<<<<<<< HEAD
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.ResourceFactoryTest" />
-      <option name="METHOD_NAME" value="testGameSettingsResource" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-=======
-      <option name="PACKAGE_NAME" value="gameMechanic" />
-      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-<<<<<<< HEAD
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="7808" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
     <configuration default="false" name="ResourceFactoryTest.testResExist" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="resource.*" />
-=======
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="java-server" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-<<<<<<< HEAD
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="resource" />
       <option name="MAIN_CLASS_NAME" value="resource.ResourceFactoryTest" />
@@ -1639,59 +1416,49 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
-=======
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="java-server" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-<<<<<<< HEAD
       <properties />
       <listeners />
-=======
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="false" name="ReflectionHelperTest.testCreateInstance" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-=======
-    <configuration default="false" name="GameMechanicImplTest.twoUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="gameMechanic.*" />
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="java-server" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-<<<<<<< HEAD
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="utils" />
       <option name="MAIN_CLASS_NAME" value="utils.ReflectionHelperTest" />
       <option name="METHOD_NAME" value="testCreateInstance" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
-=======
-      <option name="PACKAGE_NAME" value="gameMechanic" />
-      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
-      <option name="METHOD_NAME" value="twoUsersTest" />
-      <option name="TEST_OBJECT" value="method" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-<<<<<<< HEAD
       <properties />
       <listeners />
       <RunnerSettings RunnerId="Debug">
@@ -1706,17 +1473,6 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.*" />
-=======
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GameMechanicImplTest.threeUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="gameMechanic.*" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1726,36 +1482,97 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-<<<<<<< HEAD
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="java-server" />
       <envs />
-=======
-      <option name="PACKAGE_NAME" value="gameMechanic" />
-      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
-      <option name="METHOD_NAME" value="threeUsersTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameSessionTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="gameMechanic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="java-server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="gameMechanic" />
+      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameSessionTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51987" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameSessionTest.testIsDirCreated" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="gameMechanic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="java-server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="gameMechanic" />
+      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameSessionTest" />
+      <option name="METHOD_NAME" value="testIsDirCreated" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52117" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -2012,35 +1829,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="TestNG.ChatMessageTest.testChatMessage" />
-<<<<<<< HEAD
-      <item index="1" class="java.lang.String" itemvalue="TestNG.ChatWebSocketImplTest.testSendMessage" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testGameSettingsResource" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testResExist" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.ReflectionHelperTest.testCreateInstance" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testResExist" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.ReflectionHelperTest.testCreateInstance" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.GameSessionTest" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.GameSessionTest.testIsDirCreated" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ReflectionHelperTest.testCreateInstance" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testResExist" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testGameSettingsResource" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.ChatWebSocketImplTest.testSendMessage" />
-=======
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MsgPartyEndTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.twoUsersTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.threeUsersTest" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.threeUsersTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.twoUsersTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MsgPartyEndTest" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+        <item index="1" class="java.lang.String" itemvalue="TestNG.GameSessionTest.testIsDirCreated" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.GameSessionTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ReflectionHelperTest.testCreateInstance" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testResExist" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -2077,86 +1878,50 @@
       <workItem from="1395772843461" duration="10588000" />
       <workItem from="1395853574417" duration="4906000" />
       <workItem from="1395916354503" duration="4043000" />
-<<<<<<< HEAD
       <workItem from="1396471519371" duration="1254000" />
       <workItem from="1396473200229" duration="2722000" />
       <workItem from="1396539253068" duration="2423000" />
       <workItem from="1396549334134" duration="44992000" />
       <workItem from="1396713691339" duration="67000" />
       <workItem from="1396713996092" duration="2987000" />
-      <workItem from="1396722345015" duration="10210000" />
-=======
-      <workItem from="1396203964988" duration="3372000" />
-      <workItem from="1396207750806" duration="10060000" />
-      <workItem from="1396250050393" duration="29614000" />
-      <workItem from="1396360625914" duration="2068000" />
-      <workItem from="1396379683345" duration="6198000" />
-      <workItem from="1396725305694" duration="615000" />
-      <workItem from="1396769930845" duration="13095000" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+      <workItem from="1396722345015" duration="15699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="138733000" />
+    <option name="totallyTimeSpent" value="144222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
-=======
-    <option name="totallyTimeSpent" value="139100000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1030" extended-state="0" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14541623" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14541623" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14436248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3561644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16905071" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38368246" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44432193" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19915701" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28114665" sideWeight="0.39105263" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39093783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39250275" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15631579" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19427083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14947917" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27713382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15806112" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2078125" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-=======
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27789474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28114665" sideWeight="0.6089474" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19010417" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2209,149 +1974,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="506" selection-end="506" vertical-scroll-proportion="0.23462985" vertical-offset="0" max-vertical-offset="797" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.0.0.v20130308/websocket-api-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/api/Session.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="51" selection-start="758" selection-end="758" vertical-scroll-proportion="0.52590674" vertical-offset="2" max-vertical-offset="799" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/UserDataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="11" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.40520042" vertical-offset="0" max-vertical-offset="923">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07280514" vertical-offset="0" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgAddUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="-0.05567452" vertical-offset="162" max-vertical-offset="629" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/CasterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="462" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="765">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="338" selection-end="338" vertical-scroll-proportion="0.14734562" vertical-offset="0" max-vertical-offset="923">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/LoadPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.113902844" vertical-offset="0" max-vertical-offset="799">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="38" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="3451">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgDoneSnapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="285" selection-end="285" vertical-scroll-proportion="0.23943663" vertical-offset="0" max-vertical-offset="923">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/GameChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/SHA2Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="867">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="77" selection-start="1711" selection-end="1711" vertical-scroll-proportion="-7.159263" vertical-offset="6999" max-vertical-offset="8075">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/StoreCookieTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="49" selection-start="395" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/test/java/chat/GameChatImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="21" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="850">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="506" selection-end="506" vertical-scroll-proportion="0.37940025" vertical-offset="151" max-vertical-offset="918">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="40" selection-start="1548" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14529915" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="313" column="150" selection-start="12169" selection-end="12169" vertical-scroll-proportion="0.0" vertical-offset="4855" max-vertical-offset="6273">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="44" selection-start="2271" selection-end="2271" vertical-scroll-proportion="1.1627907" vertical-offset="607" max-vertical-offset="1836">
           <folding />
         </state>
       </provider>
@@ -2441,11 +2066,11 @@
           <folding>
             <element signature="e#965#986#0" expanded="true" />
             <element signature="e#1087#1108#0" expanded="true" />
-            <element signature="e#1209#1230#0" expanded="true" />
-            <element signature="e#1326#1349#0" expanded="true" />
-            <element signature="e#1453#1480#0" expanded="true" />
-            <element signature="e#5018#5039#0" expanded="true" />
-            <element signature="e#7165#7178#0" expanded="true" />
+            <element signature="e#1203#1224#0" expanded="true" />
+            <element signature="e#1320#1343#0" expanded="true" />
+            <element signature="e#1447#1474#0" expanded="true" />
+            <element signature="e#5013#5034#0" expanded="true" />
+            <element signature="e#7160#7173#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2474,137 +2099,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/system/SystemInfoManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.07367281" vertical-offset="0" max-vertical-offset="923">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/VFSTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="297" selection-end="348" vertical-scroll-proportion="-3.5172415" vertical-offset="0" max-vertical-offset="1377">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameMechanic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="30" selection-start="253" selection-end="270" vertical-scroll-proportion="0.031825796" vertical-offset="66" max-vertical-offset="663" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToDBService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="491" selection-end="491" vertical-scroll-proportion="0.5695142" vertical-offset="0" max-vertical-offset="597" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.5695142" vertical-offset="0" max-vertical-offset="597" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="404" selection-end="404" vertical-scroll-proportion="0.46612903" vertical-offset="0" max-vertical-offset="620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="401" selection-end="409" vertical-scroll-proportion="0.3230994" vertical-offset="0" max-vertical-offset="684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgUpdateColors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="6" selection-start="9031" selection-end="9031" vertical-scroll-proportion="0.0" vertical-offset="2764" max-vertical-offset="7837" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToWebSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="435" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="28" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.60784316" vertical-offset="274" max-vertical-offset="935">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgDoneSnapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="43" selection-start="448" selection-end="456" vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgDoneStroke.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="271" selection-end="284" vertical-scroll-proportion="0.22222222" vertical-offset="0" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="31" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.2503937" vertical-offset="385" max-vertical-offset="1904" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToUserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="303" selection-end="303" vertical-scroll-proportion="0.3480315" vertical-offset="0" max-vertical-offset="635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="63" selection-end="63" vertical-scroll-proportion="0.107086614" vertical-offset="0" max-vertical-offset="635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgPartyEnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="342" selection-end="342" vertical-scroll-proportion="0.3480315" vertical-offset="0" max-vertical-offset="635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="-0.017322835" vertical-offset="113" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/GameMechanic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="209" selection-end="209" vertical-scroll-proportion="0.1388889" vertical-offset="0" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chat/GameChatImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="758" selection-end="799" vertical-scroll-proportion="0.28290468" vertical-offset="0" max-vertical-offset="661">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="93" selection-start="950" selection-end="950" vertical-scroll-proportion="0.17707007" vertical-offset="252" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="36" selection-start="3721" selection-end="3721" vertical-scroll-proportion="2.598726" vertical-offset="0" max-vertical-offset="2227">
           <folding />
         </state>
       </provider>
@@ -2619,44 +2120,17 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/chat/ChatWebSocketImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="83" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.4611465" vertical-offset="471" max-vertical-offset="2091">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="363" selection-end="363" vertical-scroll-proportion="0.37480316" vertical-offset="0" max-vertical-offset="635" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar!/org/mockito/Mockito.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="63" selection-start="1710" selection-end="1816" vertical-scroll-proportion="0.34670946" vertical-offset="396" max-vertical-offset="1700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/UserDataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="22" selection-start="1283" selection-end="1290" vertical-scroll-proportion="0.5219298" vertical-offset="510" max-vertical-offset="1496" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="46" selection-start="3374" selection-end="3386" vertical-scroll-proportion="0.9444444" vertical-offset="714" max-vertical-offset="2652">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/chat/ChatWebSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="110" selection-start="823" selection-end="823" vertical-scroll-proportion="0.43312103" vertical-offset="0" max-vertical-offset="901">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.08600337" vertical-offset="0" max-vertical-offset="1037">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="26" selection-start="1096" selection-end="1096" vertical-scroll-proportion="-2.6774611" vertical-offset="2322" max-vertical-offset="3094">
@@ -2676,31 +2150,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="70" selection-start="807" selection-end="807" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="884">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="988" selection-end="1046" vertical-scroll-proportion="0.45868465" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="173" selection-end="173" vertical-scroll-proportion="0.19444445" vertical-offset="0" max-vertical-offset="2023" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="773" selection-end="814" vertical-scroll-proportion="0.02977233" vertical-offset="136" max-vertical-offset="748">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="53" selection-start="6122" selection-end="6122" vertical-scroll-proportion="0.57276994" vertical-offset="2303" max-vertical-offset="3043">
           <folding />
         </state>
       </provider>
@@ -2717,103 +2166,32 @@
         <state line="53" column="52" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.7579618" vertical-offset="0" max-vertical-offset="1156">
           <folding />
         </state>
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/chat/ChatMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.11908932" vertical-offset="0" max-vertical-offset="571" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chat/ChatWebSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="276" selection-end="276" vertical-scroll-proportion="0.11908932" vertical-offset="0" max-vertical-offset="1037" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgCheckStroke.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2084063" vertical-offset="0" max-vertical-offset="571" />
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgAddUser.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="21" column="46" selection-start="579" selection-end="579" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="785">
-=======
-        <state line="146" column="0" selection-start="5231" selection-end="5231" vertical-scroll-proportion="-0.7311828" vertical-offset="2482" max-vertical-offset="6324">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgUpdateUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="11" selection-start="254" selection-end="254" vertical-scroll-proportion="0.19490446" vertical-offset="0" max-vertical-offset="785">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="14" selection-start="1393" selection-end="1445" vertical-scroll-proportion="0.56567425" vertical-offset="0" max-vertical-offset="1156">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="19" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.63860106" vertical-offset="0" max-vertical-offset="9520">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="57" selection-start="496" selection-end="496" vertical-scroll-proportion="0.38141027" vertical-offset="0" max-vertical-offset="624">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="56" selection-start="4627" selection-end="4627" vertical-scroll-proportion="0.0" vertical-offset="1765" max-vertical-offset="2550">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="8" selection-start="1327" selection-end="1370" vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="4012">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="17" selection-start="36" selection-end="36" vertical-scroll-proportion="0.043312103" vertical-offset="0" max-vertical-offset="785">
-=======
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="279" selection-end="304" vertical-scroll-proportion="0.04647436" vertical-offset="158" max-vertical-offset="782">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/Rating.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="48" selection-start="428" selection-end="428" vertical-scroll-proportion="0.28152865" vertical-offset="0" max-vertical-offset="785">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="4301">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/resource/GameSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="264" selection-end="264" vertical-scroll-proportion="0.17324841" vertical-offset="0" max-vertical-offset="785">
           <folding />
         </state>
       </provider>
@@ -2821,27 +2199,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/TimeSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.043312103" vertical-offset="0" max-vertical-offset="785">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="14" selection-start="5699" selection-end="5703" vertical-scroll-proportion="-16.206896" vertical-offset="2080" max-vertical-offset="3825">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1246#1247#0" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="8.793103" vertical-offset="493" max-vertical-offset="2227">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="55" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
@@ -2851,14 +2212,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="52" selection-start="956" selection-end="956" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="37" selection-start="658" selection-end="658" vertical-scroll-proportion="0.49808916" vertical-offset="0" max-vertical-offset="785">
-=======
+        <state line="15" column="37" selection-start="355" selection-end="355" vertical-scroll-proportion="0.32484075" vertical-offset="0" max-vertical-offset="785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="56" selection-start="4627" selection-end="4627" vertical-scroll-proportion="0.39363056" vertical-offset="1765" max-vertical-offset="2550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="43" selection-start="3344" selection-end="3344" vertical-scroll-proportion="1.0433121" vertical-offset="541" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="48" selection-start="91" selection-end="91" vertical-scroll-proportion="0.06597672" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="22" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.3518758" vertical-offset="0" max-vertical-offset="773">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/TimeHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.0.0.v20130308/websocket-common-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/common/message/SimpleTextMessage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="16" selection-start="717" selection-end="717" vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.0.0.v20130308/websocket-common-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/common/WebSocketSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="16" selection-start="3673" selection-end="3673" vertical-scroll-proportion="0.34790874" vertical-offset="973" max-vertical-offset="1717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.0.0.v20130308/websocket-common-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/common/events/EventDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="25" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.5102041" vertical-offset="252" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.0.0.v20130308/websocket-common-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/common/events/ListenerEventDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="16" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.7202925" vertical-offset="31" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/resource/GameSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="537" selection-end="537" vertical-scroll-proportion="0.61025643" vertical-offset="0" max-vertical-offset="585">
+          <folding>
+            <element signature="e#568#569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="0" selection-start="4871" selection-end="4871" vertical-scroll-proportion="0.752883" vertical-offset="1634" max-vertical-offset="3043">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.0" vertical-offset="910" max-vertical-offset="3519">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_11/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1249" column="42" selection-start="53439" selection-end="53439" vertical-scroll-proportion="0.42671615" vertical-offset="20374" max-vertical-offset="34765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="48" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="89" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="469" column="19" selection-start="13671" selection-end="13675" vertical-scroll-proportion="1.4381443" vertical-offset="6966" max-vertical-offset="9537">
->>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+        <state line="36" column="53" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.39586028" vertical-offset="153" max-vertical-offset="10234">
           <folding />
         </state>
       </provider>

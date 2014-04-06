@@ -11,7 +11,7 @@ import java.util.Queue;
 public class VFS {
     public static final String USER_DIRECTORY = "user.dir";
 
-    public static final String PROJECT_DIRECTORY = System.getProperty(USER_DIRECTORY) + '/';
+    public static final String PROJECT_DIRECTORY = System.getProperty(USER_DIRECTORY) + '\\';
 
     public static String getAbsolutePath(String path) {
         return isAbsolute(path) ? path : PROJECT_DIRECTORY + path;
@@ -70,6 +70,9 @@ public class VFS {
         FileWriter writer = null;
         try {
             File file = new File(getAbsolutePath(path));
+            if (!file.exists()) {
+                file.createNewFile();
+            }
             writer = new FileWriter(file);
             writer.write(data);
         } catch (Exception e) {
