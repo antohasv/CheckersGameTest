@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 public class ResourceFactoryTest {
 
     public static final String GAME_SETTINGS_RESOURCE_PATH = "settings/gameSettings.xml";
+    public static final String UNEXIST_RESOURCE = "UNEXIST_RESOURCE";
     ResourceFactory resourceFactory;
 
     @BeforeMethod
@@ -36,6 +37,17 @@ public class ResourceFactoryTest {
     @Test
     public void testTimeResource() throws Exception {
         Assert.assertNotEquals(TimeSettings.getExitTime(), 0);
+    }
+
+    @Test
+    public void testResExist() throws Exception {
+        GameSettings gameSettings1 = (GameSettings) resourceFactory.getResource(GAME_SETTINGS_RESOURCE_PATH);
+        Assert.assertEquals(gameSettings1, (GameSettings) resourceFactory.getResource(GAME_SETTINGS_RESOURCE_PATH));
+    }
+
+    @Test
+    public void testUncorrectValue() throws Exception {
+        Assert.assertNull(resourceFactory.getResource(UNEXIST_RESOURCE));
     }
 
     @AfterMethod

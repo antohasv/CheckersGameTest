@@ -60,7 +60,6 @@ public class VFS {
             writer = new FileWriter(file);
             writer.write("");
         } catch (Exception e) {
-            System.err.println(e.getMessage());
             e.printStackTrace();
         } finally {
             closeWriter(writer);
@@ -74,7 +73,6 @@ public class VFS {
             writer = new FileWriter(file);
             writer.write(data);
         } catch (Exception e) {
-            System.err.println(e.getMessage());
             e.printStackTrace();
         } finally {
             closeWriter(writer);
@@ -88,7 +86,6 @@ public class VFS {
             writer = new FileWriter(file, true);
             writer.write(data);
         } catch (Exception e) {
-            System.err.println(e.getMessage());
             e.printStackTrace();
         } finally {
             closeWriter(writer);
@@ -100,7 +97,6 @@ public class VFS {
             try {
                 writer.close();
             } catch (Exception e) {
-                System.err.println(e.getMessage());
                 e.printStackTrace();
             }
         }
@@ -117,7 +113,6 @@ public class VFS {
                 sb.append(line);
             }
         } catch (Exception e) {
-            System.err.println(e.getMessage());
             e.printStackTrace();
         } finally {
             closeFileReder(fileReader);
@@ -130,7 +125,6 @@ public class VFS {
             try {
                 fileReader.close();
             } catch (Exception e) {
-                System.err.println(e.getMessage());
                 e.printStackTrace();
             }
         }

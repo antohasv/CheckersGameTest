@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -14,7 +15,7 @@ import utils.VFS;
 public class ResourceFactory {
     public static final String RESOURCE_DIRECTORY = "/settings";
 
-    private HashMap<String, Resource> resource;
+    private Map<String, Resource> resource;
     private static ResourceFactory factory = null;
 
     private ResourceFactory() {
@@ -48,7 +49,6 @@ public class ResourceFactory {
                 resource.put(path, (Resource) saxHandler.object);
                 return (Resource) saxHandler.object;
             } catch (Exception e) {
-                System.err.println(e.getMessage());
                 e.printStackTrace();
             }
             return null;

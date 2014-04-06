@@ -8,8 +8,6 @@ public class ReflectionHelper {
         try {
             return Class.forName(className).newInstance();
         } catch (Exception e) {
-            System.err.println("ReflectionHelper, createInstance");
-            System.err.println(e.getMessage());
             e.printStackTrace();
         }
         return null;
@@ -20,15 +18,12 @@ public class ReflectionHelper {
             Field field = object.getClass().getDeclaredField(fieldName);
             field.setAccessible(true);
 
-            if (field.getType().equals(String.class)) {
-                field.set(object, value);
-            } else if (field.getType().equals(int.class)) {
+            if (field.getType().equals(int.class)) {
                 field.set(object, Integer.parseInt(value));
             }
 
             field.setAccessible(false);
         } catch (Exception e) {
-            System.err.println("ReflectionHelper, setFieldValue");
             e.printStackTrace();
         }
     }
