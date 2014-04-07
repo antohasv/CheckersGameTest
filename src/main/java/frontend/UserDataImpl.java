@@ -36,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
     private static Map<String, UserDataSet> wantToPlay =
             new ConcurrentHashMap<String, UserDataSet>();
 
-    final private static Map<String, WebSocketImpl> sessionIdToWS =
+    final public static Map<String, WebSocketImpl> sessionIdToWS =
             new HashMap<String, WebSocketImpl>();
 
     final private static Map<String, ChatWebSocketImpl> sessionIdToChatWS =
