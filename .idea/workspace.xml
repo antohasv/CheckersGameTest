@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad79f1b-4430-4147-8bba-6c9100c41457" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameClasses/FieldTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameClasses/FieldTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameClasses/SnapshotTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameClasses/SnapshotTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java" afterPath="$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/ccu" afterPath="$PROJECT_DIR$/statistic/ccu" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/memoryUsage" afterPath="$PROJECT_DIR$/statistic/memoryUsage" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/time" afterPath="$PROJECT_DIR$/statistic/time" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/totalMemory" afterPath="$PROJECT_DIR$/statistic/totalMemory" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\artem_000\IdeaProjects\CheckersGameTest\src\test\java\gameClasses\FieldTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\artem_000\IdeaProjects\CheckersGameTest\src\test\java\gameClasses\SnapshotTest.java" afterPath="" />
     </list>
     <ignored path="java-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -278,22 +260,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MsgUpdateColorsTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java">
+      <file leaf-file-name="StrokeTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="952">
+            <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CasterTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/utils/CasterTest.java">
+      <file leaf-file-name="Snapshot.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="918">
-              <folding>
-                <element signature="e#1022#1030#0" expanded="false" />
-              </folding>
+            <state line="7" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="-1.1226416" vertical-offset="697" max-vertical-offset="1836">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -320,23 +300,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBUserManagerTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DBUserManagerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="-2.4962263" vertical-offset="1391" max-vertical-offset="1921">
+            <state line="10" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="1921">
               <folding>
                 <element signature="e#726#1526#0" expanded="true" />
                 <element signature="e#1519#1520#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReflectionHelperTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1282,16 +1253,16 @@
       <workItem from="1396725305694" duration="615000" />
       <workItem from="1396769930845" duration="21792000" />
       <workItem from="1396846317038" duration="20781000" />
-      <workItem from="1396888171503" duration="4873000" />
+      <workItem from="1396888171503" duration="5015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173451000" />
+    <option name="totallyTimeSpent" value="173593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1030" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1517,15 +1488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1836">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="17" selection-start="1446" selection-end="1516" vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="1156">
@@ -1550,33 +1512,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/utils/VFSTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/FieldTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/SnapshotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1720,11 +1655,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="-2.4962263" vertical-offset="1391" max-vertical-offset="1921">
+        <state line="10" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="1921">
           <folding>
             <element signature="e#726#1526#0" expanded="true" />
             <element signature="e#1519#1520#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="-1.1226416" vertical-offset="697" max-vertical-offset="1836">
+          <folding />
         </state>
       </provider>
     </entry>
