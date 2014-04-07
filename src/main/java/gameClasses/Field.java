@@ -1,17 +1,18 @@
 package gameClasses;
 
 public class Field {
-    public static enum Checker {nothing, black, white};
+    public static enum checker {nothing, black, white}
+
 
     private boolean king = false;
-    private Checker type;
+    private checker type;
 
-    public Field(Checker checker) {
-        type = checker;
+    public Field(checker t) {
+        type = t;
     }
 
     public Field() {
-        type = Checker.nothing;
+        type = checker.nothing;
     }
 
     public Field(Field field) {
@@ -24,8 +25,8 @@ public class Field {
         king = field.king;
     }
 
-    public void setType(Checker checker) {
-        type = checker;
+    public void setType(checker t) {
+        type = t;
     }
 
     public boolean isKing() {
@@ -36,20 +37,23 @@ public class Field {
         king = true;
     }
 
-    public Checker getType() {
+    public void makeNotKing() {
+        king = false;
+    }
+
+    public checker getType() {
         return type;
     }
 
     public void clear() {
-        type = Checker.nothing;
+        type = checker.nothing;
         king = false;
     }
 
     public boolean isEmpty() {
-        if (type == Checker.nothing) {
+        if (type == checker.nothing)
             return true;
-        } else {
+        else
             return false;
-        }
     }
 }
