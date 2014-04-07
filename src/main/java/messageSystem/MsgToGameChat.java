@@ -12,10 +12,13 @@ public abstract class MsgToGameChat extends Msg{
 		super(from,to);
 	}
 
-	public void exec(Abonent abonent){
+	public boolean exec(Abonent abonent){
 		if (abonent instanceof GameChat){
 			exec((GameChat)abonent);
-		}
+            return true;
+        }
+        else
+            return false;
 	}
 	public abstract void exec(GameChat gameChat);
 }

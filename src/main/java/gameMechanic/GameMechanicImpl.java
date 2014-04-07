@@ -21,7 +21,7 @@ import utils.TimeHelper;
 public class GameMechanicImpl implements GameMechanic {
     public static final String SERVICE_NAME = "GameMechanic";
 
-    final private Map<Integer, GameSession> userIdToSession =
+    final public Map<Integer, GameSession> userIdToSession =
             new HashMap<Integer, GameSession>();
     final private Map<String, UserDataSet> wantToPlay =
             new HashMap<String, UserDataSet>();
@@ -42,14 +42,21 @@ public class GameMechanicImpl implements GameMechanic {
         return messageSystem;
     }
 
-    private void sendSnapshot(int userId) {
+
+    public Map<String, UserDataSet> getWantToPlay() {
+        return wantToPlay;
+    }
+
+
+    public Snapshot sendSnapshot(int userId) {
         Snapshot snapshot = getSnapshot(userId);
         Address to = getMessageSystem().getAddressByName(WebSocketImpl.SERVICE_NAME);
         MsgDoneSnapshot msg = new MsgDoneSnapshot(getAddress(), to, userId, snapshot);
         getMessageSystem().putMsg(to, msg);
+        return snapshot;
     }
 
-    private int randomMod2() {
+    public int randomMod2() {
         return (((int) (Math.random() * 1000)) % 2);
     }
 
@@ -106,8 +113,7 @@ public class GameMechanicImpl implements GameMechanic {
 
     public Map<String, String> createGames(Map<String, UserDataSet> users) {
         Map<String, String> sessionIdToColor = new HashMap<String, String>();
-        if (users.size() == 0)
-            return sessionIdToColor;
+        if (users.size() == 0) return sessionIdToColor;
         String sessionIdWhite, sessionIdBlack;
         removeRepeatUsers(users);
         removeAlreadyInGameUsers(users);
@@ -135,8 +141,7 @@ public class GameMechanicImpl implements GameMechanic {
         int to_y = stroke.getTo_Y();
         String status = stroke.getStatus();
         Map<Integer, Stroke> resp = new HashMap<Integer, Stroke>();
-        if (gameSession == null)
-            return resp;
+        if (gameSession == null) return resp;
         if (status.equals("lose")) {
             sendResultStroke(gameSession, gameSession.getAnotherId(id));
             return resp;
@@ -152,7 +157,7 @@ public class GameMechanicImpl implements GameMechanic {
         }
         int winnerId = gameSession.getWinnerId();
         if (winnerId != 0) {
-            gameSession.saveLog(winnerId);
+            //gameSession.saveLog(winnerId);
             updateUsersRating(winnerId, gameSession.getAnotherId(winnerId));
             resp.get(winnerId).setStatus("win");
             resp.get(gameSession.getAnotherId(winnerId)).setStatus("lose");
@@ -162,11 +167,11 @@ public class GameMechanicImpl implements GameMechanic {
         return resp;
     }
 
-    private void sendResultStroke(GameSession gameSession, int winnerId) {
+    public void sendResultStroke(GameSession gameSession, int winnerId) {
         Stroke winStroke = new Stroke("win");
         Stroke loseStroke = new Stroke("lose");
         Map<Integer, Stroke> resp = new HashMap<Integer, Stroke>();
-        gameSession.saveLog(winnerId);
+//        gameSession.saveLog(winnerId);
         resp.clear();
         updateUsersRating(winnerId, gameSession.getAnotherId(winnerId));
         resp.put(winnerId, winStroke);
@@ -184,14 +189,13 @@ public class GameMechanicImpl implements GameMechanic {
         messageSystem.putMsg(to, msg);
     }
 
-    private void removeDeadGames() {
+    public  void removeDeadGames() {
         Object[] keys = userIdToSession.keySet().toArray();
         int count, winnerId;
         GameSession gameSession;
         for (count = 0; count < keys.length; count++) {
             gameSession = userIdToSession.get(keys[count]);
-            if (gameSession == null)
-                continue;
+            if (gameSession == null) continue;
             winnerId = gameSession.getWinnerId();
             if (winnerId != 0) {
                 sendResultStroke(gameSession, winnerId);
