@@ -9,8 +9,9 @@ import frontend.WebSocketImpl;
 import gameMechanic.gameCreating.MsgCreateChat;
 import gameMechanic.gameCreating.MsgUpdateColors;
 import messageSystem.MessageSystemImpl;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.mockito.Mock;
 import org.testng.Assert;
 
@@ -27,7 +28,7 @@ public class MsgUpdateColorsTest {
     private GameMechanicImpl gameMechanic;
     private WebSocketImpl webSocket;
 
-    @Before
+    @BeforeMethod
     public  void setUp() throws Exception {
         messageSystem = new MessageSystemImpl();
         gameMechanic = new GameMechanicImpl(messageSystem);

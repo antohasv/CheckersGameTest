@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import java.sql.*;
 import java.util.Random;
 
+
 public class DBUserManagerTest {
     public static final String PREFIX_FAKE_USER = "fake_user";
     public static final String FAKE_PASSWORD = "fake_password";
@@ -109,3 +110,4 @@ public class DBUserManagerTest {
         connection.close();
     }
 }
+

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+
 public class DBServiceImplTest {
     public static final String FAKE_LOGIN = "fake_login";
     public static final String FAKE_PASSWORD = "fake_password";
@@ -70,3 +71,4 @@ public class DBServiceImplTest {
         dataAccessObject.deleteUser(FAKE_LOGIN);
     }
 }
+

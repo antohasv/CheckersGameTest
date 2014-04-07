@@ -10,8 +10,9 @@ import frontend.UserDataImpl;
 import gameMechanic.Stroke.MsgPartyEnd;
 import gameMechanic.gameCreating.MsgCreateChat;
 import messageSystem.MessageSystemImpl;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.Assert;
 
 import static org.mockito.Mockito.mock;
@@ -24,7 +25,7 @@ public class MsgPartyEndTest {
     private GameChatImpl gameChat;
     private UserDataImpl userData;
 
-    @Before
+    @BeforeMethod
     public  void setUp() throws Exception {
         messageSystem = new MessageSystemImpl();
         gameMechanic = new GameMechanicImpl(messageSystem);

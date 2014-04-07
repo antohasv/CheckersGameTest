@@ -6,8 +6,9 @@ import base.MessageSystem;
 import chat.GameChatImpl;
 import gameMechanic.gameCreating.MsgCreateChat;
 import messageSystem.MessageSystemImpl;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.mockito.Mock;
 import org.testng.Assert;
 
@@ -20,7 +21,7 @@ public class MsgCreateChatTest {
     private GameMechanicImpl gameMechanic;
     private GameChatImpl gameChat;
 
-    @Before
+    @BeforeMethod
     public  void setUp() throws Exception {
         messageSystem = new MessageSystemImpl();
         gameMechanic = new GameMechanicImpl(messageSystem);
