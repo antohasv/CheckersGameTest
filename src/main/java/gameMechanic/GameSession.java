@@ -113,6 +113,7 @@ public class GameSession {
     }
 
     public boolean checkStroke(int id, int fromX, int fromY, int toX, int toY) {
+        System.out.println(String.format("gameSession.checkStroke(%d, %d, %d, %d, %d);", id, fromX, fromY, toX, toY));
         StringBuffer sb = new StringBuffer("gameSession.checkStroke(");
         sb.append(id).append(",").append(fromX).append(",").append(fromY).append(",").append(toX).append(",").append(toY).append(");\n");
 
@@ -152,6 +153,7 @@ public class GameSession {
 
     private boolean checkEating(int fromX, int fromY, int toX, int toY) {
         if (!fieldIsKing(fromX, fromY)) {
+            System.out.println("fieldIsKing");
             return true;
         } else {
             return !checkKingOtherEating(fromX, fromY, toX, toY);
@@ -159,6 +161,7 @@ public class GameSession {
     }
 
     private boolean checkKingOtherEating(int fromX, int fromY, int toX, int toY) {
+        System.out.println("checkKingOtherEating");
         Field.Checker anotherColor = getAnotherColor(getFieldType(fromX, fromY));
         int onX = normal(toX - fromX);
         int onY = normal(toY - fromY);
@@ -239,6 +242,7 @@ public class GameSession {
     private boolean makeEatingStroke(int fromX, int fromY, int toX, int toY) {
         eat(fromX, fromY, toX, toY);
         if (becameKing(toX, toY)) {
+            System.out.println("Make King");
             makeKing(toX, toY);
         }
         return canEat(toX, toY);
@@ -247,12 +251,14 @@ public class GameSession {
     private boolean makeUsualStroke(int fromX, int fromY, int toX, int toY) {
         Field.Checker myColor = getFieldType(fromX, fromY);
         if (canEat(myColor)) {
+            System.out.println("CanEat");
             return false;
         }
 
         move(fromX, fromY, toX, toY);
 
         if (becameKing(toX, toY)) {
+            System.out.println("Make King");
             makeKing(toX, toY);
         }
         return true;
@@ -439,6 +445,7 @@ public class GameSession {
     }
 
     private boolean kingEating(int fromX, int fromY, int toX, int toY) {
+        System.out.println("King Eating");
         Field.Checker myColor = getFieldType(fromX, fromY), anotherColor = getAnotherColor(myColor);
         int onX = normal(toX - fromX);
         int onY = normal(toY - fromY);
@@ -461,6 +468,7 @@ public class GameSession {
     }
 
     private boolean pawnEating(int fromX, int fromY, int toX, int toY) {
+        System.out.println("Pawn Eating");
         if (abs(fromX - toX) != 2 || abs(fromY - toY) != 2) {
             return false;
         }

@@ -26,6 +26,7 @@ public class Main {
     public static final int GAME_SERVER_PORT = 8002;
     public static final int WEBSOCKET_SERVER_PORT = 8052;
     public static final int CHAT_SERVER_PORT = 8012;
+    public static final String STATIC = "static";
 
     public static void main(String[] args) throws Exception {
         final SystemInfo sysInfo = new SystemInfo();
@@ -71,7 +72,7 @@ public class Main {
     private static ResourceHandler getResourceHanlder() {
         ResourceHandler resourceHandler = new ResourceHandler();
         resourceHandler.setDirectoriesListed(true);
-        resourceHandler.setResourceBase("static");
+        resourceHandler.setResourceBase(STATIC);
         return resourceHandler;
     }
 

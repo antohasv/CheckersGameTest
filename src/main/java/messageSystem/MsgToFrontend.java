@@ -6,19 +6,19 @@ import base.Frontend;
 import base.Msg;
 
 
-public abstract class MsgToFrontend extends Msg{
+public abstract class MsgToFrontend extends Msg {
 
-	public MsgToFrontend(Address from, Address to){
-		super(from,to);
-	}
+    public MsgToFrontend(Address from, Address to) {
+        super(from, to);
+    }
 
-	public boolean exec(Abonent abonent){
-		if (abonent instanceof Frontend){
-			exec((Frontend)abonent);
+    public boolean exec(Abonent abonent) {
+        if (abonent instanceof Frontend) {
+            exec((Frontend) abonent);
             return true;
-		}
-        else
+        } else
             return false;
-	}
-	public abstract void exec(Frontend frontend);
+    }
+
+    public abstract void exec(Frontend frontend);
 }

@@ -15,8 +15,6 @@ public class Rating implements Serializable, Resource {
 
     public static int getDiff(int winRating, int loseRating) {
         if (decreaseThreshold == 0) {
-            System.err.println("Ratings decreaseThreshold is 0!");
-            System.err.println("You must reload this resource, now diffRating is avg");
             return avgDiff;
         } else {
             return Math.min(maxDiff,

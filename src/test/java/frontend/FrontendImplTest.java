@@ -5,6 +5,7 @@ import base.MessageSystem;
 import base.Msg;
 import dbService.DBServiceImpl;
 import dbService.UserDataSet;
+import frontend.msg.MsgUpdateUser;
 import org.eclipse.jetty.server.Request;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Matchers;
@@ -466,6 +467,25 @@ public class FrontendImplTest {
         frontend.handle("/img/", request, servletRequest, response);
         Assert.assertEquals(htmlTemplate.toString(), "");
     }
+
+/*
+    @Test
+    public void testVerifyUser() throws Exception {
+        Request request = mock(Request.class);
+        HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
+
+        when(servletRequest.getParameter(FrontendImpl.USER_NICKNAME)).thenReturn(FAKE_USERNAME);
+        when(servletRequest.getParameter(FrontendImpl.USER_PASSWORD)).thenReturn(FAKE_PASSWORD);
+
+        StringWriter htmlTemplate = new StringWriter();
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
+
+        frontend.handle(Site.INDEX.getUrl(), request, servletRequest, response);
+        Address dbService = messageSystem.getAddressByName(DBServiceImpl.SERVICE_NAME);
+        MsgUpdateUser msg = (MsgUpdateUser)messageSystem.getMessages().get(dbService).poll();
+    }
+*/
 
     public Cookie[] getCookie() throws IOException {
         Request request = mock(Request.class);

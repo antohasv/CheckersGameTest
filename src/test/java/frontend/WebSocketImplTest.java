@@ -155,7 +155,7 @@ public class WebSocketImplTest {
             fileds[i] = new Field[m];
             for (int j = 0; j < m; j++) {
                 fileds[i][j] = new Field();
-                fileds[i][j].setType(Field.checker.nothing);
+                fileds[i][j].setType(Field.Checker.nothing);
             }
         }
         return fileds;
