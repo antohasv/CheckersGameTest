@@ -22,7 +22,7 @@ public class ResourceFactoryTest {
 
         Assert.assertNotNull(gameSettings);
         Assert.assertNotEquals(gameSettings.getFieldSize(), 0);
-        Assert.assertNotEquals(gameSettings.getPlayerSize(), 0);
+        Assert.assertNotEquals(gameSettings.getPlayerFieldSize(), 0);
         Assert.assertNotEquals(gameSettings.getStrokeTime(), 0);
     }
 

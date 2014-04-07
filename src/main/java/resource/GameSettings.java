@@ -20,7 +20,7 @@ public class GameSettings implements Serializable, Resource {
         return fieldSize;
     }
 
-    public int getPlayerSize() {
+    public int getPlayerFieldSize() {
         return playerSize;
     }
 

@@ -31,7 +31,7 @@ public class SAXHandlerTest {
         settings = (GameSettings) saxHandler.object;
 
         Assert.assertEquals(settings.getFieldSize(), TEST_FIELD_SIZE);
-        Assert.assertEquals(settings.getPlayerSize(), TEST_PLAYER_SIZE);
+        Assert.assertEquals(settings.getPlayerFieldSize(), TEST_PLAYER_SIZE);
         Assert.assertEquals(settings.getStrokeTime(), TEST_STROKE);
     }
 
