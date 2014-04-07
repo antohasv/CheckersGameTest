@@ -1,6 +1,6 @@
 package utils;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.mockito.Mock;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

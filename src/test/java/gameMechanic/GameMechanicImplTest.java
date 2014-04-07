@@ -3,16 +3,15 @@ package gameMechanic;
 import base.*;
 import chat.GameChatImpl;
 import dbService.UserDataSet;
-import frontend.FrontendImpl;
 import frontend.UserDataImpl;
 import frontend.WebSocketImpl;
 import gameClasses.Snapshot;
 import gameClasses.Stroke;
 import messageSystem.MessageSystemImpl;
 import org.testng.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -39,7 +38,7 @@ public class GameMechanicImplTest {
     public GameMechanicImpl gameMechanic = new GameMechanicImpl(messageSystem);
     final GameChat gameChat = new GameChatImpl(messageSystem);
 
-    @Before
+    @BeforeMethod
     public  void setUp() throws Exception {
 
     }

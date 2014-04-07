@@ -10,8 +10,9 @@ import gameMechanic.gameCreating.MsgCreateGames;
 import org.junit.runner.RunWith;
 import org.testng.Assert;
 import messageSystem.MessageSystemImpl;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
@@ -27,7 +28,7 @@ public class MsgCreateGamesTest {
     private WebSocketImpl webSocket;
     private Map<String, UserDataSet> sendMap;
 
-    @Before
+    @BeforeMethod
     public  void setUp() throws Exception {
         messageSystem = new MessageSystemImpl();
         gameMechanic = new GameMechanicImpl(messageSystem);
