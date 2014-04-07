@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad79f1b-4430-4147-8bba-6c9100c41457" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/AI/1.txt" afterPath="$PROJECT_DIR$/log/AI/1.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java" afterPath="$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/resource/GameSettings.java" afterPath="$PROJECT_DIR$/src/main/java/resource/GameSettings.java" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java" afterPath="$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" />
+>>>>>>> nikolsky-master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/ccu" afterPath="$PROJECT_DIR$/statistic/ccu" />
@@ -13,6 +22,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/time" afterPath="$PROJECT_DIR$/statistic/time" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistic/totalMemory" afterPath="$PROJECT_DIR$/statistic/totalMemory" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change type="DELETED" beforePath="C:\Users\artem_000\IdeaProjects\CheckersGameTest\src\test\java\gameClasses\FieldTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\artem_000\IdeaProjects\CheckersGameTest\src\test\java\gameClasses\SnapshotTest.java" afterPath="" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
     </list>
     <ignored path="java-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,13 +52,57 @@
     <SUITE FILE_PATH="coverage/server$TimeHelperTest.coverage" NAME="TimeHelperTest Coverage Results" MODIFIED="1395916559355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
     </SUITE>
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/server$MsgCreateGamesTest.coverage" NAME="MsgCreateGamesTest Coverage Results" MODIFIED="1395858385829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+=======
+    <SUITE FILE_PATH="coverage/server$GameMechanicImplTest.coverage" NAME="GameMechanicImplTest Coverage Results" MODIFIED="1396888373073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+>>>>>>> nikolsky-master
       <FILTER>gameMechanic.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/server$SystemInfoTest.coverage" NAME="SystemInfoTest Coverage Results" MODIFIED="1395786824060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>system.*</FILTER>
     </SUITE>
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/server$VFSTest.coverage" NAME="VFSTest Coverage Results" MODIFIED="1395916571233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+=======
+    <SUITE FILE_PATH="coverage/server$DBServiceImplTest.coverage" NAME="DBServiceImplTest Coverage Results" MODIFIED="1395786832678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dbService.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$StrokeTest.coverage" NAME="StrokeTest Coverage Results" MODIFIED="1396887117766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameClasses.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$MsgDoneSnapshotTest.coverage" NAME="MsgDoneSnapshotTest Coverage Results" MODIFIED="1396815744163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$SnapshotTest.coverage" NAME="SnapshotTest Coverage Results" MODIFIED="1396888722752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameClasses.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$frontend_in_java_server.coverage" NAME="frontend in java-server Coverage Results" MODIFIED="1396204647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>frontend.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$FieldTest.coverage" NAME="FieldTest Coverage Results" MODIFIED="1396888538619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameClasses.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$utils_in_java_server.coverage" NAME="utils in java-server Coverage Results" MODIFIED="1395916494989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$MsgUpdateColorsTest.coverage" NAME="MsgUpdateColorsTest Coverage Results" MODIFIED="1396266100086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+    </SUITE>
+<<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/server$utils_in_java_server.coverage" NAME="utils in java-server Coverage Results" MODIFIED="1395916494989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>utils.*</FILTER>
+=======
+    <SUITE FILE_PATH="coverage/server$MsgCreateGamesTest.coverage" NAME="MsgCreateGamesTest Coverage Results" MODIFIED="1396254880460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+    <SUITE FILE_PATH="coverage/server$GameMechanicImplTest_testSendSnapshot.coverage" NAME="GameMechanicImplTest.testSendSnapshot Coverage Results" MODIFIED="1396869031681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$TimeHelperTest.coverage" NAME="TimeHelperTest Coverage Results" MODIFIED="1395916559355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+>>>>>>> nikolsky-master
       <FILTER>utils.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/server$utils_in_java_server.coverage" NAME="utils in java-server Coverage Results" MODIFIED="1395916494989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -54,6 +111,27 @@
     <SUITE FILE_PATH="coverage/server$StoreCookieTest.coverage" NAME="StoreCookieTest Coverage Results" MODIFIED="1395916547969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
     </SUITE>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    <SUITE FILE_PATH="coverage/server$GameMechanicImplTest_endGameTest.coverage" NAME="GameMechanicImplTest.endGameTest Coverage Results" MODIFIED="1396884258597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+    </SUITE>
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+    <SUITE FILE_PATH="coverage/server$MsgCreateGamesTest.coverage" NAME="MsgCreateGamesTest Coverage Results" MODIFIED="1396254880460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/server$CasterTest.coverage" NAME="CasterTest Coverage Results" MODIFIED="1395916538089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>utils.*</FILTER>
+    </SUITE>
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+    <SUITE FILE_PATH="coverage/server$MsgCreateChatTest.coverage" NAME="MsgCreateChatTest Coverage Results" MODIFIED="1396254839413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gameMechanic.*</FILTER>
+    </SUITE>
+>>>>>>> nikolsky-master
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -860,10 +938,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="Field.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="35" column="16" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1020">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="DBUserManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="56" selection-start="4627" selection-end="4627" vertical-scroll-proportion="0.0" vertical-offset="1765" max-vertical-offset="2550">
+=======
+      <file leaf-file-name="GameSession.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="469" column="19" selection-start="13671" selection-end="13675" vertical-scroll-proportion="1.4381443" vertical-offset="6966" max-vertical-offset="9537">
+=======
+      <file leaf-file-name="StrokeTest.java" pinned="false" current="true" current-in-tab="true">
+=======
+      <file leaf-file-name="StrokeTest.java" pinned="false" current="false" current-in-tab="false">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+        <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Snapshot.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="-1.1226416" vertical-offset="697" max-vertical-offset="1836">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameMechanicImplTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="17" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5185">
+>>>>>>> nikolsky-master
               <folding>
                 <element signature="e#556#557#0" expanded="true" />
                 <element signature="e#583#584#0" expanded="true" />
@@ -872,10 +991,51 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Snapshot.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="0" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="1836">
+=======
+      <file leaf-file-name="DBServiceImplTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="13" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+              <folding>
+                <element signature="e#1885#1898#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBUserManagerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="1921">
+              <folding>
+                <element signature="e#726#1526#0" expanded="true" />
+                <element signature="e#1519#1520#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SAXHandlerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="748">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SHA2Test.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/utils/SHA2Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state line="2" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+>>>>>>> nikolsky-master
               <folding />
             </state>
           </provider>
@@ -892,6 +1052,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="GameSession.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -899,15 +1060,93 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="GameMechanicImplTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="8.793103" vertical-offset="493" max-vertical-offset="2227">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+            <state line="10" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="969">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="ReflectionHelper.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="37" selection-start="658" selection-end="658" vertical-scroll-proportion="0.49808916" vertical-offset="0" max-vertical-offset="785">
+=======
+      <file leaf-file-name="UserDataImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="0" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="4301">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <file leaf-file-name="FrontendImplTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="21" selection-start="1183" selection-end="1196" vertical-scroll-proportion="-5.6896553" vertical-offset="124" max-vertical-offset="4012">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <file leaf-file-name="StoreCookieTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/utils/StoreCookieTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="595">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+              <folding />
+>>>>>>> nikolsky-master
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/game.js">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="ReflectionHelperTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java">
+=======
+      <file leaf-file-name="GameMechanicImplTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="3" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="407" max-vertical-offset="5202">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1756#1777#0" expanded="true" />
+                <element signature="e#3239#3260#0" expanded="true" />
+                <element signature="e#5226#5247#0" expanded="true" />
+                <element signature="e#6637#6658#0" expanded="true" />
+                <element signature="e#7953#7974#0" expanded="true" />
+                <element signature="e#8852#8873#0" expanded="true" />
+                <element signature="e#10182#10203#0" expanded="true" />
+              </folding>
+=======
+      <file leaf-file-name="FrontendImplTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
+>>>>>>> nikolsky-master
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="133" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3456562" vertical-offset="0" max-vertical-offset="11016">
               <folding />
+<<<<<<< HEAD
+=======
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <file leaf-file-name="TemplateHelperTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="13" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1088">
+              <folding />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
             </state>
           </provider>
         </entry>
@@ -925,6 +1164,34 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/frontend/newOrLoginUser/MsgGetUser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/newOrLoginUser/MsgAddUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java" />
+=======
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+        <option value="$PROJECT_DIR$/src/main/java/utils/VFS.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utils/VFSTest.java" />
+=======
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+        <option value="$PROJECT_DIR$/src/main/java/resource/Rating.java" />
+        <option value="$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utils/CookieDescriptorTest.java" />
+<<<<<<< HEAD
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+        <option value="$PROJECT_DIR$/src/main/java/utils/CookieDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/StoreCookie.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utils/StoreCookieTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java" />
+>>>>>>> nikolsky-master
         <option value="$PROJECT_DIR$/src/main/java/chat/ChatWebSocketServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/msg/MsgUpdateUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/Metric.java" />
@@ -937,17 +1204,54 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/utils/CasterTest.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/ChatMessage.java" />
         <option value="$PROJECT_DIR$/src/test/java/frontend/HttpServletHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/Site.java" />
         <option value="$PROJECT_DIR$/src/test/java/frontend/LoadPage.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/base/DataAccessObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/dbService/DBServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" />
+=======
+=======
+        <option value="$PROJECT_DIR$/pom.xml" />
+=======
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameMechanic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToWebSocket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToUserData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToDBService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgCheckStroke.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+        <option value="$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java" />
+=======
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
+        <option value="$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameClasses/Field.java" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> nikolsky-master
         <option value="$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java" />
         <option value="$PROJECT_DIR$/src/main/java/chat/Chater.java" />
         <option value="$PROJECT_DIR$/src/test/java/chat/ChaterTest.java" />
@@ -973,9 +1277,35 @@
         <option value="$PROJECT_DIR$/src/main/java/gameClasses/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/base/Abonent.java" />
         <option value="$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java" />
         <option value="$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java" />
         <option value="$PROJECT_DIR$/static/js/game.js" />
+=======
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+        <option value="$PROJECT_DIR$/src/test/java/gameClasses/FieldTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameClasses/SnapshotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <option value="$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/gameClasses/FieldTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameClasses/SnapshotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/GameMechanicImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       </list>
     </option>
   </component>
@@ -1021,8 +1351,15 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+=======
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1066,6 +1403,61 @@
               <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckersGameTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckersGameTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1285,6 +1677,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckersGameTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckersGameTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckersGameTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1318,6 +1787,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1345,6 +1818,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
@@ -1451,6 +1925,16 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+=======
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1485,8 +1969,27 @@
       <recent name="gameMechanic" />
       <recent name="utils" />
       <recent name="resource" />
+<<<<<<< HEAD
       <recent name="frontend" />
       <recent name="chat" />
+=======
+      <recent name="dbService" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <recent name="system" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="false" name="GameMechanicImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+<<<<<<< HEAD
+          <option name="PATTERN" value="chat.*" />
+=======
+      <recent name="system" />
+>>>>>>> nikolsky-master
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -1518,7 +2021,24 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="false" name="GameSessionTest.testCheckStroke" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+=======
+    <configuration default="false" name="gameMechanic in java-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+<<<<<<< HEAD
+          <option name="PATTERN" value="resource.*" />
+=======
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameMechanicImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> nikolsky-master
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="gameMechanic.*" />
@@ -1534,6 +2054,27 @@
       <option name="METHOD_NAME" value="testCheckStroke" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
+<<<<<<< HEAD
+=======
+=======
+      <option name="PACKAGE_NAME" value="gameMechanic" />
+      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <option name="PACKAGE_NAME" value="gameMechanic" />
+<<<<<<< HEAD
+      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
+      <option name="METHOD_NAME" value="endGameTest" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1549,6 +2090,34 @@
       <envs />
       <properties />
       <listeners />
+<<<<<<< HEAD
+=======
+=======
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+<<<<<<< HEAD
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+=======
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <ConfigurationWrapper RunnerId="Cover" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <option name="PATTERN" value="resource.*" />
+=======
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+>>>>>>> nikolsky-master
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="60049" />
         <option name="TRANSPORT" value="0" />
@@ -1561,12 +2130,25 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="gameMechanic.*" />
+<<<<<<< HEAD
+=======
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+          <option name="PATTERN" value="gameClasses.*" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="java-server" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> nikolsky-master
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="gameMechanic" />
       <option name="MAIN_CLASS_NAME" value="gameMechanic.GameSessionTest" />
@@ -1578,6 +2160,35 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
+<<<<<<< HEAD
+=======
+=======
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="java-server" />
+      <envs />
+<<<<<<< HEAD
+      <properties />
+      <listeners />
+=======
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <option name="PACKAGE_NAME" value="gameMechanic" />
+      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
+      <option name="METHOD_NAME" value="threeUsersTest" />
+      <option name="TEST_OBJECT" value="method" />
+=======
+      <option name="PACKAGE_NAME" value="gameClasses" />
+      <option name="MAIN_CLASS_NAME" value="gameClasses.FieldTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+>>>>>>> nikolsky-master
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1586,6 +2197,7 @@
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
       <envs />
+<<<<<<< HEAD
       <properties />
       <listeners />
       <RunnerSettings RunnerId="Debug">
@@ -1600,6 +2212,38 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="gameMechanic.*" />
+=======
+      <patterns />
+<<<<<<< HEAD
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <RunnerSettings RunnerId="Cover" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <configuration default="false" name="ReflectionHelperTest.testCreateInstance" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+=======
+    <configuration default="false" name="GameMechanicImplTest.twoUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="gameMechanic.*" />
+=======
+    <configuration default="false" name="StrokeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
+    <configuration default="false" name="SnapshotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="gameClasses.*" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+>>>>>>> nikolsky-master
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1612,6 +2256,27 @@
       <option name="METHOD_NAME" value="testSaveAILog" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
+<<<<<<< HEAD
+=======
+=======
+      <option name="PACKAGE_NAME" value="gameMechanic" />
+      <option name="MAIN_CLASS_NAME" value="gameMechanic.GameMechanicImplTest" />
+      <option name="METHOD_NAME" value="twoUsersTest" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <option name="PACKAGE_NAME" value="gameClasses" />
+<<<<<<< HEAD
+      <option name="MAIN_CLASS_NAME" value="gameClasses.StrokeTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <option name="MAIN_CLASS_NAME" value="gameClasses.SnapshotTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1633,19 +2298,78 @@
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <ConfigurationWrapper RunnerId="Debug" />
+<<<<<<< HEAD
+=======
+=======
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <option name="PATTERN" value="main.*" />
+=======
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+>>>>>>> nikolsky-master
       <method />
     </configuration>
     <configuration default="false" name="GameSessionTest.testSaveLog" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="gameMechanic.*" />
+<<<<<<< HEAD
+=======
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+          <option name="PATTERN" value="gameClasses.*" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+          <option name="PATTERN" value="main.*" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="java-server" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+<<<<<<< HEAD
       <option name="SUITE_NAME" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+=======
+      <option name="PACKAGE_NAME" value="gameClasses" />
+      <option name="MAIN_CLASS_NAME" value="gameClasses.StrokeTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+<<<<<<< HEAD
+=======
+>>>>>>> nikolsky-master
       <option name="PACKAGE_NAME" value="gameMechanic" />
       <option name="MAIN_CLASS_NAME" value="gameMechanic.GameSessionTest" />
       <option name="METHOD_NAME" value="testSaveLog" />
@@ -1654,6 +2378,7 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -1666,6 +2391,17 @@
       <envs />
       <properties />
       <listeners />
+=======
+=======
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="java-server" />
+      <envs />
+<<<<<<< HEAD
+      <patterns />
+>>>>>>> nikolsky-master
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="61155" />
         <option name="TRANSPORT" value="0" />
@@ -1674,6 +2410,18 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+<<<<<<< HEAD
+=======
+=======
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Cover" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -1939,10 +2687,55 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+<<<<<<< HEAD
         <item index="1" class="java.lang.String" itemvalue="TestNG.GameSessionTest.testSaveLog" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.GameSessionTest.testSaveAILog" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.GameSessionTest.testIsDirCreated (1)" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.GameSessionTest.testCheckStroke" />
+=======
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ReflectionHelperTest.testCreateInstance" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testResExist" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ResourceFactoryTest.testGameSettingsResource" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.ChatWebSocketImplTest.testSendMessage" />
+=======
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MsgPartyEndTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.twoUsersTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.threeUsersTest" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.threeUsersTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.twoUsersTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MsgPartyEndTest" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.gameMechanic in java-server" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FieldTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SnapshotTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+<<<<<<< HEAD
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StrokeTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StrokeTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.threeUsersTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest.endGameTest" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SnapshotTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FieldTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GameMechanicImplTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.gameMechanic in java-server" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1985,16 +2778,66 @@
       <workItem from="1396549334134" duration="44992000" />
       <workItem from="1396713691339" duration="67000" />
       <workItem from="1396713996092" duration="2987000" />
+<<<<<<< HEAD
       <workItem from="1396722345015" duration="26932000" />
+=======
+      <workItem from="1396722345015" duration="10210000" />
+=======
+=======
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+      <workItem from="1396203964988" duration="3372000" />
+      <workItem from="1396207750806" duration="10060000" />
+      <workItem from="1396250050393" duration="29614000" />
+      <workItem from="1396360625914" duration="2068000" />
+      <workItem from="1396379683345" duration="6198000" />
+      <workItem from="1396725305694" duration="615000" />
+<<<<<<< HEAD
+      <workItem from="1396769930845" duration="13095000" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <workItem from="1396769930845" duration="21792000" />
+      <workItem from="1396846317038" duration="20781000" />
+<<<<<<< HEAD
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <workItem from="1396888171503" duration="5015000" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="155455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="138733000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="139100000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1" y="1" width="1918" height="1030" extended-state="0" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+    <option name="totallyTimeSpent" value="168578000" />
+=======
+    <option name="totallyTimeSpent" value="173593000" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1" y="1" width="1918" height="1030" extended-state="0" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+    <editor active="true" />
+>>>>>>> nikolsky-master
     <layout>
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="1692" y="92" width="1736" height="856" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2005,6 +2848,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14436248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40252897" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -2012,6 +2856,45 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27291885" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3561644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16905071" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38368246" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44432193" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28114665" sideWeight="0.39105263" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39093783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39250275" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15631579" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16905071" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16868798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35942668" sideWeight="0.16105263" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39250275" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2031579" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22491731" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2031579" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2021,8 +2904,21 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14947917" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2402529" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2078125" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27789474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28114665" sideWeight="0.6089474" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27789474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35942668" sideWeight="0.83894736" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19010417" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+>>>>>>> nikolsky-master
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38368246" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2076,7 +2972,78 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/frontend/UserDataImplTest.java">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java">
+=======
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar!/org/mockito/Mockito.class">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="63" selection-start="1710" selection-end="1816" vertical-scroll-proportion="0.34670946" vertical-offset="396" max-vertical-offset="1700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="57" selection-start="496" selection-end="496" vertical-scroll-proportion="0.38141027" vertical-offset="0" max-vertical-offset="624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToGameMechanic.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/chat/ChatWebSocketImpl.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="276" selection-end="276" vertical-scroll-proportion="-0.8888889" vertical-offset="524" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chat/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="0" selection-start="2152" selection-end="2152" vertical-scroll-proportion="-1.2623575" vertical-offset="1803" max-vertical-offset="2329">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/UserDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="64" selection-end="64" vertical-scroll-proportion="-1.7022133" vertical-offset="914" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToUserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="36" column="29" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.40520042" vertical-offset="0" max-vertical-offset="923">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07280514" vertical-offset="0" max-vertical-offset="986" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgAddUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="-0.05567452" vertical-offset="162" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/CasterTest.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="54" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <folding>
@@ -2092,7 +3059,50 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.0.0.v20130308/websocket-api-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/api/RemoteEndpoint.class">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
+=======
+        <state line="20" column="25" selection-start="404" selection-end="404" vertical-scroll-proportion="0.46612903" vertical-offset="0" max-vertical-offset="620" />
+=======
+        <state line="16" column="0" selection-start="303" selection-end="303" vertical-scroll-proportion="0.4201521" vertical-offset="0" max-vertical-offset="526" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/WebSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="113" selection-end="113" vertical-scroll-proportion="0.16732283" vertical-offset="0" max-vertical-offset="508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgUpdateColors.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgDoneStroke.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="341" selection-end="346" vertical-scroll-proportion="0.33774835" vertical-offset="0" max-vertical-offset="453">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="13" column="24" selection-start="285" selection-end="285" vertical-scroll-proportion="0.23943663" vertical-offset="0" max-vertical-offset="923">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/GameChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/SHA2Test.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="9" selection-start="727" selection-end="727" vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="459">
           <folding />
@@ -2106,6 +3116,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="0" selection-start="4167" selection-end="4167" vertical-scroll-proportion="0.23325358" vertical-offset="1641" max-vertical-offset="4284">
@@ -2122,6 +3133,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/system/SystemInfoTest.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/test/java/chat/GameChatImplTest.java">
+=======
+        <state line="199" column="6" selection-start="9031" selection-end="9031" vertical-scroll-proportion="0.0" vertical-offset="2764" max-vertical-offset="7837" />
+=======
+        <state line="13" column="16" selection-start="317" selection-end="317" vertical-scroll-proportion="0.3878327" vertical-offset="0" max-vertical-offset="526" />
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.0.0.v20130308/websocket-api-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/api/RemoteEndpoint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="178" selection-end="192" vertical-scroll-proportion="0.16966067" vertical-offset="0" max-vertical-offset="501" />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgDoneSnapshot.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBServiceImpl.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0054171183" vertical-offset="63" max-vertical-offset="986">
           <folding />
@@ -2135,27 +3176,76 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/system/Metric.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="12" selection-start="29" selection-end="29" vertical-scroll-proportion="0.036836404" vertical-offset="0" max-vertical-offset="923">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="-0.017322835" vertical-offset="113" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/GameMechanic.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="33" selection-start="5689" selection-end="5689" vertical-scroll-proportion="0.5167464" vertical-offset="2113" max-vertical-offset="2652">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="17" selection-start="6894" selection-end="6895" vertical-scroll-proportion="-5.827586" vertical-offset="2568" max-vertical-offset="6324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="174" selection-end="174" vertical-scroll-proportion="0.23181818" vertical-offset="0" max-vertical-offset="440">
+>>>>>>> nikolsky-master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/system/SystemInfoManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.07367281" vertical-offset="0" max-vertical-offset="923">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/UserDataImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="26" selection-start="7729" selection-end="7739" vertical-scroll-proportion="3.4827585" vertical-offset="3671" max-vertical-offset="4301">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgCheckStroke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+>>>>>>> nikolsky-master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="93" selection-start="950" selection-end="950" vertical-scroll-proportion="0.17707007" vertical-offset="252" max-vertical-offset="1037">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgPartyEnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="19" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SAXHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="21" selection-start="566" selection-end="566" vertical-scroll-proportion="0.36815286" vertical-offset="0" max-vertical-offset="785">
@@ -2166,17 +3256,36 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/chat/ChatWebSocketImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="83" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.4611465" vertical-offset="471" max-vertical-offset="2091">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chat/ChatWebSocketImpl.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="110" selection-start="823" selection-end="823" vertical-scroll-proportion="0.43312103" vertical-offset="0" max-vertical-offset="901">
+        <state line="198" column="34" selection-start="7723" selection-end="7734" vertical-scroll-proportion="-0.19951338" vertical-offset="3346" max-vertical-offset="3757">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="13" selection-start="872" selection-end="872" vertical-scroll-proportion="-20.459017" vertical-offset="9127" max-vertical-offset="9554">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/HttpServletHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="26" column="110" selection-start="823" selection-end="823" vertical-scroll-proportion="0.43312103" vertical-offset="0" max-vertical-offset="901">
+=======
+        <state line="9" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="582" max-vertical-offset="1105">
+>>>>>>> nikolsky-master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="26" selection-start="1096" selection-end="1096" vertical-scroll-proportion="-2.6774611" vertical-offset="2322" max-vertical-offset="3094">
@@ -2189,10 +3298,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgGetUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="28" selection-start="708" selection-end="708" vertical-scroll-proportion="0.43312103" vertical-offset="0" max-vertical-offset="785">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/TestUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/LoadPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+>>>>>>> nikolsky-master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/ResourceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="70" selection-start="807" selection-end="807" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="884">
@@ -2203,32 +3325,79 @@
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_11/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="183" column="27" selection-start="6087" selection-end="6087" vertical-scroll-proportion="0.7031847" vertical-offset="1488" max-vertical-offset="51867">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="986">
+          <folding>
+            <element signature="e#501#502#0" expanded="false" />
+            <element signature="e#525#526#0" expanded="false" />
+            <element signature="e#556#557#0" expanded="false" />
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#760#761#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Stroke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="5" selection-start="2224" selection-end="2231" vertical-scroll-proportion="0.0" vertical-offset="1212" max-vertical-offset="1887">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgAddUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="46" selection-start="579" selection-end="579" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="785">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="17" selection-start="1446" selection-end="1516" vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="1156">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgUpdateUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="11" selection-start="254" selection-end="254" vertical-scroll-proportion="0.19490446" vertical-offset="0" max-vertical-offset="785">
+=======
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2499">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="17" selection-start="36" selection-end="36" vertical-scroll-proportion="0.043312103" vertical-offset="0" max-vertical-offset="785">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/TimeHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="25" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="884">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/Rating.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/VFSTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="5" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.07367281" vertical-offset="0" max-vertical-offset="923">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/VFSTest.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="48" selection-start="428" selection-end="428" vertical-scroll-proportion="0.28152865" vertical-offset="0" max-vertical-offset="785">
           <folding />
@@ -2258,20 +3427,47 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/ReflectionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="37" selection-start="355" selection-end="355" vertical-scroll-proportion="0.32484075" vertical-offset="0" max-vertical-offset="785">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <state line="2" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="77" selection-start="7694" selection-end="7694" vertical-scroll-proportion="0.0" vertical-offset="2143" max-vertical-offset="3094">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="125" column="56" selection-start="4627" selection-end="4627" vertical-scroll-proportion="0.39363056" vertical-offset="1765" max-vertical-offset="2550">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="251" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="8534">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="22" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.3518758" vertical-offset="0" max-vertical-offset="773">
@@ -2280,6 +3476,34 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/TimeHelper.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/resource/ResourceFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="407" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCheckStrokeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="60" column="83" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.4611465" vertical-offset="471" max-vertical-offset="2091">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="363" selection-end="363" vertical-scroll-proportion="0.37480316" vertical-offset="0" max-vertical-offset="635" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar!/org/mockito/Mockito.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="63" selection-start="1710" selection-end="1816" vertical-scroll-proportion="0.34670946" vertical-offset="396" max-vertical-offset="1700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/UserDataSet.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
           <folding />
@@ -2300,6 +3524,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.0.0.v20130308/websocket-common-9.0.0.v20130308.jar!/org/eclipse/jetty/websocket/common/events/EventDriver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="25" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.5102041" vertical-offset="252" max-vertical-offset="816">
@@ -2315,6 +3540,57 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_11/src.zip!/java/io/File.java">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/WebSocketImplTest.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <state line="36" column="17" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="1088">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateChatTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="799">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgCreateGamesTest.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="17" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="935">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="17" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="1105">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgPartyEndTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="28" column="70" selection-start="807" selection-end="807" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="884">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgDoneSnapshotTest.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="1249" column="42" selection-start="53439" selection-end="53439" vertical-scroll-proportion="0.42671615" vertical-offset="20374" max-vertical-offset="34765">
           <folding />
@@ -2330,18 +3606,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.iml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+=======
+        <state line="28" column="4" selection-start="773" selection-end="814" vertical-scroll-proportion="0.02977233" vertical-offset="136" max-vertical-offset="748">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+        <state line="233" column="26" selection-start="7729" selection-end="7739" vertical-scroll-proportion="3.4827585" vertical-offset="3671" max-vertical-offset="4301">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <state line="27" column="17" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="1054">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_11/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="199" column="6" selection-start="9031" selection-end="9031" vertical-scroll-proportion="0.0" vertical-offset="2771" max-vertical-offset="7837">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/Stroke/MsgCheckStroke.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/MsgUpdateColorsTest.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="17" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="952">
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/base/Abonent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="59" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
@@ -2362,6 +3665,21 @@
             <element signature="e#8852#8873#0" expanded="true" />
             <element signature="e#10182#10203#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/CasterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="918">
+          <folding>
+            <element signature="e#1022#1030#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+>>>>>>> nikolsky-master
         </state>
       </provider>
     </entry>
@@ -2372,6 +3690,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/resource/GameSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="15" selection-start="519" selection-end="519" vertical-scroll-proportion="0.53208137" vertical-offset="0" max-vertical-offset="639">
@@ -2394,11 +3713,94 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/WebSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="155" column="16" selection-start="5247" selection-end="5263" vertical-scroll-proportion="0.0" vertical-offset="2167" max-vertical-offset="3043">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/SAXHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="21" column="46" selection-start="579" selection-end="579" vertical-scroll-proportion="0.38980892" vertical-offset="0" max-vertical-offset="785">
+=======
+        <state line="146" column="0" selection-start="5231" selection-end="5231" vertical-scroll-proportion="-0.7311828" vertical-offset="2482" max-vertical-offset="6324">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+        <state line="33" column="13" selection-start="872" selection-end="872" vertical-scroll-proportion="-20.459017" vertical-offset="9127" max-vertical-offset="9554">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <state line="12" column="13" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/msg/MsgUpdateUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="254" selection-end="254" vertical-scroll-proportion="0.19490446" vertical-offset="0" max-vertical-offset="785">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="14" selection-start="1393" selection-end="1445" vertical-scroll-proportion="0.56567425" vertical-offset="0" max-vertical-offset="1156">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.19318181" vertical-offset="0" max-vertical-offset="986">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/SHA2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="969">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="19" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.63860106" vertical-offset="0" max-vertical-offset="9520">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/gameCreating/MsgCreateGames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="57" selection-start="496" selection-end="496" vertical-scroll-proportion="0.38141027" vertical-offset="0" max-vertical-offset="624">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.6349893" vertical-offset="1339" max-vertical-offset="1802">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/StoreCookieTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="595">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToWebSocket.java">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBUserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="56" selection-start="4627" selection-end="4627" vertical-scroll-proportion="0.0" vertical-offset="1765" max-vertical-offset="2550">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="8" selection-start="1327" selection-end="1370" vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="4012">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/SnapshotTest.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.34585288" vertical-offset="0" max-vertical-offset="639">
           <folding />
@@ -2407,28 +3809,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dbService/DBServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="84" column="0" selection-start="2893" selection-end="2893" vertical-scroll-proportion="0.33279222" vertical-offset="917" max-vertical-offset="1955">
+=======
+        <state line="11" column="0" selection-start="279" selection-end="304" vertical-scroll-proportion="0.04647436" vertical-offset="158" max-vertical-offset="782">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/TemplateHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1088">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Field.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="35" column="16" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1020">
           <folding>
             <element signature="e#556#557#0" expanded="true" />
             <element signature="e#583#584#0" expanded="true" />
+=======
+        <state line="40" column="17" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5185">
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> nikolsky-master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="1836">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/dbService/DBServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="100" column="23" selection-start="2224" selection-end="2231" vertical-scroll-proportion="0.0" vertical-offset="1276" max-vertical-offset="2023">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/VFS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="0" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.33283582" vertical-offset="848" max-vertical-offset="2278">
@@ -2437,6 +3864,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/gameMechanic/GameSessionTest.java">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/resource/GameSettings.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/frontend/FrontendImplTest.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <state line="16" column="13" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <folding>
+            <element signature="e#1885#1898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dbService/DBUserManagerTest.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="1921">
+          <folding>
+            <element signature="e#726#1526#0" expanded="true" />
+            <element signature="e#1519#1520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.043312103" vertical-offset="0" max-vertical-offset="785">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
+>>>>>>> nikolsky-master
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="101" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
           <folding>
@@ -2447,17 +3908,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameMechanicImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="198" column="0" selection-start="7700" selection-end="7700" vertical-scroll-proportion="0.0" vertical-offset="2659" max-vertical-offset="3485">
+=======
+        <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="8.793103" vertical-offset="493" max-vertical-offset="2227">
+>>>>>>> 0d4caaa414d5682e44d9eb09bd44654928cc685f
+=======
+        <state line="2" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+        <state line="7" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+>>>>>>> nikolsky-master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMechanic/GameSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="559" column="31" selection-start="18093" selection-end="18093" vertical-scroll-proportion="0.0" vertical-offset="9119" max-vertical-offset="10727">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/ReflectionHelperTest.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/java/gameClasses/StrokeTest.java">
+>>>>>>> 9f2a61ed2fe8186a2c64f71ce505608005dfad80
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameClasses/Snapshot.java">
+>>>>>>> 53331c1b1bb09dc7c019e2b031b81eeb4d07dd82
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="-1.1226416" vertical-offset="697" max-vertical-offset="1836">
+          <folding />
+>>>>>>> nikolsky-master
         </state>
       </provider>
     </entry>

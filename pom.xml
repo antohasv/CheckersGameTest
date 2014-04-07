@@ -23,7 +23,7 @@
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <check></check>
+                    <check>false</check>
                     <formats>
                         <format>html</format>
                         <format>xml</format>
@@ -129,7 +129,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <configuration>
-                    <check></check>
+                    <check>false</check>
                     <formats>
                         <format>html</format>
                         <format>xml</format>

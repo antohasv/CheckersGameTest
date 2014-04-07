@@ -1,7 +1,7 @@
 package gameClasses;
 
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

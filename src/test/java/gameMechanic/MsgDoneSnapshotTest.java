@@ -11,8 +11,9 @@ import gameClasses.Stroke;
 import gameMechanic.Stroke.MsgCheckStroke;
 import gameMechanic.Stroke.MsgDoneSnapshot;
 import messageSystem.MessageSystemImpl;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.Assert;
 
 import java.util.HashMap;
@@ -31,7 +32,7 @@ public class MsgDoneSnapshotTest {
     private GameMechanicImpl gameMechanic;
     private WebSocketImpl webSocket;
 
-    @Before
+    @BeforeMethod
     public  void setUp() throws Exception {
         gameSession = new GameSession(TEST_USER_ID, TEST_USER_ID);
         users = new HashMap<String, UserDataSet>();
