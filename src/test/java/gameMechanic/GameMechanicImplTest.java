@@ -291,6 +291,7 @@ public class GameMechanicImplTest {
             stroke = new Stroke(toX, toY, fromX, fromY, "");
             id = userDataSet2.getId();
         }
+
         gameMechanic.userIdToSession.get(id).clearWhiteQuantity();
         resp = gameMechanic.checkStroke(id, stroke);
         Assert.assertEquals(stroke.getStatus(), "lose");

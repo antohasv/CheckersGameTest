@@ -602,5 +602,11 @@ public class GameSession {
             return 'w';
         }
     }
+
+    public int getWhiteQuantity(){
+        return whiteQuantity;
+    }
+
+    public void clearWhiteQuantity() { whiteQuantity = 0; }
 }
 //Черная клетка, если координаты один. четности
