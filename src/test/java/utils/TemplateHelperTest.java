@@ -34,6 +34,7 @@ public class TemplateHelperTest {
 
     @BeforeMethod
     public void setUp() throws Exception {
+        TemplateHelper th = new TemplateHelper();
         data = new HashMap<String, String>();
     }
 

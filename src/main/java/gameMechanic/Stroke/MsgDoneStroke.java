@@ -17,7 +17,5 @@ public class MsgDoneStroke extends MsgToWebSocket{
 		idToStroke=data;
 	}
 
-	public void exec(WebSocket webSocket){
-		webSocket.sendStroke(idToStroke);
-	}
+	public void exec(WebSocket webSocket){ webSocket.sendStroke(idToStroke); }
 }
