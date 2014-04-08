@@ -17,7 +17,5 @@ public class MsgDoneSnapshot extends MsgToWebSocket {
         this.id = id;
     }
 
-    public void exec(WebSocket webSocket) {
-        webSocket.doneSnapshot(id, snapshot);
-    }
+    public void exec(WebSocket webSocket) { webSocket.doneSnapshot(id, snapshot); }
 }

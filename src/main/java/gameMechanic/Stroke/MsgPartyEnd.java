@@ -13,7 +13,5 @@ public class MsgPartyEnd extends MsgToUserData{
 		this.loseId = loseId;
 	}
 	
-	public void exec(UserData userData){
-		userData.partyEnd(winId, loseId);
-	}
+	public void exec(UserData userData){ userData.partyEnd(winId, loseId); }
 }

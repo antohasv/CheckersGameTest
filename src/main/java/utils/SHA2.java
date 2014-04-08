@@ -11,8 +11,7 @@ public class SHA2 {
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance(SHA);
-        } catch (NoSuchAlgorithmException ignor) {
-            return "";
+        } catch (NoSuchAlgorithmException ignor) { return "";
         }
         md.update(password.getBytes());
         byte byteData[] = md.digest();

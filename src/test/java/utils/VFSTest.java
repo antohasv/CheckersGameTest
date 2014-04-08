@@ -16,7 +16,7 @@ public class VFSTest {
 
     @BeforeMethod
     public void setUp() throws Exception {
-
+        VFS vfs = new VFS();
     }
 
     @Test

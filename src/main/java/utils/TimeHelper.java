@@ -15,8 +15,7 @@ public class TimeHelper {
     public static void sleep(int TICK_TIME) {
         try {
             Thread.sleep(TICK_TIME);
-        } catch (InterruptedException e) {
-        }
+        } catch (InterruptedException e) {}
     }
 
     public static long getCurrentTime() {

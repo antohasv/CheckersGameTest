@@ -16,8 +16,7 @@ public class TemplateHelper {
 	static {
 		try {
 			cfg.setDirectoryForTemplateLoading(new File(System.getProperty("user.dir") + "/static/html"));				
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException e) { e.printStackTrace();
 		}
 	}
 
@@ -26,8 +25,7 @@ public class TemplateHelper {
 		try {
 			template = cfg.getTemplate(name);
 			template.process(map, out);
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception e) { e.printStackTrace();
 		}
 	}
 }

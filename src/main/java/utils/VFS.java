@@ -59,8 +59,7 @@ public class VFS {
             File file = new File(getAbsolutePath(path));
             writer = new FileWriter(file);
             writer.write("");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e) { e.printStackTrace();
         } finally {
             closeWriter(writer);
         }
@@ -75,8 +74,7 @@ public class VFS {
             }
             writer = new FileWriter(file);
             writer.write(data);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e) { e.printStackTrace();
         } finally {
             closeWriter(writer);
         }
@@ -88,8 +86,7 @@ public class VFS {
         try {
             writer = new FileWriter(file, true);
             writer.write(data);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e) { e.printStackTrace();
         } finally {
             closeWriter(writer);
         }
@@ -99,8 +96,7 @@ public class VFS {
         if (writer != null) {
             try {
                 writer.close();
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e) { e.printStackTrace();
             }
         }
     }
@@ -115,8 +111,7 @@ public class VFS {
             while ((line = bufferedReader.readLine()) != null) {
                 sb.append(line);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e) { e.printStackTrace();
         } finally {
             closeFileReder(fileReader);
         }
@@ -127,8 +122,7 @@ public class VFS {
         if (fileReader != null) {
             try {
                 fileReader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e) { e.printStackTrace();
             }
         }
     }

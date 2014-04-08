@@ -182,7 +182,7 @@ public class GameSession {
         return ans;
     }
 
-    private boolean checkOtherEatingOpportunityForField(int fromX, int fromY, int x, int y) {
+    public boolean checkOtherEatingOpportunityForField(int fromX, int fromY, int x, int y) {
         Field wasField = new Field();
         boolean ans = false;
         
@@ -281,7 +281,7 @@ public class GameSession {
         return field[y][x].getType();
     }
 
-    private boolean canEat(int x, int y) {
+    public boolean canEat(int x, int y) {
         if (fieldIsKing(x, y)) {
             return kingCanEat(x, y);
         } else {
@@ -294,12 +294,12 @@ public class GameSession {
         return (y < settings.getFieldSize() - 2) && (x < settings.getFieldSize() - 2) && (getFieldType(x + 1, y + 1) == anotherColor) && (fieldIsEmpty(x + 2, y + 2));
     }
 
-    private boolean pawnCanEatRightDown(int x, int y) {
+    public boolean pawnCanEatRightDown(int x, int y) {
         Field.Checker anotherColor = getAnotherColor(getFieldType(x, y));
         return (y > 1) && (x < settings.getFieldSize() - 2) && (getFieldType(x + 1, y - 1) == anotherColor) && (fieldIsEmpty(x + 2, y - 2));
     }
 
-    private boolean pawnCanEatLeftUp(int x, int y) {
+    public boolean pawnCanEatLeftUp(int x, int y) {
         Field.Checker anotherColor = getAnotherColor(getFieldType(x, y));
         return (y < settings.getFieldSize() - 2) && (x > 1) && (getFieldType(x - 1, y + 1) == anotherColor) && (fieldIsEmpty(x - 2, y + 2));
     }
@@ -309,7 +309,7 @@ public class GameSession {
         return (y > 1) && (x > 1) && (getFieldType(x - 1, y - 1) == anotherColor) && (fieldIsEmpty(x - 2, y - 2));
     }
 
-    private boolean pawnCanEat(int x, int y) {
+    public boolean pawnCanEat(int x, int y) {
         return pawnCanEatRightUp(x, y) || pawnCanEatLeftUp(x, y) || pawnCanEatRightDown(x, y) || pawnCanEatLeftDown(x, y);
     }
 
@@ -376,7 +376,7 @@ public class GameSession {
         return false;
     }
 
-    private boolean kingCanEat(int x, int y) {
+    public boolean kingCanEat(int x, int y) {
         return kingCanEatRightUp(x, y) || kingCanEatRightDown(x, y) || kingCanEatLeftUp(x, y) || kingCanEatLeftDown(x, y);
     }
 

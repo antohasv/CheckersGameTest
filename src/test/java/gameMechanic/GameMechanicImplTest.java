@@ -35,7 +35,7 @@ public class GameMechanicImplTest {
     public static final String USER_ID_3 = "3";
 
     public MessageSystem messageSystem = new MessageSystemImpl();
-    public GameMechanicImpl gameMechanic = new GameMechanicImpl(messageSystem);
+    public GameMechanicImpl gameMechanic;
     final GameChat gameChat = new GameChatImpl(messageSystem);
 
     @BeforeMethod
@@ -45,6 +45,7 @@ public class GameMechanicImplTest {
 
     @Test
     public void twoUsersTest() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
         when(userDataSet1.getId()).thenReturn(1);
@@ -85,6 +86,7 @@ public class GameMechanicImplTest {
 
     @Test
     public void threeUsersTest() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
         UserDataSet userDataSet3 = mock(UserDataSet.class);
@@ -136,6 +138,7 @@ public class GameMechanicImplTest {
 
     @Test
     public void badStrokeTest() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataImpl userData = new UserDataImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
@@ -173,6 +176,7 @@ public class GameMechanicImplTest {
 
     @Test
     public void loseTest() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataImpl userData = new UserDataImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
@@ -209,6 +213,7 @@ public class GameMechanicImplTest {
 
     @Test
     public void testSendSnapshot() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
@@ -228,6 +233,7 @@ public class GameMechanicImplTest {
 
     @Test
     public void testSendResultStroke() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
         when(userDataSet1.getId()).thenReturn(1);
@@ -255,12 +261,14 @@ public class GameMechanicImplTest {
 
     @Test
     public void testRandom() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         int rand = gameMechanic.randomMod2();
         Assert.assertTrue(rand == 1 || rand == 0);
     }
 
     @Test
     public void endGameTest() throws Exception {
+        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataImpl userData = new UserDataImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
