@@ -16,6 +16,7 @@ import java.util.Random;
 
 public class DBServiceImplTest {
     public static final String FAKE_LOGIN = "fake_login";
+    public static final String FAKE_LONG_LOGIN = "543545fjsdfreieuhhdiuiduih&DUHDipd39du3@#$%^&*()(*&^%$#$%^&*()";
     public static final String FAKE_PASSWORD = "fake_password";
     public static final int RAND_VALUE = 123;
     DataAccessObject dataAccessObject;
@@ -30,7 +31,7 @@ public class DBServiceImplTest {
     @Test
     public void testAddUser() throws Exception {
         Assert.assertTrue(dataAccessObject.addUserData(FAKE_LOGIN, FAKE_PASSWORD));
-        Assert.assertTrue(dataAccessObject.addUserData(FAKE_LOGIN, FAKE_PASSWORD));
+        Assert.assertFalse(dataAccessObject.addUserData(FAKE_LONG_LOGIN, FAKE_PASSWORD));
     }
 
     @Test

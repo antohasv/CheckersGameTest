@@ -89,4 +89,30 @@ public class StrokeTest {
         Assert.assertTrue(strokeNew.getFrom_X() == fromX);
         Assert.assertTrue(strokeNew.getFrom_Y() == fromY);
     }
+
+    @Test
+    public void testCreation() throws Exception {
+        int x1 = 1;
+        int y1 = 2;
+        int x2 = 4;
+        int y2 = 5;
+        Stroke stroke1 = new Stroke();
+        Assert.assertTrue(stroke1.getTo_X() == -1 && stroke1.getTo_Y() == -1 && stroke1.getFrom_X() == -1 && stroke1.getFrom_Y() == -1);
+
+        Stroke stroke = new Stroke(x1, y1, x2, y2, "ST", "b");
+        stroke.clear();
+        Assert.assertTrue(stroke1.getTo_X() == -1 && stroke1.getTo_Y() == -1 && stroke1.getFrom_X() == -1 && stroke1.getFrom_Y() == -1);
+        Assert.assertTrue(stroke.isEmpty());
+
+        stroke.fullSet(x1, y1, x2, y2);
+        Assert.assertFalse(stroke.isEmpty());
+        Stroke strokeInv = stroke.getInverse();
+        Assert.assertTrue(strokeInv.getTo_X() == 7 - x1 && strokeInv.getTo_Y() == 7 - y1 && strokeInv.getFrom_X() == 7 - x2 && strokeInv.getFrom_Y() == 7 - y2);
+
+        stroke.setTo_X(x1);
+        stroke.setTo_Y(y1);
+        stroke.setFrom_X(x2);
+        stroke.setFrom_Y(y2);
+        Assert.assertTrue(stroke.getTo_X() == x1 && stroke.getTo_Y() == y1 && stroke.getFrom_X() == x2 && stroke.getFrom_Y() == y2);
+    }
 }

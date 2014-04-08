@@ -3,6 +3,7 @@ package frontend;
 import base.Address;
 import base.MessageSystem;
 import chat.ChatWebSocketImpl;
+import com.google.inject.Inject;
 import dbService.DBServiceImpl;
 import dbService.MsgUpdateUsers;
 import dbService.UserDataSet;
@@ -45,6 +46,7 @@ import java.util.concurrent.ConcurrentHashMap;
     static private MessageSystem messageSystem;
     final private Address address;
 
+    @Inject
     public UserDataImpl(MessageSystem msgSystem) {
         messageSystem = msgSystem;
         address = new Address();

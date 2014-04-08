@@ -17,9 +17,7 @@ public class Rating implements Serializable, Resource {
         if (decreaseThreshold == 0) {
             return avgDiff;
         } else {
-            return Math.min(maxDiff,
-                    Math.max(minDiff,
-                            avgDiff - (winRating - loseRating) / decreaseThreshold));
+            return Math.min(maxDiff, Math.max(minDiff, avgDiff - (winRating - loseRating) / decreaseThreshold));
         }
     }
 }

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ListIterator;
 
+import com.google.inject.Inject;
 import utils.TimeHelper;
 import base.Address;
 import base.DataAccessObject;
@@ -52,6 +53,7 @@ public class DBServiceImpl implements DataAccessObject {
         }
     };
 
+    @Inject
     public DBServiceImpl(MessageSystem msgSystem) {
         address = new Address();
         messageSystem = msgSystem;

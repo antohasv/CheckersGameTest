@@ -8,6 +8,7 @@ import base.GameMechanic;
 import base.MessageSystem;
 
 import chat.GameChatImpl;
+import com.google.inject.Inject;
 import dbService.UserDataSet;
 import frontend.UserDataImpl;
 import frontend.WebSocketImpl;
@@ -28,6 +29,7 @@ public class GameMechanicImpl implements GameMechanic {
     final private Address address;
     final private MessageSystem messageSystem;
 
+    @Inject
     public GameMechanicImpl(MessageSystem msgSystem) {
         address = new Address();
         messageSystem = msgSystem;

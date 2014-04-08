@@ -1,5 +1,6 @@
 package gameMechanic;
 
+import gameClasses.Field;
 import gameClasses.Snapshot;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -9,11 +10,14 @@ import utils.VFS;
 public class GameSessionTest {
     public static final int PLAYER_ID_1 = 451;
     public static final int PLAYER_ID_2 = 452;
+
     private GameSession gameSession;
+    private Field[][] field;
 
     @BeforeMethod
     public void setUp() throws Exception {
-        gameSession = new GameSession(PLAYER_ID_1, PLAYER_ID_2);
+        field = GenerateChessBoard.generate();
+        gameSession = new GameSession(field, PLAYER_ID_1, PLAYER_ID_2);
     }
 
     @Test
@@ -40,116 +44,115 @@ public class GameSessionTest {
 
     @Test
     public void testStrokes() throws Exception {
-        gameSession.checkStroke(451, 6, 5, 7, 4);
+        gameSession.checkStroke(PLAYER_ID_1, 6, 5, 7, 4);
         Assert.assertTrue(gameSession.checkOtherEatingOpportunityForField(6, 5, 7, 4));
-        gameSession.checkStroke(452, 2, 5, 1, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 2, 5, 1, 4);
         Assert.assertTrue(gameSession.pawnCanEatLeftUp(5, 2));
-        gameSession.checkStroke(451, 7, 4, 5, 2);
+        gameSession.checkStroke(PLAYER_ID_1, 7, 4, 5, 2);
 
         //Pawn Eating
         //fieldIsKing
         Assert.assertTrue(gameSession.canEat(3, 4));
-        gameSession.checkStroke(452, 1, 6, 3, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 1, 6, 3, 4);
         //Pawn Eating
        // fieldIsKing
         Assert.assertTrue(gameSession.canEat(6, 5));
-        gameSession.checkStroke(451, 5, 6, 6, 5);
+        gameSession.checkStroke(PLAYER_ID_1, 5, 6, 6, 5);
         Assert.assertTrue(gameSession.canEat(2, 3));
-        gameSession.checkStroke(452, 3, 4, 2, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 3, 4, 2, 3);
         Assert.assertTrue(gameSession.pawnCanEatLeftUp(6, 3));
-        gameSession.checkStroke(451, 4, 5, 6, 3);
+        gameSession.checkStroke(PLAYER_ID_1, 4, 5, 6, 3);
         //Pawn Eating
         //fieldIsKing
         Assert.assertTrue(gameSession.canEat(2, 3));
-        gameSession.checkStroke(452, 0, 5, 2, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 0, 5, 2, 3);
         //Pawn Eating
        // fieldIsKing
         Assert.assertTrue(gameSession.pawnCanEatLeftUp(4, 3));
-        gameSession.checkStroke(451, 6, 5, 4, 3);
+        gameSession.checkStroke(PLAYER_ID_1, 6, 5, 4, 3);
         //Pawn Eating
         //fieldIsKing
         Assert.assertTrue(gameSession.canEat(2, 3));
-        gameSession.checkStroke(452, 4, 5, 2, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 4, 5, 2, 3);
        // Pawn Eating
        // fieldIsKing
         Assert.assertTrue(gameSession.canEat(4, 5));
-        gameSession.checkStroke(451, 3, 6, 4, 5);
+        gameSession.checkStroke(PLAYER_ID_1, 3, 6, 4, 5);
         Assert.assertTrue(gameSession.canEat(4, 1));
-        gameSession.checkStroke(452, 2, 3, 4, 1);
+        gameSession.checkStroke(PLAYER_ID_2, 2, 3, 4, 1);
        // Pawn Eating
        // fieldIsKing
         Assert.assertTrue(gameSession.canEat(1, 4));
-        gameSession.checkStroke(451, 3, 6, 1, 4);
-        gameSession.checkStroke(452, 4, 1, 6, 3);
+        gameSession.checkStroke(PLAYER_ID_1, 3, 6, 1, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 4, 1, 6, 3);
        // Pawn Eating
        // fieldIsKing
         Assert.assertTrue(gameSession.canEat(2, 3));
-        gameSession.checkStroke(451, 0, 5, 2, 3);
+        gameSession.checkStroke(PLAYER_ID_1, 0, 5, 2, 3);
        // Pawn Eating
        // fieldIsKing
         Assert.assertTrue(gameSession.canEat(4, 3));
-        gameSession.checkStroke(452, 6, 5, 4, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 6, 5, 4, 3);
        // Pawn Eating
        // fieldIsKing
-        gameSession.checkStroke(451, 2, 7, 3, 6);
+        gameSession.checkStroke(PLAYER_ID_1, 2, 7, 3, 6);
         Assert.assertTrue(gameSession.canEat(6, 5));
-        gameSession.checkStroke(452, 5, 6, 6, 5);
+        gameSession.checkStroke(PLAYER_ID_2, 5, 6, 6, 5);
         Assert.assertTrue(gameSession.canEat(5, 6));
-        gameSession.checkStroke(451, 6, 7, 5, 6);
+        gameSession.checkStroke(PLAYER_ID_1, 6, 7, 5, 6);
         Assert.assertTrue(gameSession.canEat(7,4));
-        gameSession.checkStroke(452, 6, 5, 7, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 6, 5, 7, 4);
         Assert.assertTrue(gameSession.canEat(6,5));
-        gameSession.checkStroke(451, 7, 6, 6, 5);
+        gameSession.checkStroke(PLAYER_ID_1, 7, 6, 6, 5);
         Assert.assertTrue(gameSession.canEat(2, 5));
-        gameSession.checkStroke(452, 3, 6, 2, 5);
-        gameSession.checkStroke(451, 3, 6, 2, 5);
+        gameSession.checkStroke(PLAYER_ID_2, 3, 6, 2, 5);
+        gameSession.checkStroke(PLAYER_ID_1, 3, 6, 2, 5);
         Assert.assertTrue(gameSession.canEat(3,4));
-        gameSession.checkStroke(452, 2, 5, 3, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 2, 5, 3, 4);
         Assert.assertTrue(gameSession.canEat(4,5));
-        gameSession.checkStroke(451, 5, 6, 4, 5);
+        gameSession.checkStroke(PLAYER_ID_1, 5, 6, 4, 5);
         Assert.assertTrue(gameSession.canEat(2,1));
-        gameSession.checkStroke(452, 4, 3, 2, 1);
+        gameSession.checkStroke(PLAYER_ID_2, 4, 3, 2, 1);
         //Pawn Eating
         //fieldIsKing
         Assert.assertTrue(gameSession.canEat(0,3));
-        gameSession.checkStroke(452, 2, 1, 0, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 2, 1, 0, 3);
         //Pawn Eating
         //fieldIsKing
-        gameSession.checkStroke(451, 4, 7, 5, 6);
-        gameSession.checkStroke(452, 0, 3, 1, 2);
-        gameSession.checkStroke(451, 5, 6, 7, 4);
+        gameSession.checkStroke(PLAYER_ID_1, 4, 7, 5, 6);
+        gameSession.checkStroke(PLAYER_ID_2, 0, 3, 1, 2);
+        gameSession.checkStroke(PLAYER_ID_1, 5, 6, 7, 4);
        // Pawn Eating
        // fieldIsKing
-        gameSession.checkStroke(452, 3, 4, 2, 3);
-        gameSession.checkStroke(451, 2, 5, 1, 4);
-        gameSession.checkStroke(452, 7, 4, 5, 2);
+        gameSession.checkStroke(PLAYER_ID_2, 3, 4, 2, 3);
+        gameSession.checkStroke(PLAYER_ID_1, 2, 5, 1, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 7, 4, 5, 2);
         //Pawn Eating
         //fieldIsKing
         Assert.assertTrue(gameSession.checkOtherEatingOpportunityForField(1, 6, 3, 4));
-        gameSession.checkStroke(451, 1, 6, 3, 4);
+        gameSession.checkStroke(PLAYER_ID_1, 1, 6, 3, 4);
        // Pawn Eating
        // fieldIsKing
-        gameSession.checkStroke(452, 4, 7, 5, 6);
-        gameSession.checkStroke(451, 3, 4, 2, 3);
-        gameSession.checkStroke(452, 2, 3, 3, 2);
-        gameSession.checkStroke(451, 7, 4, 6, 3);
-        gameSession.checkStroke(452, 3, 2, 4, 1);
-        gameSession.checkStroke(451, 2, 3, 1, 2);
+        gameSession.checkStroke(PLAYER_ID_2, 4, 7, 5, 6);
+        gameSession.checkStroke(PLAYER_ID_1, 3, 4, 2, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 2, 3, 3, 2);
+        gameSession.checkStroke(PLAYER_ID_1, 7, 4, 6, 3);
+        gameSession.checkStroke(PLAYER_ID_2, 3, 2, 4, 1);
+        gameSession.checkStroke(PLAYER_ID_1, 2, 3, 1, 2);
         Assert.assertTrue(gameSession.checkOtherEatingOpportunityForField(2, 3, 1, 2));
-        gameSession.checkStroke(452, 7, 6, 5, 4);
+        gameSession.checkStroke(PLAYER_ID_2, 7, 6, 5, 4);
        // Pawn Eating
        // fieldIsKing
-        gameSession.checkStroke(451, 6, 3, 7, 2);
-        gameSession.checkStroke(452, 4, 1, 5, 0);
+        gameSession.checkStroke(PLAYER_ID_1, 6, 3, 7, 2);
+        gameSession.checkStroke(PLAYER_ID_2, 4, 1, 5, 0);
        // Make King
-        gameSession.checkStroke(451, 0, 7, 1, 6);
+        gameSession.checkStroke(PLAYER_ID_1, 0, 7, 1, 6);
         //Assert.assertTrue(gameSession.kingCanEat(5, 0));
-        gameSession.checkStroke(452, 5, 0, 7, 2);
+        gameSession.checkStroke(PLAYER_ID_2, 5, 0, 7, 2);
        // King Eating
        // checkKingOtherEating
-        gameSession.checkStroke(451, 7, 2, 6, 1);
+        gameSession.checkStroke(PLAYER_ID_1, 7, 2, 6, 1);
         Assert.assertTrue(gameSession.checkOtherEatingOpportunityForField(7, 2, 6, 1));
-
     }
 
     @Test
@@ -169,5 +172,11 @@ public class GameSessionTest {
         Assert.assertNotEquals(VFS.readFile(gameSession.getFileName()), "");
         gameSession.saveLog(PLAYER_ID_2);
         Assert.assertNotEquals(VFS.readFile(gameSession.getFileName()), "");
+    }
+
+    @Test
+    public void testGetSnapshot() throws Exception {
+        Assert.assertNotNull(gameSession.getSnapshot(PLAYER_ID_1));
+        Assert.assertNotNull(gameSession.getSnapshot(PLAYER_ID_2));
     }
 }

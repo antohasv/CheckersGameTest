@@ -32,7 +32,7 @@ public class DBUserManager {
             statement.executeUpdate();
             statement.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            return;
         } finally {
             try {
                 statement.close();

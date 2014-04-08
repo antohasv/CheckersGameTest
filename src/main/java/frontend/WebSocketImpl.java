@@ -2,6 +2,7 @@ package frontend;
 
 import java.util.Map;
 
+import com.google.inject.Inject;
 import dbService.UserDataSet;
 import gameMechanic.GameMechanicImpl;
 import org.eclipse.jetty.websocket.api.WebSocketAdapter;
@@ -41,6 +42,7 @@ public class WebSocketImpl extends WebSocketAdapter implements WebSocket {
         this.address = new Address();
     }
 
+    @Inject
     public WebSocketImpl(MessageSystem messageSystem) {
         this.address = new Address();
         this.messageSystem = messageSystem;

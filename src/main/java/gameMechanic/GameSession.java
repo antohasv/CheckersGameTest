@@ -3,6 +3,8 @@ package gameMechanic;
 import java.io.File;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import resource.GameSettings;
 import resource.ResourceFactory;
 
@@ -20,6 +22,8 @@ public class GameSession {
     public static final String SLASH = "\\";
     public static final String EXTEND_TXT = ".txt";
     public static final String PATH_TO_LOG_AI = "log\\AI\\1.txt";
+    public static final String ID1 = "Id1";
+    public static final String ID2 = "Id2";
 
     private static String dirForLog;
     private static AtomicInteger creatorId = new AtomicInteger();
@@ -46,61 +50,36 @@ public class GameSession {
         dir.mkdirs();
     }
 
+    public GameSession() {
+        this.settings = (GameSettings) ResourceFactory.instanse().getResource(FILE_GAME_SETTINGS);
+    }
+
     public GameSession(int id1, int id2) {
-        settings = (GameSettings) ResourceFactory.instanse().getResource(FILE_GAME_SETTINGS);
+        this();
+        this.field = GenerateChessBoard.generate();
+        intializeChessBoard(id1, id2);
+    }
+
+    public GameSession(Field[][] field, int id1, int id2) {
+        this();
+        this.field = field;
         intializeChessBoard(id1, id2);
     }
 
     private void intializeChessBoard(int id1, int id2) {
-        field = new Field[settings.getFieldSize()][settings.getFieldSize()];
         blackQuantity = getNumCheckers();
         whiteQuantity = getNumCheckers();
-
         whiteId = id1;
         blackId = id2;
         lastStroke = id2;
-
-        fillChessBoard();
     }
 
     private int getNumCheckers() {
         return settings.getFieldSize() * settings.getPlayerFieldSize() / 2;
     }
 
-    private void fillChessBoard() {
-        for (int y = 0; y < settings.getFieldSize(); y++) {
-            if (y < settings.getPlayerFieldSize()) {
-                generateLine(y, Field.Checker.white, isOdd(y));
-            } else if (y >= (settings.getFieldSize() - settings.getPlayerFieldSize())) {
-                generateLine(y, Field.Checker.black, isOdd(y));
-            } else {
-                generateEmptyLine(y);
-            }
-        }
-    }
-
-    private void generateEmptyLine(int y) {
-        for (int x = 0; x < settings.getFieldSize(); x++) {
-            generateField(x, y, Field.Checker.nothing);
-        }
-    }
-
-    private void generateLine(int y, Field.Checker color, boolean needOdd) {
-        for (int x = 0; x < settings.getFieldSize(); x++) {
-            if (isOdd(x) == needOdd) {
-                generateField(x, y, color);
-            } else {
-                generateField(x, y, Field.Checker.nothing);
-            }
-        }
-    }
-
     private boolean isOdd(int number) {
         return number % 2 == 1;
-    }
-
-    private void generateField(int x, int y, Field.Checker field) {
-        this.field[y][x] = new Field(field);
     }
 
     private Field.Checker getAnotherColor(Field.Checker myColor) {

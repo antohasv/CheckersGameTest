@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
+import com.google.inject.Inject;
 import dbService.UserDataSet;
 import utils.TimeHelper;
 
@@ -28,6 +29,7 @@ public class GameChatImpl implements GameChat {
     private MessageSystem messageSystem;
     private Address address = new Address();
 
+    @Inject
     public GameChatImpl(MessageSystem messageSystem) {
         this.messageSystem = messageSystem;
         messageSystem.addService(this, SERVICE_NAME);

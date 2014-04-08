@@ -4,6 +4,7 @@ package frontend;
 import base.Address;
 import base.Frontend;
 import base.MessageSystem;
+import com.google.inject.Inject;
 import dbService.DBServiceImpl;
 import dbService.UserDataSet;
 import frontend.msg.MsgAddUser;
@@ -70,6 +71,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     final private Address address;
     final private MessageSystem messageSystem;
 
+    @Inject
     public FrontendImpl(MessageSystem msgSystem) {
         address = new Address();
         messageSystem = msgSystem;

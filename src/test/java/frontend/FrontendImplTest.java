@@ -4,8 +4,10 @@ import base.Address;
 import base.MessageSystem;
 import base.Msg;
 import dbService.DBServiceImpl;
+import dbService.DBServiceImplTest;
 import dbService.UserDataSet;
-import frontend.msg.MsgUpdateUser;
+import frontend.msg.MsgAddUser;
+import messageSystem.MessageSystemImpl;
 import org.eclipse.jetty.server.Request;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Matchers;
@@ -30,6 +32,7 @@ import java.util.Map;
 
 import static org.mockito.Mockito.*;
 
+
 public class FrontendImplTest {
     public static final int INIT_NUMBER_OF_COOKIES = 2;
     public static final String FAKE_USERNAME = "fake_user";
@@ -49,7 +52,7 @@ public class FrontendImplTest {
 
     @BeforeMethod
     public void setUp() throws Exception {
-        messageSystem = mock(MessageSystem.class);
+        messageSystem = spy(new MessageSystemImpl());
 
         dbService = new DBServiceImpl(messageSystem);
         dbService.createConnection();
@@ -89,7 +92,7 @@ public class FrontendImplTest {
         when(servletResponse.getWriter()).thenReturn(new PrintWriter(stringWriter));
 
         frontend.handle(Site.INDEX.getUrl(), request, servletRequest, servletResponse);
-        Mockito.verify(servletResponse).getWriter();
+        verify(servletResponse).getWriter();
 
         Assert.assertNotEquals(stringWriter.toString(), "");
     }
@@ -468,24 +471,24 @@ public class FrontendImplTest {
         Assert.assertEquals(htmlTemplate.toString(), "");
     }
 
-/*
+
     @Test
     public void testVerifyUser() throws Exception {
         Request request = mock(Request.class);
         HttpServletRequest servletRequest = HttpServletHelper.getRequestWithCookie();
 
-        when(servletRequest.getParameter(FrontendImpl.USER_NICKNAME)).thenReturn(FAKE_USERNAME);
-        when(servletRequest.getParameter(FrontendImpl.USER_PASSWORD)).thenReturn(FAKE_PASSWORD);
+        when(servletRequest.getParameter(FrontendImpl.PARAM_REG_NICKNAME)).thenReturn(FAKE_USERNAME);
+        when(servletRequest.getParameter(FrontendImpl.PARAM_REG_PASSWORD)).thenReturn(FAKE_PASSWORD);
 
         StringWriter htmlTemplate = new StringWriter();
         HttpServletResponse response = mock(HttpServletResponse.class);
         when(response.getWriter()).thenReturn(new PrintWriter(htmlTemplate));
 
         frontend.handle(Site.INDEX.getUrl(), request, servletRequest, response);
-        Address dbService = messageSystem.getAddressByName(DBServiceImpl.SERVICE_NAME);
-        MsgUpdateUser msg = (MsgUpdateUser)messageSystem.getMessages().get(dbService).poll();
+        MsgAddUser msg = (MsgAddUser) messageSystem.getMessages().get(dbService.getAddress()).poll();
+        msg.exec(dbService);
     }
-*/
+
 
     public Cookie[] getCookie() throws IOException {
         Request request = mock(Request.class);
