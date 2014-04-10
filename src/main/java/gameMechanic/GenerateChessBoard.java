@@ -15,6 +15,15 @@ public class GenerateChessBoard {
         return chessBoard;
     }
 
+    public static Field[][] generateEmptyField() {
+        chessBoard = new Field[settings.getFieldSize()][settings.getFieldSize()];
+        for (int i = 0; i < settings.getFieldSize(); i++) {
+            chessBoard[i] = generateEmptyLine();
+        }
+        return chessBoard;
+    }
+
+
     private static void fillChessBoard() {
         for (int y = 0; y < settings.getFieldSize(); y++) {
             if (y < settings.getPlayerFieldSize()) {
@@ -31,6 +40,14 @@ public class GenerateChessBoard {
         for (int x = 0; x < settings.getFieldSize(); x++) {
             generateField(x, y, Field.Checker.nothing);
         }
+    }
+
+    private static Field[] generateEmptyLine() {
+        Field[] result = new Field[settings.getFieldSize()];
+        for (int x = 0; x < settings.getFieldSize(); x++) {
+            result[x] = new Field(Field.Checker.nothing);
+        }
+        return result;
     }
 
     private static void generateLine(int y, Field.Checker color, boolean needOdd) {

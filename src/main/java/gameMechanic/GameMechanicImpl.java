@@ -2,6 +2,7 @@ package gameMechanic;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import base.Address;
 import base.GameMechanic;
@@ -84,17 +85,21 @@ public class GameMechanicImpl implements GameMechanic {
         }
     }
 
-    private void createGame(String sessionIdWhite, String sessionIdBlack,
-                            Map<String, String> sessionIdToColor, Map<String, UserDataSet> users) {
+    private void createGame(String sessionIdWhite, String sessionIdBlack, Map<String, String> sessionIdToColor, Map<String, UserDataSet> users) {
         int userIdWhite = users.get(sessionIdWhite).getId();
         int userIdBlack = users.get(sessionIdBlack).getId();
+
         GameSession gameSession = new GameSession(userIdWhite, userIdBlack);
+
         sessionIdToColor.put(sessionIdBlack, "black");
         sessionIdToColor.put(sessionIdWhite, "white");
+
         userIdToSession.put(userIdWhite, gameSession);
         userIdToSession.put(userIdBlack, gameSession);
+
         users.remove(sessionIdBlack);
         users.remove(sessionIdWhite);
+
         createChat(sessionIdWhite, sessionIdBlack);
     }
 
@@ -115,20 +120,28 @@ public class GameMechanicImpl implements GameMechanic {
 
     public Map<String, String> createGames(Map<String, UserDataSet> users) {
         Map<String, String> sessionIdToColor = new HashMap<String, String>();
-        if (users.size() == 0) return sessionIdToColor;
+
+        if (users.size() == 0) {
+            return sessionIdToColor;
+        }
+
         String sessionIdWhite, sessionIdBlack;
         removeRepeatUsers(users);
         removeAlreadyInGameUsers(users);
-        if (users.size() % 2 == 1)
+
+        if (users.size() % 2 == 1) {
             moveUser(users);
+        }
+
         String[] keys = Caster.castKeysToStrings(users);
-        for (int count = 0; count < users.size() / 2; count++) {
+
+        for (int i = 0; i < users.size() / 2; i++) {
             if (randomMod2() == 1) {
-                sessionIdBlack = keys[count * 2];
-                sessionIdWhite = keys[count * 2 + 1];
+                sessionIdBlack = keys[i * 2];
+                sessionIdWhite = keys[i * 2 + 1];
             } else {
-                sessionIdBlack = keys[count * 2 + 1];
-                sessionIdWhite = keys[count * 2];
+                sessionIdBlack = keys[i * 2 + 1];
+                sessionIdWhite = keys[i * 2];
             }
             createGame(sessionIdWhite, sessionIdBlack, sessionIdToColor, users);
         }
@@ -157,7 +170,9 @@ public class GameMechanicImpl implements GameMechanic {
             stroke = new Stroke(from_x, from_y, to_x, to_y, "false", stroke.getColor(), gameSession.getNext());
             resp.put(id, stroke);
         }
+
         int winnerId = gameSession.getWinnerId();
+
         if (winnerId != 0) {
             //gameSession.saveLog(winnerId);
             updateUsersRating(winnerId, gameSession.getAnotherId(winnerId));
@@ -192,13 +207,17 @@ public class GameMechanicImpl implements GameMechanic {
     }
 
     public  void removeDeadGames() {
-        Object[] keys = userIdToSession.keySet().toArray();
-        int count, winnerId;
+        int winnerId;
         GameSession gameSession;
-        for (count = 0; count < keys.length; count++) {
-            gameSession = userIdToSession.get(keys[count]);
-            if (gameSession == null) continue;
+
+        for (Map.Entry<Integer, GameSession> entry : userIdToSession.entrySet()) {
+            gameSession = userIdToSession.get(entry.getKey());
+            if (gameSession == null) {
+                continue;
+            }
+
             winnerId = gameSession.getWinnerId();
+
             if (winnerId != 0) {
                 sendResultStroke(gameSession, winnerId);
             }

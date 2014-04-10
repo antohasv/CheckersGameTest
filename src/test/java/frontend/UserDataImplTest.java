@@ -8,13 +8,16 @@ import dbService.DBServiceImpl;
 import dbService.UserDataSet;
 import gameMechanic.GameMechanicImpl;
 import messageSystem.MessageSystemImpl;
+import org.eclipse.jetty.websocket.api.RemoteEndpoint;
+import org.eclipse.jetty.websocket.api.Session;
+import org.mockito.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import resource.TimeSettings;
 import utils.TimeHelper;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.*;
 
 public class UserDataImplTest {
 
@@ -124,4 +127,44 @@ public class UserDataImplTest {
         UserDataImpl.putSessionIdAndUserSession(SESSION_ID_2, userDataSet2);
         thread.interrupt();
     }
+
+    @Test
+    public void testKeepALive() throws Exception {
+        WebSocketImpl webSocket = mock(WebSocketImpl.class);
+        Session session = mock(Session.class);
+        RemoteEndpoint remoteEndpoint = mock(RemoteEndpoint.class);
+        when(webSocket.getSession()).thenReturn(session);
+        when(session.getRemote()).thenReturn(remoteEndpoint);
+
+        UserDataSet userDataSet = new UserDataSet();
+
+        UserDataImpl.putSessionIdAndWS(SESSION_ID_1, webSocket);
+        UserDataImpl.putSessionIdAndUserSession(SESSION_ID_1, userDataSet);
+        UserDataImpl.putLogInUser(SESSION_ID_1, userDataSet);
+
+        new Thread(userData).start();
+        TimeHelper.sleep(5000);
+        Assert.assertNull(UserDataImpl.getUserSessionBySessionId(SESSION_ID_1));
+    }
+
+    @Test
+    public void testKeepALiveTime() throws Exception {
+        TimeSettings.setExitTime(10000000);
+        WebSocketImpl webSocket = mock(WebSocketImpl.class);
+        Session session = mock(Session.class);
+        RemoteEndpoint remoteEndpoint = mock(RemoteEndpoint.class);
+        when(webSocket.getSession()).thenReturn(session);
+        when(session.getRemote()).thenReturn(remoteEndpoint);
+
+        UserDataSet userDataSet = new UserDataSet();
+
+        UserDataImpl.putSessionIdAndWS(SESSION_ID_1, webSocket);
+        UserDataImpl.putSessionIdAndUserSession(SESSION_ID_1, userDataSet);
+        UserDataImpl.putLogInUser(SESSION_ID_1, userDataSet);
+
+        new Thread(userData).start();
+        TimeHelper.sleep(500);
+        verify(UserDataImpl.getWSBySessionId(SESSION_ID_1), times(1)).sendString(Matchers.eq("1"));
+    }
+
 }

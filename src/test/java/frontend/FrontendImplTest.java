@@ -1,17 +1,17 @@
 package frontend;
 
 import base.Address;
+import base.GameMechanic;
 import base.MessageSystem;
 import base.Msg;
 import dbService.DBServiceImpl;
-import dbService.DBServiceImplTest;
 import dbService.UserDataSet;
 import frontend.msg.MsgAddUser;
+import gameMechanic.GameMechanicImpl;
 import messageSystem.MessageSystemImpl;
 import org.eclipse.jetty.server.Request;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Matchers;
-import org.mockito.Mockito;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -46,6 +46,7 @@ public class FrontendImplTest {
     private FrontendImpl frontend;
     private DBServiceImpl dbService;
     private UserDataImpl userData;
+    private GameMechanic gameMechanic;
 
     private Site[] sitesWithSession = {Site.INDEX, Site.REG, Site.RULES};
     private Cookie[] cookies;
@@ -58,6 +59,7 @@ public class FrontendImplTest {
         dbService.createConnection();
         userData = new UserDataImpl(messageSystem);
         frontend = new FrontendImpl(messageSystem);
+        gameMechanic = new GameMechanicImpl(messageSystem);
 
         when(messageSystem.getAddressByName(DBServiceImpl.SERVICE_NAME)).thenReturn(dbService.getAddress());
         when(messageSystem.getAddressByName(UserDataImpl.SERVICE_NAME)).thenReturn(userData.getAddress());
@@ -510,6 +512,56 @@ public class FrontendImplTest {
         Cookie[] cookies = new Cookie[cookieList.size()];
         cookieList.toArray(cookies);
         return cookies;
+    }
+
+    @Test
+    public void testPartyEnd() {
+        final int adminUserId = 3;
+        final int userUserId = 4;
+        final int otherUserId = 5;
+
+        UserDataSet adminDataSet = new UserDataSet(adminUserId, "admin", 200, 0, 0);
+        UserDataSet userDataSet = new UserDataSet(userUserId, "user", 200, 0, 0);
+
+        Assert.assertEquals(adminDataSet.getWinQuantity(), 0);
+        Assert.assertEquals(userDataSet.getLoseQuantity(), 0);
+
+        String adminSessionId = String.valueOf(1);
+        this.userData.putLogInUser(adminSessionId, adminDataSet);
+
+        String userSessionId = String.valueOf(2);
+        this.userData.putLogInUser(userSessionId, userDataSet);
+
+        this.userData.partyEnd(adminUserId, userUserId);
+        Assert.assertEquals(adminDataSet.getWinQuantity(), 0);
+        Assert.assertEquals(userDataSet.getLoseQuantity(), 0);
+
+        UserDataImpl.putSessionIdAndUserSession(adminSessionId, adminDataSet);
+        this.userData.partyEnd(adminUserId, userUserId);
+        Assert.assertEquals(adminDataSet.getWinQuantity(), 1);
+        Assert.assertEquals(adminDataSet.getLoseQuantity(), 0);
+
+        this.userData.partyEnd(userUserId, adminUserId);
+        Assert.assertEquals(adminDataSet.getWinQuantity(), 1);
+        Assert.assertEquals(adminDataSet.getLoseQuantity(), 1);
+
+        UserDataImpl.putSessionIdAndUserSession(userSessionId, userDataSet);
+        this.userData.partyEnd(adminUserId, userUserId);
+
+        Assert.assertEquals(adminDataSet.getWinQuantity(), 2);
+        Assert.assertEquals(adminDataSet.getLoseQuantity(), 1);
+        Assert.assertEquals(userDataSet.getWinQuantity(), 0);
+        Assert.assertEquals(userDataSet.getLoseQuantity(), 1);
+
+        UserDataSet otherDataSet = new UserDataSet(otherUserId, "other", 100, 0, 0);
+        String otherSessionId = String.valueOf(3);
+
+        this.userData.putLogInUser(otherSessionId, otherDataSet);
+        UserDataImpl.putSessionIdAndUserSession(otherSessionId, otherDataSet);
+
+        this.userData.partyEnd(userUserId, otherUserId);
+        Assert.assertEquals(otherDataSet.getWinQuantity(), 0);
+        Assert.assertEquals(otherDataSet.getLoseQuantity(), 1);
     }
 
     @AfterMethod

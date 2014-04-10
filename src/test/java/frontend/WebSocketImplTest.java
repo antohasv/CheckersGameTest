@@ -101,22 +101,6 @@ public class WebSocketImplTest {
     }
 
     @Test
-    public void testSendStroke() throws Exception {
-        UserDataImpl.putLogInUser(FAKE_SESSION_ID, new UserDataSet(FAKE_USER_ID, FAKE_NICK_NAME, 0, 0, 0));
-
-        Session session = mock(Session.class);
-        RemoteEndpoint remoteEndpoint = mock(RemoteEndpoint.class);
-        when(webSocket.getSession()).thenReturn(session);
-        when(session.getRemote()).thenReturn(remoteEndpoint);
-
-        UserDataImpl.putSessionIdAndWS(FAKE_SESSION_ID, webSocket);
-        webSocket.sendStroke(getUsersStroke());
-        verify(remoteEndpoint, times(1)).sendString("{\"color\":\"null\",\"to_x\":4,\"to_y\":5,\"from_x\":5,\"from_y\":4,\"status\":\"\",\"next\":\"0\"}");
-
-        webSocket.sendStroke(new HashMap<Integer, Stroke>());
-    }
-
-    @Test
     public void testUpdateUserColor() throws Exception {
         Session session = mock(Session.class);
         RemoteEndpoint remoteEndpoint = mock(RemoteEndpoint.class);
@@ -133,20 +117,6 @@ public class WebSocketImplTest {
         verify(remoteEndpoint, times(1)).sendString(WebSocketImpl.JSON_COLOR_BLACK);
 
         webSocket.updateUsersColor(getSessionIdToColor("red"));
-    }
-
-    @Test
-    public void testDoneSnapshot() throws Exception {
-        Session session = mock(Session.class);
-        RemoteEndpoint remoteEndpoint = mock(RemoteEndpoint.class);
-        when(webSocket.getSession()).thenReturn(session);
-        when(session.getRemote()).thenReturn(remoteEndpoint);
-
-        UserDataImpl.putLogInUser(FAKE_SESSION_ID, new UserDataSet(FAKE_USER_ID, FAKE_NICK_NAME, 0, 0, 0));
-        UserDataImpl.putSessionIdAndWS(FAKE_SESSION_ID, webSocket);
-
-        webSocket.doneSnapshot(FAKE_USER_ID, new Snapshot(getFields(7, 7), 'w', 7, 'b'));
-        verify(remoteEndpoint, times(1)).sendString("{\"field\":[[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing],[nothing,nothing,nothing,nothing,nothing,nothing,nothing]],\"color\":w,\"status\":\"snapshot\",\"next\":b,\"king\":[[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false],[false,false,false,false,false,false,false]]}");
     }
 
     public Field[][] getFields(int n, int m) {

@@ -14,6 +14,7 @@ public class StrokeTest {
     public static final String status = "OK";
     private String black = "b";
     private String white = "w";
+
     @Before
     public void setUp() throws Exception {
 
@@ -114,5 +115,38 @@ public class StrokeTest {
         stroke.setFrom_X(x2);
         stroke.setFrom_Y(y2);
         Assert.assertTrue(stroke.getTo_X() == x1 && stroke.getTo_Y() == y1 && stroke.getFrom_X() == x2 && stroke.getFrom_Y() == y2);
+    }
+
+
+    @Test
+    public void testInverse() {
+        Stroke blackStroke = new Stroke(1, 2, 3, 4, "status", "b");
+        Stroke strokeBlackInv = blackStroke.getInverse();
+        Assert.assertTrue(strokeBlackInv.getTo_X() == 6 && strokeBlackInv.getTo_Y() == 5 && strokeBlackInv.getFrom_X() == 4 && strokeBlackInv.getFrom_Y() == 3 && strokeBlackInv.getColor().equals("w"));
+
+        Stroke whiteStroke = new Stroke(1, 2, 3, 4, "status", "w");
+        Stroke strokeWhiteInv = whiteStroke.getInverse();
+        Assert.assertTrue(strokeWhiteInv.getTo_X() == 6 && strokeWhiteInv.getTo_Y() == 5 && strokeWhiteInv.getFrom_X() == 4 && strokeWhiteInv.getFrom_Y() == 3 && strokeWhiteInv.getColor().equals("b"));
+    }
+
+    @Test
+    public void isEmptyTest() {
+        Stroke stroke = new Stroke();
+        Assert.assertTrue(stroke.isEmpty());
+
+        stroke.setTo_X(1);
+        Assert.assertFalse(stroke.isEmpty());
+
+        stroke.setTo_X(-1);
+        stroke.setTo_Y(1);
+        Assert.assertFalse(stroke.isEmpty());
+
+        stroke.setTo_Y(-1);
+        stroke.setFrom_X(1);
+        Assert.assertFalse(stroke.isEmpty());
+
+        stroke.setFrom_X(-1);
+        stroke.setFrom_Y(1);
+        Assert.assertFalse(stroke.isEmpty());
     }
 }

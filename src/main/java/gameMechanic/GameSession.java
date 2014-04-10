@@ -24,6 +24,8 @@ public class GameSession {
     public static final String PATH_TO_LOG_AI = "log\\AI\\1.txt";
     public static final String ID1 = "Id1";
     public static final String ID2 = "Id2";
+    public static final String NAME_BLACK_QUANTITY = "blackQuantity";
+    public static final String NAME_WHITE_QUANTITY = "whiteQuantity";
 
     private static String dirForLog;
     private static AtomicInteger creatorId = new AtomicInteger();
@@ -31,12 +33,16 @@ public class GameSession {
     private int whiteId;
     private int blackId;
     private int lastStroke;
+
+    @Inject @Named(NAME_BLACK_QUANTITY)
     private int blackQuantity;
+    @Inject @Named(NAME_WHITE_QUANTITY)
     private int whiteQuantity;
 
     private long lastStrokeTime = TimeHelper.getCurrentTime();
 
-    private Field[][] field;
+    @Inject
+    public Field[][] field;
     private StringBuilder log = new StringBuilder();
 
     final private GameSettings settings;
@@ -91,8 +97,16 @@ public class GameSession {
         return Field.Checker.nothing;
     }
 
+
+    public void printArray(Field[][] fields) {
+        for (int i = 0; i < fields.length; i++) {
+            for (int j = 0; j < fields.length; j++) {
+                System.out.println(String.format("(%d, %d -> %s)", i, j, fields[i][j].getType().toString()));
+            }
+        }
+    }
+
     public boolean checkStroke(int id, int fromX, int fromY, int toX, int toY) {
-        System.out.println(String.format("gameSession.checkStroke(%d, %d, %d, %d, %d);", id, fromX, fromY, toX, toY));
         StringBuffer sb = new StringBuffer("gameSession.checkStroke(");
         sb.append(id).append(",").append(fromX).append(",").append(fromY).append(",").append(toX).append(",").append(toY).append(");\n");
 
@@ -106,14 +120,16 @@ public class GameSession {
             fromX = settings.getFieldSize() - 1 - fromX;
         }
 
-        if (!checking(id, fromX, fromY, toX, toY)) {
+        if (!isStrokeRight(id, fromX, fromY, toX, toY)) {
             return false;
         }
 
-        if (eating(fromX, fromY, toX, toY)) {
+        if (canEating(fromX, fromY, toX, toY)) {
+
             if (!checkEating(fromX, fromY, toX, toY)) {
                 return false;
             }
+
             changeId = !makeEatingStroke(fromX, fromY, toX, toY);
         } else {
             if (!makeUsualStroke(fromX, fromY, toX, toY)) {
@@ -132,7 +148,6 @@ public class GameSession {
 
     private boolean checkEating(int fromX, int fromY, int toX, int toY) {
         if (!fieldIsKing(fromX, fromY)) {
-            System.out.println("fieldIsKing");
             return true;
         } else {
             return !checkKingOtherEating(fromX, fromY, toX, toY);
@@ -140,7 +155,6 @@ public class GameSession {
     }
 
     private boolean checkKingOtherEating(int fromX, int fromY, int toX, int toY) {
-        System.out.println("checkKingOtherEating");
         Field.Checker anotherColor = getAnotherColor(getFieldType(fromX, fromY));
         int onX = normal(toX - fromX);
         int onY = normal(toY - fromY);
@@ -151,11 +165,11 @@ public class GameSession {
             x += onX;
             y += onY;
         }
-        
+
         Field eatingField = new Field(getField(x, y));
         int eatingFieldX = x, eatingFieldY = y;
         clearField(x, y);
-        
+
         boolean ans = checkOtherEatingOpportunity(x, y, fromX, fromY, toX, toY);
         getField(eatingFieldX, eatingFieldY).make(eatingField);
         return ans;
@@ -164,10 +178,10 @@ public class GameSession {
     public boolean checkOtherEatingOpportunityForField(int fromX, int fromY, int x, int y) {
         Field wasField = new Field();
         boolean ans = false;
-        
+
         wasField.make(getField(x, y));
         getField(x, y).make(getField(fromX, fromY));
-        
+
         if (canEat(x, y)) {
             ans = true;
         }
@@ -201,11 +215,13 @@ public class GameSession {
         }
     }
 
-    private boolean checking(int id, int fromX, int fromY, int toX, int toY) {
+    private boolean isStrokeRight(int id, int fromX, int fromY, int toX, int toY) {
+        // Test last Stroke. User can't stroke twice.
         if (id == lastStroke) {
             return false;
         }
 
+        // 
         if (!standartCheck(fromX, fromY, toX, toY)) {
             return false;
         }
@@ -221,7 +237,6 @@ public class GameSession {
     private boolean makeEatingStroke(int fromX, int fromY, int toX, int toY) {
         eat(fromX, fromY, toX, toY);
         if (becameKing(toX, toY)) {
-            System.out.println("Make King");
             makeKing(toX, toY);
         }
         return canEat(toX, toY);
@@ -229,17 +244,17 @@ public class GameSession {
 
     private boolean makeUsualStroke(int fromX, int fromY, int toX, int toY) {
         Field.Checker myColor = getFieldType(fromX, fromY);
+
         if (canEat(myColor)) {
-            System.out.println("CanEat");
             return false;
         }
 
         move(fromX, fromY, toX, toY);
 
         if (becameKing(toX, toY)) {
-            System.out.println("Make King");
             makeKing(toX, toY);
         }
+
         return true;
     }
 
@@ -293,15 +308,21 @@ public class GameSession {
     }
 
     private boolean kingCanEatRightUp(int x, int y) {
-        Field.Checker myColor = getFieldType(x, y), anotherColor = getAnotherColor(myColor);
-        for (int counter = 1; counter < settings.getFieldSize(); counter++) {
-            if ((x + counter >= settings.getFieldSize() - 2) || (y + counter >= settings.getFieldSize() - 2)
-                    || (getFieldType(x + counter, y + counter) == myColor)) {
+        Field.Checker myColor = getFieldType(x, y);
+        Field.Checker anotherColor = getAnotherColor(myColor);
+
+        int nextX;
+        int nextY;
+        for (int i = 1; i < settings.getFieldSize(); i++) {
+            nextX = i + 1;
+            nextY = i + 1;
+
+            if (nextX >= settings.getFieldSize() - 2 || nextY >= settings.getFieldSize() - 2 || getFieldType(nextX, nextY) == myColor) {
                 return false;
             }
 
-            if (getFieldType(x + counter, y + counter) == anotherColor) {
-                return fieldIsEmpty(x + counter + 1, y + counter + 1);
+            if (getFieldType(nextX, nextY) == anotherColor) {
+                return fieldIsEmpty(nextX + 1, nextY + 1);
             }
         }
         return false;
@@ -356,6 +377,7 @@ public class GameSession {
     }
 
     public boolean kingCanEat(int x, int y) {
+        System.out.print("");
         return kingCanEatRightUp(x, y) || kingCanEatRightDown(x, y) || kingCanEatLeftUp(x, y) || kingCanEatLeftDown(x, y);
     }
 
@@ -379,19 +401,24 @@ public class GameSession {
     }
 
     private void eat(int fromX, int fromY, int toX, int toY) {
-        int onX = normal(toX - fromX), onY = normal(toY - fromY);
-        int x = fromX, y = fromY;
-        for (int counter = 1; counter < abs(toX - fromX); counter++) {
-            x += onX;
+        int onX = normal(toX - fromX);
+        int onY = normal(toY - fromY);
+        int x = fromX;
+        int y = fromY;
 
+        for (int i = 1; i < abs(toX - fromX); i++) {
+            x += onX;
             y += onY;
+
             if (getFieldType(x, y) == Field.Checker.black) {
                 blackQuantity--;
             } else if (getFieldType(x, y) == Field.Checker.white) {
                 whiteQuantity--;
             }
+
             clearField(x, y);
         }
+
         move(fromX, fromY, toX, toY);
     }
 
@@ -413,6 +440,7 @@ public class GameSession {
             return false;
         }
 
+        // User can go only in border
         if (!inBorder(toX) || !inBorder(toY) || !inBorder(fromX) || !inBorder(fromY)) {
             return false;
         }
@@ -447,7 +475,6 @@ public class GameSession {
     }
 
     private boolean pawnEating(int fromX, int fromY, int toX, int toY) {
-        System.out.println("Pawn Eating");
         if (abs(fromX - toX) != 2 || abs(fromY - toY) != 2) {
             return false;
         }
@@ -460,7 +487,7 @@ public class GameSession {
         return getFieldType(fromX + onX, fromY + onY) == anotherColor && fieldIsEmpty(toX, toY);
     }
 
-    private boolean eating(int fromX, int fromY, int toX, int toY) {
+    private boolean canEating(int fromX, int fromY, int toX, int toY) {
         if (abs(fromX - toX) < 2 || abs(fromY - toY) < 2) {
             return false;
         }

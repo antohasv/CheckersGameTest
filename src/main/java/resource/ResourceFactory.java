@@ -45,6 +45,9 @@ public class ResourceFactory {
                 SAXParserFactory factory = SAXParserFactory.newInstance();
                 SAXParser parser = factory.newSAXParser();
                 SAXHandler saxHandler = new SAXHandler();
+                if (!isFileExists(path)) {
+                    return null;
+                }
                 parser.parse(new File(path), saxHandler);
                 resource.put(path, (Resource) saxHandler.object);
                 return (Resource) saxHandler.object;
@@ -53,5 +56,9 @@ public class ResourceFactory {
             }
             return null;
         }
+    }
+
+    private boolean isFileExists(String path) {
+        return new File(path).exists();
     }
 }

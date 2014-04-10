@@ -12,6 +12,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utils.TimeHelper;
+
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -34,18 +37,22 @@ public class GameMechanicImplTest {
     public static final String USER_ID_2 = "2";
     public static final String USER_ID_3 = "3";
 
-    public MessageSystem messageSystem = new MessageSystemImpl();
-    public GameMechanicImpl gameMechanic;
-    final GameChat gameChat = new GameChatImpl(messageSystem);
+    public static final String FAKE_SESSION_ID_1 = "fake_session_id_1";
+    public static final String FAKE_SESSION_ID_2 = "fake_session_id_2";
+
+    private MessageSystem messageSystem;
+    private GameMechanicImpl gameMechanic;
+    private GameChat gameChat;
 
     @BeforeMethod
     public  void setUp() throws Exception {
-
+        messageSystem = new MessageSystemImpl();
+        gameMechanic = new GameMechanicImpl(messageSystem);
+        gameChat = new GameChatImpl(messageSystem);
     }
 
     @Test
     public void twoUsersTest() throws Exception {
-        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
         when(userDataSet1.getId()).thenReturn(1);
@@ -86,7 +93,6 @@ public class GameMechanicImplTest {
 
     @Test
     public void threeUsersTest() throws Exception {
-        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
         UserDataSet userDataSet3 = mock(UserDataSet.class);
@@ -138,7 +144,6 @@ public class GameMechanicImplTest {
 
     @Test
     public void badStrokeTest() throws Exception {
-        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataImpl userData = new UserDataImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
@@ -176,7 +181,6 @@ public class GameMechanicImplTest {
 
     @Test
     public void loseTest() throws Exception {
-        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataImpl userData = new UserDataImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
@@ -213,7 +217,6 @@ public class GameMechanicImplTest {
 
     @Test
     public void testSendSnapshot() throws Exception {
-        gameMechanic = new GameMechanicImpl(messageSystem);
         WebSocket webSocket = new WebSocketImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
@@ -233,7 +236,6 @@ public class GameMechanicImplTest {
 
     @Test
     public void testSendResultStroke() throws Exception {
-        gameMechanic = new GameMechanicImpl(messageSystem);
         UserDataSet userDataSet1 = mock(UserDataSet.class);
         UserDataSet userDataSet2 = mock(UserDataSet.class);
         when(userDataSet1.getId()).thenReturn(1);
@@ -304,5 +306,22 @@ public class GameMechanicImplTest {
         Assert.assertEquals(stroke.getStatus(), "lose");
 
         gameMechanic.removeDeadGames();
+    }
+
+    @Test
+    public void testRemoveDeadGames() throws Exception {
+        Map<String, UserDataSet> userDataSetMap = new HashMap<String, UserDataSet>();
+        userDataSetMap.put(FAKE_SESSION_ID_1, new UserDataSet(100, "nick1", 0, 0, 0));
+        userDataSetMap.put(FAKE_SESSION_ID_2, new UserDataSet(101, "nick2", 0, 0, 0));;
+        gameMechanic.createGames(userDataSetMap);
+        gameMechanic.removeDeadGames();
+    }
+
+    @Test
+    public void testRun() throws Exception {
+        Thread th = new Thread(gameMechanic);
+        th.start();
+        TimeHelper.sleep(500);
+
     }
 }
