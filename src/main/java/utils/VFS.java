@@ -11,7 +11,7 @@ import java.util.Queue;
 public class VFS {
     public static final String USER_DIRECTORY = "user.dir";
 
-    public static final String PROJECT_DIRECTORY = System.getProperty(USER_DIRECTORY) + '\\';
+    public static final String PROJECT_DIRECTORY = System.getProperty(USER_DIRECTORY) + File.separator;
 
     public static String getAbsolutePath(String path) {
         return isAbsolute(path) ? path : PROJECT_DIRECTORY + path;
