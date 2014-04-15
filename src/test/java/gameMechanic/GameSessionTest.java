@@ -179,7 +179,6 @@ public class GameSessionTest {
         gameSession.checkStroke(PLAYER_ID_1, 6, 5, 7, 4);
         gameSession.checkStroke(PLAYER_ID_1, 2, 5, 1, 4);
         Snapshot snapshotPlayer1 = gameSession.getSnapshot(PLAYER_ID_1);
-        System.out.print(snapshotPlayer1.toString());
     }
 
     @Test

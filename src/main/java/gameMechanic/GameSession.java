@@ -97,15 +97,6 @@ public class GameSession {
         return Field.Checker.nothing;
     }
 
-
-    public void printArray(Field[][] fields) {
-        for (int i = 0; i < fields.length; i++) {
-            for (int j = 0; j < fields.length; j++) {
-                System.out.println(String.format("(%d, %d -> %s)", i, j, fields[i][j].getType().toString()));
-            }
-        }
-    }
-
     public boolean checkStroke(int id, int fromX, int fromY, int toX, int toY) {
         StringBuffer sb = new StringBuffer("gameSession.checkStroke(");
         sb.append(id).append(",").append(fromX).append(",").append(fromY).append(",").append(toX).append(",").append(toY).append(");\n");
@@ -377,7 +368,6 @@ public class GameSession {
     }
 
     public boolean kingCanEat(int x, int y) {
-        System.out.print("");
         return kingCanEatRightUp(x, y) || kingCanEatRightDown(x, y) || kingCanEatLeftUp(x, y) || kingCanEatLeftDown(x, y);
     }
 
@@ -452,7 +442,6 @@ public class GameSession {
     }
 
     private boolean kingEating(int fromX, int fromY, int toX, int toY) {
-        System.out.println("King Eating");
         Field.Checker myColor = getFieldType(fromX, fromY), anotherColor = getAnotherColor(myColor);
         int onX = normal(toX - fromX);
         int onY = normal(toY - fromY);
@@ -637,4 +626,3 @@ public class GameSession {
 
     public void clearWhiteQuantity() { whiteQuantity = 0; }
 }
-//Черная клетка, если координаты один. четности

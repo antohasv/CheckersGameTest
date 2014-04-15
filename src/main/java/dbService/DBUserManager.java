@@ -1,9 +1,6 @@
 package dbService;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DBUserManager {
     public static final String TABLE_NAME = "Users";
@@ -16,22 +13,50 @@ public class DBUserManager {
     public static final String COL_WIN_QUANTITY = "win_quantity";
     public static final String COL_LOSE_QUANTITY = "lose_quantity";
     public static final String USERS_COUNT = "users_count";
+    public static final String COL_LAST_VISIT = "last_visit";
+
+    public static void createTableUser(Connection connection) {
+        StringBuffer userTable = new StringBuffer();
+        userTable.append("CREATE TABLE IF NOT EXISTS ").append(TABLE_NAME)
+                .append(" (").append(COL_ID).append(" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,")
+                .append(COL_NICKNAME).append(" VARCHAR(20) NOT NULL,")
+                .append(COL_PASSWORD).append(" CHAR(64) NOT NULL,")
+                .append(COL_LAST_VISIT).append(" TIMESTAMP NOT NULL,")
+                .append(COL_REGISTRATION_DATE).append(" TIMESTAMP NOT NULL,")
+                .append(COL_RATING).append(" SMALLINT NOT NULL DEFAULT 500,")
+                .append(COL_WIN_QUANTITY).append(" INTEGER  UNSIGNED NOT NULL DEFAULT 0,")
+                .append(COL_LOSE_QUANTITY).append(" INTEGER  UNSIGNED NOT NULL DEFAULT 0").append(")");
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(userTable.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     public static void addUser(Connection connection, String login, String password) {
         PreparedStatement statement = null;
 
         StringBuilder query = new StringBuilder("INSERT INTO ").append(TABLE_NAME);
-        query.append("(").append(COL_NICKNAME).append(",").append(COL_PASSWORD)
-                .append(",").append(COL_REGISTRATION_DATE).append(")");
-        query.append(" VALUES(?,?,CURRENT_TIMESTAMP)");
+        query.append("(")
+                .append(COL_NICKNAME).append(",")
+                .append(COL_PASSWORD).append(",")
+                .append(COL_LAST_VISIT).append(",")
+                .append(COL_REGISTRATION_DATE).append(")");
+        query.append(" VALUES('").append(login).append("','").append(password).append("',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)");
 
         try {
             statement = connection.prepareStatement(query.toString());
-            statement.setString(1, login);
-            statement.setString(2, password);
             statement.executeUpdate();
-            statement.close();
         } catch (Exception e) {
+            e.printStackTrace();
             return;
         } finally {
             try {
@@ -52,9 +77,7 @@ public class DBUserManager {
             stmt.setString(1, login);
             stmt.execute();
             ResultSet resultSet = stmt.getResultSet();
-            if (resultSet.first())
-                rows = resultSet.getInt(USERS_COUNT);
-            stmt.close();
+            rows = resultSet.getInt(USERS_COUNT);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -83,7 +106,6 @@ public class DBUserManager {
             stmt.execute();
             ResultSet resultSet = stmt.getResultSet();
             user = handler.handle(resultSet);
-            stmt.close();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

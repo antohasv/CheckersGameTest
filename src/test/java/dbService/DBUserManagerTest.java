@@ -24,18 +24,15 @@ public class DBUserManagerTest {
         @Override
         public Object handle(ResultSet result) {
             try {
-                if (result.first()) {
-                    int id = result.getInt(DBUserManager.COL_ID);
-                    String login = result.getString(DBUserManager.COL_NICKNAME);
-                    int rating = result.getInt(DBUserManager.COL_RATING);
-                    int winQuantity = result.getInt(DBUserManager.COL_WIN_QUANTITY);
-                    int loseQuantity = result.getInt(DBUserManager.COL_LOSE_QUANTITY);
-                    return new UserDataSet(id, login, rating, winQuantity, loseQuantity);
-                }
+                int id = result.getInt(DBUserManager.COL_ID);
+                String login = result.getString(DBUserManager.COL_NICKNAME);
+                int rating = result.getInt(DBUserManager.COL_RATING);
+                int winQuantity = result.getInt(DBUserManager.COL_WIN_QUANTITY);
+                int loseQuantity = result.getInt(DBUserManager.COL_LOSE_QUANTITY);
+                return new UserDataSet(id, login, rating, winQuantity, loseQuantity);
             } catch (SQLException e) {
-                System.err.println(e.getMessage());
+                return null;
             }
-            return null;
         }
     };
 
@@ -53,8 +50,9 @@ public class DBUserManagerTest {
 
     @Test
     public void testAddUser() throws Exception {
-        DBUserManager.addUser(connection, getUserName(), FAKE_PASSWORD);
-        int userCount = DBUserManager.findUser(connection, PREFIX_FAKE_USER);
+        String userName = getUserName();
+        DBUserManager.addUser(connection, userName, FAKE_PASSWORD);
+        int userCount = DBUserManager.findUser(connection, userName);
         Assert.assertEquals(userCount, 1);
     }
 
@@ -96,7 +94,7 @@ public class DBUserManagerTest {
         do {
             fakeName = getFakeUserName();
             userCount = DBUserManager.findUser(connection, fakeName);
-        } while(userCount != 0);
+        } while (userCount != 0);
         return fakeName;
     }
 

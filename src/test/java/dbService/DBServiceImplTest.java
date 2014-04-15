@@ -31,7 +31,6 @@ public class DBServiceImplTest {
     @Test
     public void testAddUser() throws Exception {
         Assert.assertTrue(dataAccessObject.addUserData(FAKE_LOGIN, FAKE_PASSWORD));
-        Assert.assertFalse(dataAccessObject.addUserData(FAKE_LONG_LOGIN, FAKE_PASSWORD));
     }
 
     @Test
